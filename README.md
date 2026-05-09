@@ -288,7 +288,7 @@ citation("okBATHTUB")
 ```
 
 ```
-Henderson, J. (2025). okBATHTUB: Reservoir Eutrophication Modeling for
+Henderson, J. (2026). okBATHTUB: Reservoir Eutrophication Modeling for
 Oklahoma Lakes. R package version 0.1.0.
 https://github.com/0011235813/Oklahoma-BATHTUB
 ```
@@ -297,16 +297,19 @@ https://github.com/0011235813/Oklahoma-BATHTUB
 
 ## License
 
-MIT © Oklahoma Water Resources Board, Water Quality Division
+MIT © Jordon Henderson
 
 ---
 
 ## Development
 
-okBATHTUB is developed by the OWRB Water Quality Division as part of the
-FY-24 EPA 604(b) Water Quality Planning Grant program. Coefficient
-recalibration is recommended when five or more new lake-years of LMP data
-have been added to AWQMS since the calibration date recorded in
+okBATHTUB is an independent open-source contribution to the water quality
+modeling community, developed by Jordon Henderson in a personal capacity.
+The calibration data underlying the Oklahoma-specific coefficients derives
+from the OWRB Lake Monitoring Program, which is publicly available.
+
+Coefficient recalibration is recommended when five or more new lake-years
+of LMP data have been added to AWQMS since the calibration date recorded in
 `data-raw/ok_coefficients.R`.
 
 Bug reports and feature requests:
