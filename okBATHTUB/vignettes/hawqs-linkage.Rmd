@@ -217,11 +217,11 @@ scenario_results <- lapply(hawqs_scenarios, function(sc) {
       tp_inflow_ugl = tp_ugl,
       tn_inflow_ugl = tn_ugl,
       coefficients  = "oklahoma",
-      ecoregion     = res$eco_l3_name
+      ecoregion     = "Cross Timbers"
     ) |>
     ok_hydraulics(
-      surface_area_ha = res$surface_area_ha,
-      mean_depth_m    = res$mean_depth_m
+      surface_area_ha = 890,
+      mean_depth_m    = 4.2
     ) |>
     ok_retention() |>
     ok_inlake()    |>
@@ -260,11 +260,11 @@ annual_results <- lapply(seq_len(nrow(hawqs_annual)), function(i) {
       tp_inflow_ugl = tp_ugl,
       tn_inflow_ugl = tn_ugl,
       coefficients  = "oklahoma",
-      ecoregion     = res$eco_l3_name
+      ecoregion     = "Cross Timbers"
     ) |>
     ok_hydraulics(
-      surface_area_ha = res$surface_area_ha,
-      mean_depth_m    = res$mean_depth_m
+      surface_area_ha = 890,
+      mean_depth_m    = 4.2
     ) |>
     ok_retention() |>
     ok_inlake()    |>
@@ -302,7 +302,7 @@ ok_plot_response(
   response     = "tsi",
   target_class = "mesotrophic",
   current_tp   = mean_tp_ugl,
-  lake_name    = paste(res$lake_name, "— OK-HAWQS/okBATHTUB Linkage")
+  lake_name    = "Arcadia Lake -- OK-HAWQS/okBATHTUB Linkage"
 )
 ```
 

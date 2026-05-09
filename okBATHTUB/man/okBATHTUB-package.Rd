@@ -44,17 +44,17 @@ Report W-96-2.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/0011235813/okBATHTUB}
-  \item Report bugs at \url{https://github.com/0011235813/okBATHTUB/issues}
+  \item \url{https://github.com/0011235813/Oklahoma-BATHTUB}
+  \item Report bugs at \url{https://github.com/0011235813/Oklahoma-BATHTUB/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Jordon Henderson \email{WATER_Data@owrb.ok.gov}
+\strong{Maintainer}: Jordon Henderson \email{jordon.henderson@owrb.ok.gov}
 
 Authors:
 \itemize{
-  \item Jordon Henderson \email{WATER_Data@owrb.ok.gov}
+  \item Jordon Henderson \email{jordon.henderson@owrb.ok.gov}
 }
 
 Other contributors:
