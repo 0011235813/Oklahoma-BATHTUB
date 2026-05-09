@@ -1,0 +1,792 @@
+monitoring_location_id,monitoring_location_name,monitoring_location_latitude,monitoring_location_longitude,calibration_tier,TP,Chla,Secchi,TN,OrthoP,TSS,Temp,lake_name,eco_l3_code,eco_l3_name
+520620010100-04,"American Horse Lake, Site 4",35.629968208,-98.501484524,Insufficient data,0,1,0,0,0,0,0,American Horse Lake,25,Central Great Plains
+NLA06608-0488,Bee Creek Lake,37.1924901397,-95.9867252755,Insufficient data,0,1,1,0,0,0,1,Bee Creek Lake,29,Ouachita Mountains
+NLA06608-4643,Birch Lake,36.5147867033,-96.1911658088,Insufficient data,0,1,1,0,0,0,1,Birch Lake,30,Ozark Highlands
+NLA06608-0824,Bluestem Lake,36.7028593505,-96.4201913599,Insufficient data,0,1,1,0,0,0,1,Bluestem Lake,28,Cross Timbers
+520500020040-01,"Brooks Lake, Site 1",35.1803,-96.18241,Insufficient data,1,2,2,1,0,0,2,Brooks Lake,28,Cross Timbers
+520500020040-02,"Brooks Lake, Site 2",35.17828,-96.18269,Insufficient data,1,2,2,1,0,0,2,Brooks Lake,28,Cross Timbers
+NLA06608-4056,Canton Lake,36.1430584468,-98.6285654482,Insufficient data,0,1,1,0,0,0,1,Canton Lake,25,Central Great Plains
+NLA06608-4064,Carl Etling Lake,36.8486239247,-102.875142028,Insufficient data,0,1,1,0,0,0,1,Carl Etling Lake,25,Central Great Plains
+410100010250-01,"Charles Lake, Site 1",33.76344,-94.84111,Insufficient data,2,2,2,2,0,0,2,Charles Lake,37,Arkansas Valley
+410100010250-02,"Charles Lake, Site 2",33.76259,-94.8447,Insufficient data,2,2,2,2,0,0,2,Charles Lake,37,Arkansas Valley
+121510010060-01,"Chelsea Reservoir, Site 1",36.54229,-95.46879,Insufficient data,2,2,2,2,0,0,2,Chelsea Reservoir,30,Ozark Highlands
+121510010060-02,"Chelsea Reservoir, Site 2",36.54269,-95.46622,Insufficient data,2,2,2,2,0,0,2,Chelsea Reservoir,30,Ozark Highlands
+121510010060-03,"Chelsea Reservoir, Site 3",36.54363,-95.4648,Insufficient data,2,2,2,2,0,0,2,Chelsea Reservoir,30,Ozark Highlands
+410300030780-03,"Clayton Lake, Site 3",34.54136,-95.31193,Insufficient data,2,2,2,2,0,0,2,Clayton Lake,29,Ouachita Mountains
+NLA06608-0472,Coalgate Reservoir,34.5706114297,-96.2383567634,Insufficient data,0,1,1,0,0,0,1,Coalgate Reservoir,37,Arkansas Valley
+520510000030-01,"Cohee Lake, Site 1",35.32651667,-96.39018333,Insufficient data,2,2,2,2,0,0,2,Cohee Lake,28,Cross Timbers
+520510000030-02,"Cohee Lake, Site 2",35.3291,-96.3920333,Insufficient data,2,2,2,2,0,0,2,Cohee Lake,28,Cross Timbers
+520510000030-03,"Cohee Lake, Site 3",35.33,-96.393,Insufficient data,1,1,1,1,0,0,1,Cohee Lake,28,Cross Timbers
+NLA06608-1960,Copan Lake,36.8906821449,-95.9526501734,Insufficient data,0,1,1,0,0,0,1,Copan Lake,30,Ozark Highlands
+NLA06608-R723,Cowley County State Lake,37.09209,-96.798912,Insufficient data,0,1,1,0,0,0,1,Cowley County State Lake,NA,NA
+NLA06608-4659,Crowder Lake,35.3970672686,-98.7075208663,Insufficient data,0,1,1,0,0,0,1,Crowder Lake,28,Cross Timbers
+310830060120-001RS,"Crowder Lake, Cobb",35.4203777778,-98.7129083333,Insufficient data,2,2,0,2,2,0,2,"Crowder Lake, Cobb",28,Cross Timbers
+310830060120-002RS,"Crowder Lake, Tail",35.3925916667,-98.7000694444,Insufficient data,2,2,0,2,2,0,2,"Crowder Lake, Tail",28,Cross Timbers
+NLA06608-0012,Cushing Lake,35.9907882254,-96.8717873056,Insufficient data,0,1,1,0,0,0,1,Cushing Lake,28,Cross Timbers
+NLA06608-1524,Dave Boyer Lake,34.3737043815,-98.3393051802,Insufficient data,0,1,1,0,0,0,1,Dave Boyer Lake,27,Central Oklahoma/Texas Plains
+410400030300-01,"Delaware Creek, Site 1",34.3727,-96.41286,Insufficient data,1,1,2,1,2,0,2,Delaware Creek,NA,NA
+410400030300-02,"Delaware Creek, Site 2",34.3715,-96.41229,Insufficient data,2,2,2,2,2,0,2,Delaware Creek,NA,NA
+NLA06608-4206,Dolese,35.9212758847,-97.4130470357,Insufficient data,0,1,1,0,0,0,1,Dolese,28,Cross Timbers
+410600010440-01,"Durant Lake, Site 1",34.082133,-96.387583,Insufficient data,1,2,2,1,0,0,2,Durant Lake,27,Central Oklahoma/Texas Plains
+410600010440-02,"Durant Lake, Site 2",34.0778,-96.39321,Insufficient data,1,2,2,1,0,0,2,Durant Lake,27,Central Oklahoma/Texas Plains
+410600010440-03,"Durant Lake, Site 3",34.07317,-96.39569,Insufficient data,1,2,2,1,0,0,2,Durant Lake,27,Central Oklahoma/Texas Plains
+NLA06608-0540,Elk City Lake,35.1710432483,-99.3711522835,Insufficient data,0,1,1,0,0,0,1,Elk City Lake,25,Central Great Plains
+620910050070-01,"Elmer Lake, Site 1",35.88008,-97.98804,Insufficient data,2,2,2,2,0,0,2,Elmer Lake,27,Central Oklahoma/Texas Plains
+620910050070-02,"Elmer Lake, Site 2",35.88131,-97.99046,Insufficient data,2,2,2,2,0,0,2,Elmer Lake,27,Central Oklahoma/Texas Plains
+620910050070-03,"Elmer Lake, Site 3",35.88439,-97.98997,Insufficient data,2,2,2,2,0,0,2,Elmer Lake,27,Central Oklahoma/Texas Plains
+121500020280-01,"Fin & Feather Lake, Site 1",36.16809,-95.63019,Insufficient data,1,2,2,1,0,0,2,Fin & Feather Lake,30,Ozark Highlands
+121500020280-02,"Fin & Feather Lake, Site 2",36.17012,-95.63021,Insufficient data,1,2,2,1,0,0,2,Fin & Feather Lake,30,Ozark Highlands
+NLA06608-1568,Ford Supply Lake,36.53187298,-99.5683601396,Insufficient data,0,1,1,0,0,0,1,Ford Supply Lake,25,Central Great Plains
+NLA06608-1372,Fort Cobb Reservoir,35.1985871096,-98.4913080371,Insufficient data,0,1,1,0,0,0,1,Fort Cobb Reservoir,28,Cross Timbers
+NLA06608-0180,Frederick Lake,34.5189405908,-98.8813286821,Insufficient data,0,1,1,0,0,0,1,Frederick Lake,27,Central Oklahoma/Texas Plains
+NLA06608-0152,Fuqua,34.5944072212,-97.6863648499,Insufficient data,0,1,1,0,0,0,1,Fuqua,27,Central Oklahoma/Texas Plains
+NLA06608-2776,Garriott Property Lake,33.495845068,-96.9593670329,Insufficient data,0,1,1,0,0,0,1,Garriott Property Lake,28,Cross Timbers
+HP-1,Hall Park Lake 1,35.233597,-97.409425,Insufficient data,3,0,0,3,3,3,3,Hall Park Lake 1,28,Cross Timbers
+HP-2,Hall Park Lake 2,35.233319,-97.412814,Insufficient data,3,0,0,3,3,3,3,Hall Park Lake 2,28,Cross Timbers
+HP-3,Hall Park Lake 3,35.237117,-97.412611,Insufficient data,3,0,0,3,3,3,3,Hall Park Lake 3,28,Cross Timbers
+311600020170-01,"Hall, Site 1",34.83367,-99.9254,Insufficient data,2,2,2,2,2,0,2,Hall,28,Cross Timbers
+311600020170-02,"Hall, Site 2",34.83209,-99.92622,Insufficient data,2,2,2,2,2,0,2,Hall,28,Cross Timbers
+311600020170-03,"Hall, Site 3",34.83041,-99.92773,Insufficient data,1,1,1,1,1,0,1,Hall,28,Cross Timbers
+NLA06608-4504,Hudson Lake,36.8122813822,-96.0413209104,Insufficient data,0,1,1,0,0,0,1,Hudson Lake,30,Ozark Highlands
+NLA06608-2996,Iowa Park Lake,33.9804794991,-98.7099336012,Insufficient data,0,1,1,0,0,0,1,Iowa Park Lake,NA,NA
+311200000140-01,"Jap Beaver Lake, Site 1",34.18496,-98.05479,Insufficient data,2,2,2,2,2,0,2,Jap Beaver Lake,30,Ozark Highlands
+311200000140-02,"Jap Beaver Lake, Site 2",34.18235,-98.05474,Insufficient data,2,2,2,2,2,0,2,Jap Beaver Lake,30,Ozark Highlands
+311200000140-03,"Jap Beaver Lake, Site 3",34.17935,-98.05985,Insufficient data,2,2,2,2,2,0,2,Jap Beaver Lake,30,Ozark Highlands
+NLA06608-0856,Jean Neustadt,34.284904886,-97.1711263611,Insufficient data,0,1,1,0,0,0,1,Jean Neustadt,37,Arkansas Valley
+NLA06608-4320,Kaw Lake,36.7485899276,-96.8551223273,Insufficient data,0,1,1,0,0,0,1,Kaw Lake,28,Cross Timbers
+NLA06608-0120,Keystone,36.1629298455,-96.3683453593,Insufficient data,0,1,1,0,0,0,1,Keystone,28,Cross Timbers
+NLA06608-3032,L JONES PROPERTY LAKE,33.8415669006,-97.2508279466,Insufficient data,0,1,1,0,0,0,1,L JONES PROPERTY LAKE,28,Cross Timbers
+NLA06608-0756,Lake Duncan,34.5199590926,-97.8188940103,Insufficient data,0,1,1,0,0,0,1,Lake Duncan,27,Central Oklahoma/Texas Plains
+NLA06608-1804,Lake Hefner,35.5635128592,-97.5946966232,Insufficient data,0,1,1,0,0,0,1,Lake Hefner,28,Cross Timbers
+NLA06608-1564,Lake Hobart,35.1688953693,-99.073497818,Insufficient data,0,1,1,0,0,0,1,Lake Hobart,27,Central Oklahoma/Texas Plains
+NLA06608-0244,Lake Kemp,33.7393879508,-99.2319983791,Insufficient data,0,1,1,0,0,0,1,Lake Kemp,NA,NA
+NLA06608-1868,Lake Konawa,34.9536491576,-96.7183023792,Insufficient data,0,1,1,0,0,0,1,Lake Konawa,37,Arkansas Valley
+NLA06608-3616,Lake Lloyd Vincent,36.0580799935,-99.9224780275,Insufficient data,0,1,1,0,0,0,1,Lake Lloyd Vincent,37,Arkansas Valley
+NLA06608-2704,Lake Marvin,35.8844838023,-100.185278662,Insufficient data,0,1,1,0,0,0,1,Lake Marvin,25,Central Great Plains
+NLA06608-0560,Lake Meredith,35.61858883,-101.660765488,Insufficient data,0,1,1,0,0,0,1,Lake Meredith,NA,NA
+NLA06608-4472,Lake Overholser,35.4977422247,-97.6793022249,Insufficient data,0,1,1,0,0,0,1,Lake Overholser,28,Cross Timbers
+NLA06608-4440,Lake Ponca,36.7359162295,-97.0349778894,Insufficient data,0,1,1,0,0,0,1,Lake Ponca,28,Cross Timbers
+NLA06608-0972,Lake Rolla,35.5285737932,-98.0257850421,Insufficient data,0,1,1,0,0,0,1,Lake Rolla,37,Arkansas Valley
+351354097180501,Lake Thunderbird Norman Project Site 1,35.23166667,-97.3013889,Insufficient data,1,0,0,0,0,0,0,Lake Thunderbird Norman Project Site 1,28,Cross Timbers
+351351097181201,Lake Thunderbird Norman Project Site 2,35.2308333,-97.3033333,Insufficient data,1,0,0,0,0,0,0,Lake Thunderbird Norman Project Site 2,28,Cross Timbers
+351349097181901,Lake Thunderbird Norman Project Site 3,35.23027778,-97.3052778,Insufficient data,1,0,0,0,0,0,0,Lake Thunderbird Norman Project Site 3,28,Cross Timbers
+351347097183001,Lake Thunderbird Norman Project Site 4,35.2297222,-97.3083333,Insufficient data,1,0,0,0,0,0,0,Lake Thunderbird Norman Project Site 4,28,Cross Timbers
+311100010210-01,"Leeper Lake, Site 1",33.73509,-97.12323,Insufficient data,1,2,2,1,0,0,2,Leeper Lake,37,Arkansas Valley
+311100010210-02,"Leeper Lake, Site 2",33.73964,-97.11738,Insufficient data,1,2,2,1,0,0,2,Leeper Lake,37,Arkansas Valley
+NLA06608-1016,Little Deep Fork Creek Site 10 Reservoir,35.8734490807,-96.556556287,Insufficient data,0,1,1,0,0,0,1,Little Deep Fork Creek Site 10 Reservoir,37,Arkansas Valley
+NLA06608-1420,Little Wewoka Creek Site 15 Reservoir,35.1386532006,-96.2306472339,Insufficient data,0,1,1,0,0,0,1,Little Wewoka Creek Site 15 Reservoir,37,Arkansas Valley
+220100040100-04,"Lloyd Church, Site 4",34.879360868,-95.337655569,Insufficient data,0,1,0,0,0,0,0,Lloyd Church,37,Arkansas Valley
+621200030060-05,"Lone Chimney Lake, Site 5",36.237002,-96.842865,Insufficient data,2,2,2,2,2,0,2,Lone Chimney Lake,28,Cross Timbers
+NLA06608-1336,Lower Black Bear Creek Site 4 Reservoir,36.3872718305,-96.8232407176,Insufficient data,0,1,1,0,0,0,1,Lower Black Bear Creek Site 4 Reservoir,28,Cross Timbers
+NLA06608-0284,MISSING,34.9138436996,-98.7302798083,Insufficient data,0,1,1,0,0,0,1,MISSING,28,Cross Timbers
+NLA06608-0696,MISSING,34.945821553,-97.4757381967,Insufficient data,0,1,1,0,0,0,1,MISSING,28,Cross Timbers
+NLA06608-4828,MISSING,34.9659011855,-97.6755187604,Insufficient data,0,1,1,0,0,0,1,MISSING,28,Cross Timbers
+620900010050-01,"Mannford, Site 1",36.099067,-96.3543,Insufficient data,2,2,2,2,2,0,2,Mannford,28,Cross Timbers
+620900010050-02,"Mannford, Site 2",36.094933,-96.361067,Insufficient data,2,2,2,2,2,0,2,Mannford,28,Cross Timbers
+620900010050-03,"Mannford, Site 3",36.099717,-96.367467,Insufficient data,2,2,2,2,2,0,2,Mannford,28,Cross Timbers
+NLA06608-0616,McGill,36.7248091858,-98.8888811653,Insufficient data,0,1,1,0,0,0,1,McGill,28,Cross Timbers
+NLA06608-1432,Mill Creek Watershed 2 Reservoir,34.5675465415,-96.8793790387,Insufficient data,0,1,1,0,0,0,1,Mill Creek Watershed 2 Reservoir,28,Cross Timbers
+NLA06608-0144,Miller Creek Reservoir,33.3952512131,-99.3913826452,Insufficient data,0,1,1,0,0,0,1,Miller Creek Reservoir,29,Ouachita Mountains
+310800030200-02,"Mountain Lake, Site 2",36.36535,-97.27979,Insufficient data,2,2,3,2,2,0,3,Mountain Lake,29,Ouachita Mountains
+310800030200-03,"Mountain Lake, Site 3",34.37113,-97.28088,Insufficient data,2,2,3,2,2,0,3,Mountain Lake,29,Ouachita Mountains
+NLA06608-0408,Mountian Lake,34.3688217786,-97.281832726,Insufficient data,0,1,1,0,0,0,1,Mountian Lake,29,Ouachita Mountains
+220200010025-01,"Muldrow, Site 1",35.44641,-94.56025,Insufficient data,2,2,1,2,2,0,2,Muldrow,37,Arkansas Valley
+220200010025-02,"Muldrow, Site 2",35.45151,-94.55983,Insufficient data,2,2,1,2,2,0,2,Muldrow,37,Arkansas Valley
+NLA06608-R764,Murray Gill Lake,37.232374,-96.195593,Insufficient data,0,1,1,0,0,0,1,Murray Gill Lake,27,Central Oklahoma/Texas Plains
+520700020130-01,"New Beggs, Site 1",35.74295,-96.02535,Insufficient data,2,2,2,2,2,0,2,New Beggs,37,Arkansas Valley
+520700020130-02,"New Beggs, Site 2",35.74617,-96.02327,Insufficient data,2,2,2,2,2,0,2,New Beggs,37,Arkansas Valley
+NLA06608-4949,Newt Graham Lake,36.0700177431,-95.5588118769,Insufficient data,0,0,1,0,0,0,1,Newt Graham Lake,37,Arkansas Valley
+620910040260-01,"Northwood Lake, Site 1",35.62315,-97.7611833,Insufficient data,2,2,2,2,0,0,2,Northwood Lake,28,Cross Timbers
+620910040260-02,"Northwood Lake, Site 2",35.62455,-97.7637,Insufficient data,2,2,2,2,0,0,2,Northwood Lake,28,Cross Timbers
+620910040260-03,"Northwood Lake, Site 3",35.62453,-97.76648333,Insufficient data,2,2,2,2,0,0,2,Northwood Lake,28,Cross Timbers
+NLA06608-0268,Okemah Lake,35.508489748,-96.3212197595,Insufficient data,0,1,1,0,0,0,1,Okemah Lake,37,Arkansas Valley
+520700010040-01,"Onapa (Checotah Municipal) Lake, Site 1",35.403583,-95.57095,Insufficient data,2,2,2,2,0,0,3,Onapa (Checotah Municipal) Lake,37,Arkansas Valley
+520700010040-02,"Onapa (Checotah Municipal) Lake, Site 2",35.401433,-95.568133,Insufficient data,2,2,2,2,0,0,2,Onapa (Checotah Municipal) Lake,37,Arkansas Valley
+520700010040-03,"Onapa (Checotah Municipal) Lake, Site 3",35.39895,-95.566517,Insufficient data,2,2,2,2,0,0,2,Onapa (Checotah Municipal) Lake,37,Arkansas Valley
+NLA06608-0440,Perry Lake,36.2389425845,-97.3481022763,Insufficient data,0,1,1,0,0,0,1,Perry Lake,28,Cross Timbers
+310830010080-01,"Public Service Reservoir # 3, Site 1",35.122356,-98.335603,Insufficient data,1,1,2,1,2,0,2,Public Service Reservoir # 3,28,Cross Timbers
+310830010080-02,"Public Service Reservoir # 3, Site 2",35.126367,-98.333333,Insufficient data,1,1,2,1,2,0,2,Public Service Reservoir # 3,28,Cross Timbers
+310830010080-03,"Public Service Reservoir # 3, Site 3",35.13065,-98.33355,Insufficient data,1,1,2,1,2,0,2,Public Service Reservoir # 3,28,Cross Timbers
+520610030040-04,"Purcell Lake, Site 4",34.99147744,-97.378512786,Insufficient data,0,2,0,0,0,0,0,Purcell Lake,28,Cross Timbers
+311310020130-01,"Quanah Parker Lake, Site 1",34.7128333,-98.64113333,Insufficient data,1,1,2,1,0,0,2,Quanah Parker Lake,27,Central Oklahoma/Texas Plains
+311310020130-02,"Quanah Parker Lake, Site 2",34.7154,-98.64061666,Insufficient data,1,1,2,1,0,0,2,Quanah Parker Lake,27,Central Oklahoma/Texas Plains
+311310020130-03,"Quanah Parker Lake, Site 3",34.71408333,-98.63703333,Insufficient data,1,1,2,1,0,0,2,Quanah Parker Lake,27,Central Oklahoma/Texas Plains
+410400010060-01,"Roebuck Lake, Site 1",33.924352,-95.530914,Insufficient data,2,2,2,2,0,0,2,Roebuck Lake,37,Arkansas Valley
+410400010060-02,"Roebuck Lake, Site 2",33.91164,-95.5347,Insufficient data,2,2,2,2,0,0,2,Roebuck Lake,37,Arkansas Valley
+410400010060-03,"Roebuck Lake, Site 3",33.925684,-95.536933,Insufficient data,2,2,2,2,0,0,2,Roebuck Lake,37,Arkansas Valley
+520530000100-01,"Rolla Lake, Site 1",35.530969,-98.025423,Insufficient data,2,2,2,2,0,0,2,Rolla Lake,37,Arkansas Valley
+520530000100-02,"Rolla Lake, Site 2",35.528242,-98.026771,Insufficient data,2,2,2,2,0,0,2,Rolla Lake,37,Arkansas Valley
+NLA06608-4382,Rush Creek Site 17 Reservoir,34.7290335375,-97.7730840507,Insufficient data,0,1,1,0,0,0,1,Rush Creek Site 17 Reservoir,28,Cross Timbers
+NLA06608-0376,Skiatook Lake,36.3088401788,-96.1285969497,Insufficient data,0,1,1,0,0,0,1,Skiatook Lake,28,Cross Timbers
+NLA06608-1508,Snyder Lake,36.425647289,-103.605353883,Insufficient data,0,1,1,0,0,0,1,Snyder Lake,27,Central Oklahoma/Texas Plains
+NLA06608-1496,Soil Conservation Service Site 6 Reservoir,33.669304465,-97.5854726488,Insufficient data,0,1,1,0,0,0,1,Soil Conservation Service Site 6 Reservoir,28,Cross Timbers
+NLA06608-1164,Sportsman Lake,35.2054432194,-96.5549335216,Insufficient data,0,1,1,0,0,0,1,Sportsman Lake,28,Cross Timbers
+NLA06608-4414,Spring Creek Lake,34.8862296993,-95.1632214063,Insufficient data,0,1,1,0,0,0,1,Spring Creek Lake,28,Cross Timbers
+NLA06608-1368,Steedman Marsh,33.7304441144,-96.7758030689,Insufficient data,0,1,1,0,0,0,1,Steedman Marsh,28,Cross Timbers
+121400040230-01,"Sunset Lake, Site 1",36.781909,-96.237167,Insufficient data,2,2,2,2,0,0,2,Sunset Lake,28,Cross Timbers
+121400040230-02,"Sunset Lake, Site 2",36.785887,-96.231961,Insufficient data,2,2,2,2,0,0,2,Sunset Lake,28,Cross Timbers
+121400040230-03,"Sunset Lake, Site 3",36.78814,-96.231265,Insufficient data,1,1,1,1,0,0,1,Sunset Lake,28,Cross Timbers
+220600020050-05,"Talawanda Lake #2,  Site 5",34.981772932,-95.793607836,Insufficient data,1,0,0,1,1,0,0,Talawanda Lake #2,37,Arkansas Valley
+NLA06608-0332,Tenkiller Ferry Lake,35.6405437748,-94.9696952435,Insufficient data,0,1,1,0,0,0,1,Tenkiller Ferry Lake,29,Ouachita Mountains
+NLA06608-1488,Tri-County Turkey Creek Site 7 Reservoir,34.7342891777,-99.6953050749,Insufficient data,0,1,1,0,0,0,1,Tri-County Turkey Creek Site 7 Reservoir,37,Arkansas Valley
+NLA06608-0204,Turkey Creek Site 6 Reservoir,35.4359244566,-99.2419745593,Insufficient data,0,1,1,0,0,0,1,Turkey Creek Site 6 Reservoir,37,Arkansas Valley
+310830060160-001RS,Unamed Tributary in Southwest Crowder Lake Watershed,35.3957,-98.7143,Insufficient data,1,1,0,1,1,0,0,Unamed Tributary in Southwest Crowder Lake Watershed,28,Cross Timbers
+NLA06608-4929,Upper Clear Boggy Creek Site 25 Reservoir,34.5893828074,-96.6052750639,Insufficient data,0,1,1,0,0,0,1,Upper Clear Boggy Creek Site 25 Reservoir,37,Arkansas Valley
+NLA06608-1240,Upper Clear Boggy Creek Site 9 Reservoir,34.524199018,-96.5030821329,Insufficient data,0,1,1,0,0,0,1,Upper Clear Boggy Creek Site 9 Reservoir,37,Arkansas Valley
+NLA06608-4610,Veteran's Lake,34.4885841094,-96.9813972726,Insufficient data,0,1,1,0,0,0,1,Veteran's Lake,27,Central Oklahoma/Texas Plains
+310800020120-01,"Veterans Lake, Site 1",34.4905333,-96.9862166,Insufficient data,2,2,2,2,0,0,2,Veterans Lake,27,Central Oklahoma/Texas Plains
+310800020120-02,"Veterans Lake, Site 2",34.4894,-96.9821166,Insufficient data,2,2,2,2,0,0,2,Veterans Lake,27,Central Oklahoma/Texas Plains
+310800020120-03,"Veterans Lake, Site 3",34.48975,-96.983166,Insufficient data,1,1,1,1,0,0,2,Veterans Lake,27,Central Oklahoma/Texas Plains
+NLA06608-1356,Vian Lake,35.5204335825,-94.970460641,Insufficient data,0,1,1,0,0,0,1,Vian Lake,37,Arkansas Valley
+620910020180-01,"Watonga, Site 1",35.94376,-98.42167,Insufficient data,2,2,2,2,2,0,2,Watonga,25,Central Great Plains
+620910020180-02,"Watonga, Site 2",35.9412,-98.42315,Insufficient data,2,2,2,2,2,0,2,Watonga,25,Central Great Plains
+620910020180-03,"Watonga, Site 3",35.94429,-98.42366,Insufficient data,2,2,2,2,2,0,2,Watonga,25,Central Great Plains
+520500010220-01,"Weleetka, Site 1",35.33544,-96.16399,Insufficient data,2,2,2,2,2,0,2,Weleetka,37,Arkansas Valley
+520500010220-02,"Weleetka, Site 2",35.33556,-96.16782,Insufficient data,2,2,2,2,2,0,2,Weleetka,37,Arkansas Valley
+NLA06608-0984,Whitegrass-Waterhole Creeks Site 9 Reservoir,33.885361177,-94.9395245607,Insufficient data,0,1,1,0,0,0,1,Whitegrass-Waterhole Creeks Site 9 Reservoir,25,Central Great Plains
+NLA06608-3320,Wister Lake,34.9019537004,-94.7657017882,Insufficient data,0,1,1,0,0,0,1,Wister Lake,37,Arkansas Valley
+NLA06608-3480,Wynnewood,34.629680864,-97.0899395476,Insufficient data,0,1,1,0,0,0,1,Wynnewood,28,Cross Timbers
+311510010020-01,"Altus Reservoir, Site 1",34.887219,-99.294858,Tier 1 - Full calibration,11,11,9,11,7,0,4,Altus Reservoir,27,Central Oklahoma/Texas Plains
+311510010020-02,"Altus Reservoir, Site 2",34.902472,-99.293703,Tier 1 - Full calibration,10,10,8,10,6,0,3,Altus Reservoir,27,Central Oklahoma/Texas Plains
+311510010020-03,"Altus Reservoir, Site 3",34.927333,-99.313008,Tier 1 - Full calibration,10,10,8,10,6,0,3,Altus Reservoir,27,Central Oklahoma/Texas Plains
+311510010020-04,"Altus Reservoir, Site 4",34.958308,-99.332197,Tier 1 - Full calibration,9,9,6,9,5,0,2,Altus Reservoir,27,Central Oklahoma/Texas Plains
+310800020100-01,"Arbuckle Reservoir, Site 1",34.433106,-97.026622,Tier 1 - Full calibration,16,15,12,16,11,1,16,Arbuckle Reservoir,28,Cross Timbers
+310800020100-02,"Arbuckle Reservoir, Site 2",34.466564,-97.038078,Tier 1 - Full calibration,15,14,11,15,9,0,15,Arbuckle Reservoir,28,Cross Timbers
+310800020100-03,"Arbuckle Reservoir, Site 3",34.460692,-97.012542,Tier 1 - Full calibration,15,14,9,15,9,0,15,Arbuckle Reservoir,28,Cross Timbers
+310800020100-04,"Arbuckle Reservoir, Site 4",34.421928,-96.986506,Tier 1 - Full calibration,15,14,10,15,9,0,15,Arbuckle Reservoir,28,Cross Timbers
+310800020100-05,"Arbuckle Reservoir, Site 5",34.441174,-97.014794,Tier 1 - Full calibration,15,14,10,15,9,0,15,Arbuckle Reservoir,28,Cross Timbers
+520710020020-01,"Arcadia Lake, Site 1",35.64894,-97.36424,Tier 1 - Full calibration,19,18,15,19,13,5,19,Arcadia Lake,28,Cross Timbers
+520710020020-02,"Arcadia Lake, Site 2",35.635114,-97.371411,Tier 1 - Full calibration,16,15,12,16,10,3,16,Arcadia Lake,28,Cross Timbers
+520710020020-03,"Arcadia Lake, Site 3",35.644892,-97.385269,Tier 1 - Full calibration,16,15,12,16,10,3,16,Arcadia Lake,28,Cross Timbers
+520710020020-04,"Arcadia Lake, Site 4",35.6277,-97.393867,Tier 1 - Full calibration,16,15,10,16,10,3,16,Arcadia Lake,28,Cross Timbers
+520710020020-05,"Arcadia Lake, Site 5",35.615944,-97.4059,Tier 1 - Full calibration,16,15,10,16,10,3,16,Arcadia Lake,28,Cross Timbers
+310800030070-01,"Ardmore City Lake, Site 1",34.226781,-97.153578,Tier 1 - Full calibration,12,11,7,12,10,2,11,Ardmore City Lake,28,Cross Timbers
+310800030070-02,"Ardmore City Lake, Site 2",34.223067,-97.154667,Tier 1 - Full calibration,9,8,4,9,7,0,8,Ardmore City Lake,28,Cross Timbers
+310800030070-03,"Ardmore City Lake, Site 3",34.217464,-97.153589,Tier 1 - Full calibration,9,8,4,9,7,0,8,Ardmore City Lake,28,Cross Timbers
+410400080020-01,"Atoka Lake, Site 1",34.446236,-96.087172,Tier 1 - Full calibration,19,18,14,19,12,2,18,Atoka Lake,37,Arkansas Valley
+410400080020-02,"Atoka Lake, Site 2",34.479039,-96.090781,Tier 1 - Full calibration,16,15,11,16,9,0,15,Atoka Lake,37,Arkansas Valley
+410400080020-03,"Atoka Lake, Site 3",34.505228,-96.075431,Tier 1 - Full calibration,16,15,11,16,9,0,15,Atoka Lake,37,Arkansas Valley
+410400080020-04,"Atoka Lake, Site 4",34.540172,-96.046244,Tier 1 - Full calibration,16,15,11,16,9,0,15,Atoka Lake,37,Arkansas Valley
+410400080020-05,"Atoka Lake, Site 5",34.555869,-96.034128,Tier 1 - Full calibration,14,13,9,14,8,0,13,Atoka Lake,37,Arkansas Valley
+520720040025-01,"Bellcow Lake, Site 1",35.731678,-96.918081,Tier 1 - Full calibration,19,17,13,19,11,2,19,Bellcow Lake,28,Cross Timbers
+520720040025-02,"Bellcow Lake, Site 2",35.736224,-96.938037,Tier 1 - Full calibration,16,15,10,16,8,0,16,Bellcow Lake,28,Cross Timbers
+520720040025-03,"Bellcow Lake, Site 3",35.743204,-96.953356,Tier 1 - Full calibration,15,15,10,15,7,0,16,Bellcow Lake,28,Cross Timbers
+121300030040-01,"Birch Lake, Site 1",36.533092,-96.163586,Tier 1 - Full calibration,18,17,9,18,11,0,18,Birch Lake,30,Ozark Highlands
+121300030040-02,"Birch Lake, Site 2",36.524503,-96.174067,Tier 1 - Full calibration,18,17,11,18,11,0,18,Birch Lake,30,Ozark Highlands
+121300030040-03,"Birch Lake, Site 3",36.521678,-96.183664,Tier 1 - Full calibration,18,17,10,18,11,0,18,Birch Lake,30,Ozark Highlands
+121300030040-04,"Birch Lake, Site 4",36.521817,-96.207866,Tier 1 - Full calibration,18,17,9,18,11,0,18,Birch Lake,30,Ozark Highlands
+120410010190-01,"Bixhoma Lake, Site 1",35.895042,-95.793661,Tier 1 - Full calibration,8,6,6,8,6,0,8,Bixhoma Lake,30,Ozark Highlands
+120410010190-02,"Bixhoma Lake, Site 2",35.892403,-95.800647,Tier 1 - Full calibration,8,6,6,8,6,0,8,Bixhoma Lake,30,Ozark Highlands
+120410010190-03,"Bixhoma Lake, Site 3",35.889581,-95.794761,Tier 1 - Full calibration,8,6,6,8,6,0,8,Bixhoma Lake,30,Ozark Highlands
+121300030300-01,"Bluestem Lake, Site 1",36.695208,-96.396675,Tier 1 - Full calibration,17,15,14,17,8,1,17,Bluestem Lake,28,Cross Timbers
+121300030300-02,"Bluestem Lake, Site 2",36.699592,-96.409742,Tier 1 - Full calibration,16,14,13,16,7,0,16,Bluestem Lake,28,Cross Timbers
+121300030300-03,"Bluestem Lake, Site 3",36.707739,-96.418303,Tier 1 - Full calibration,16,14,13,16,7,0,16,Bluestem Lake,28,Cross Timbers
+121300030300-04,"Bluestem Lake, Site 4",36.715794,-96.427997,Tier 1 - Full calibration,16,14,13,16,7,0,16,Bluestem Lake,28,Cross Timbers
+620900040190-01,"Boomer Lake, Site 1",36.144222,-97.065161,Tier 1 - Full calibration,11,8,8,11,9,0,11,Boomer Lake,28,Cross Timbers
+620900040190-02,"Boomer Lake, Site 2",36.151317,-97.063589,Tier 1 - Full calibration,11,9,8,11,9,0,11,Boomer Lake,28,Cross Timbers
+620900040190-03,"Boomer Lake, Site 3",36.158714,-97.061914,Tier 1 - Full calibration,11,9,8,11,9,0,11,Boomer Lake,28,Cross Timbers
+410210050020-01,"Broken Bow Lake, Site 1",34.1475,-94.683056,Tier 1 - Full calibration,18,17,15,18,11,1,18,Broken Bow Lake,29,Ouachita Mountains
+410210050020-02,"Broken Bow Lake, Site 2",34.161944,-94.656944,Tier 1 - Full calibration,17,16,14,17,10,0,17,Broken Bow Lake,29,Ouachita Mountains
+410210050020-03,"Broken Bow Lake, Site 3",34.186944,-94.691667,Tier 1 - Full calibration,17,16,13,17,10,0,16,Broken Bow Lake,29,Ouachita Mountains
+410210050020-04,"Broken Bow Lake, Site 4",34.189167,-94.718611,Tier 1 - Full calibration,17,16,14,17,10,0,17,Broken Bow Lake,29,Ouachita Mountains
+410210050020-05,"Broken Bow Lake, Site 5",34.206389,-94.656111,Tier 1 - Full calibration,17,16,13,17,10,0,16,Broken Bow Lake,29,Ouachita Mountains
+410210050020-06,"Broken Bow Lake, Site 6",34.225833,-94.677222,Tier 1 - Full calibration,18,17,14,18,11,1,17,Broken Bow Lake,29,Ouachita Mountains
+410210050020-07,"Broken Bow Lake, Site 7",34.246944,-94.68,Tier 1 - Full calibration,17,16,13,17,10,0,16,Broken Bow Lake,29,Ouachita Mountains
+410210050020-08,"Broken Bow Lake, Site 8",34.262222,-94.683056,Tier 1 - Full calibration,17,16,13,17,10,0,16,Broken Bow Lake,29,Ouachita Mountains
+220600030090-01,"Brown Lake, Site 1",34.83542,-95.85896,Tier 1 - Full calibration,8,9,9,8,3,0,9,Brown Lake,30,Ozark Highlands
+220600030090-02,"Brown Lake, Site 2",34.83072,-95.86696,Tier 1 - Full calibration,7,8,8,7,2,0,8,Brown Lake,30,Ozark Highlands
+220600030090-03,"Brown Lake, Site 3",34.83166,-95.87748,Tier 1 - Full calibration,7,8,8,7,2,0,8,Brown Lake,30,Ozark Highlands
+220200030040-01,"Brushy Creek Reservoir, Site 1",35.535278,-94.826944,Tier 1 - Full calibration,12,11,8,12,8,1,12,Brushy Creek Reservoir,37,Arkansas Valley
+220200030040-02,"Brushy Creek Reservoir, Site 2",35.542222,-94.822222,Tier 1 - Full calibration,11,10,7,11,7,0,11,Brushy Creek Reservoir,37,Arkansas Valley
+220200030040-03,"Brushy Creek Reservoir, Site 3",35.547778,-94.818333,Tier 1 - Full calibration,11,10,7,11,7,0,11,Brushy Creek Reservoir,37,Arkansas Valley
+720500010020-01,"Canton Lake, Site 1",36.093372,-98.588339,Tier 1 - Full calibration,17,17,17,17,8,1,17,Canton Lake,25,Central Great Plains
+720500010020-02,"Canton Lake, Site 2",36.125722,-98.601389,Tier 1 - Full calibration,16,16,15,16,6,0,16,Canton Lake,25,Central Great Plains
+720500010020-03,"Canton Lake, Site 3",36.14255,-98.633858,Tier 1 - Full calibration,16,16,15,16,6,0,16,Canton Lake,25,Central Great Plains
+720500010020-04,"Canton Lake, Site 4",36.142606,-98.654901,Tier 1 - Full calibration,6,6,5,6,6,0,6,Canton Lake,25,Central Great Plains
+720500010020-05,"Canton Lake, Site 5",36.095482,-98.58665,Tier 1 - Full calibration,4,5,4,4,4,0,4,Canton Lake,25,Central Great Plains
+410310010220-01,"Carl Albert Lake, Site 1",34.767789,-95.068258,Tier 1 - Full calibration,9,8,6,9,7,2,10,Carl Albert Lake,37,Arkansas Valley
+410310010220-02,"Carl Albert Lake, Site 2",34.772489,-95.068711,Tier 1 - Full calibration,6,6,3,6,4,0,7,Carl Albert Lake,37,Arkansas Valley
+410310010220-03,"Carl Albert Lake, Site 3",34.776803,-95.067639,Tier 1 - Full calibration,6,6,3,6,4,0,7,Carl Albert Lake,37,Arkansas Valley
+220100020060-01,"Cedar (Mena) Lake, Site 1",34.783669,-94.693889,Tier 1 - Full calibration,10,9,8,10,7,0,9,Cedar (Mena) Lake,29,Ouachita Mountains
+220100020060-02,"Cedar (Mena) Lake, Site 2",34.781753,-94.696917,Tier 1 - Full calibration,10,9,8,10,7,0,9,Cedar (Mena) Lake,29,Ouachita Mountains
+220100020060-03,"Cedar (Mena) Lake, Site 3",34.779786,-94.697917,Tier 1 - Full calibration,10,9,8,10,7,0,9,Cedar (Mena) Lake,29,Ouachita Mountains
+520700050060-01,"Chandler Lake, Site 1",35.733669,-96.908456,Tier 1 - Full calibration,10,8,4,10,8,1,8,Chandler Lake,28,Cross Timbers
+520700050060-02,"Chandler Lake, Site 2",35.741231,-96.907247,Tier 1 - Full calibration,9,8,4,9,7,0,7,Chandler Lake,28,Cross Timbers
+520700050060-03,"Chandler Lake, Site 3",35.745814,-96.906,Tier 1 - Full calibration,9,8,4,9,7,0,7,Chandler Lake,28,Cross Timbers
+121500040020-01,"Claremore, Site 1",36.325136,-95.579578,Tier 1 - Full calibration,15,13,13,15,9,2,15,Claremore,30,Ozark Highlands
+121500040020-02,"Claremore, Site 2",36.340311,-95.572514,Tier 1 - Full calibration,12,10,10,12,6,0,12,Claremore,30,Ozark Highlands
+121500040020-03,"Claremore, Site 3",36.340919,-95.559897,Tier 1 - Full calibration,12,10,10,12,6,0,12,Claremore,30,Ozark Highlands
+410300030780-01,"Clayton Lake, Site 1",34.54279,-95.30897,Tier 1 - Full calibration,4,4,4,4,2,0,4,Clayton Lake,29,Ouachita Mountains
+410300030780-02,"Clayton Lake, Site 2",34.53726,-95.30805,Tier 1 - Full calibration,3,3,4,3,2,0,4,Clayton Lake,29,Ouachita Mountains
+310810040120-01,"Clear Creek Lake, Site 1",34.585278,-97.840833,Tier 1 - Full calibration,17,15,12,17,11,0,17,Clear Creek Lake,28,Cross Timbers
+310810040120-02,"Clear Creek Lake, Site 2",34.596667,-97.844167,Tier 1 - Full calibration,17,15,11,17,11,0,17,Clear Creek Lake,28,Cross Timbers
+310810040120-03,"Clear Creek Lake, Site 3",34.612778,-97.849167,Tier 1 - Full calibration,15,14,9,15,9,0,15,Clear Creek Lake,28,Cross Timbers
+621200010270-01,"Cleveland City Lake, Site 1",36.282666999999996,-96.576197,Tier 1 - Full calibration,9,7,5,9,7,0,9,Cleveland City Lake,37,Arkansas Valley
+621200010270-02,"Cleveland City Lake, Site 2",36.282086,-96.581317,Tier 1 - Full calibration,9,7,5,9,7,0,9,Cleveland City Lake,37,Arkansas Valley
+621200010270-03,"Cleveland City Lake, Site 3",36.281367,-96.586581,Tier 1 - Full calibration,9,7,5,9,7,0,9,Cleveland City Lake,37,Arkansas Valley
+310830030280-01,"Clinton Lake, Site 1",35.435214,-99.221256,Tier 1 - Full calibration,10,9,7,10,6,1,8,Clinton Lake,28,Cross Timbers
+310830030280-02,"Clinton Lake, Site 2",35.434347,-99.228056,Tier 1 - Full calibration,9,8,7,9,5,0,7,Clinton Lake,28,Cross Timbers
+310830030280-03,"Clinton Lake, Site 3",35.429058,-99.223117,Tier 1 - Full calibration,9,8,6,9,5,0,7,Clinton Lake,28,Cross Timbers
+410400060040-01,"Coalgate City Lake, Site 1",34.57175,-96.233131,Tier 1 - Full calibration,13,11,9,13,11,2,12,Coalgate City Lake,37,Arkansas Valley
+410400060040-02,"Coalgate City Lake, Site 2",34.578842,-96.231875,Tier 1 - Full calibration,10,8,6,10,8,0,9,Coalgate City Lake,37,Arkansas Valley
+410400060040-03,"Coalgate City Lake, Site 3",34.586178,-96.231597,Tier 1 - Full calibration,10,8,6,10,8,0,9,Coalgate City Lake,37,Arkansas Valley
+311100040170-01,"Comanche Lake, Site 1",34.368333,-97.890022,Tier 1 - Full calibration,11,9,6,11,9,1,11,Comanche Lake,27,Central Oklahoma/Texas Plains
+311100040170-02,"Comanche Lake, Site 2",34.376275,-97.890092,Tier 1 - Full calibration,10,9,4,10,7,0,10,Comanche Lake,27,Central Oklahoma/Texas Plains
+311100040170-03,"Comanche Lake, Site 3",34.385828,-97.889406,Tier 1 - Full calibration,10,9,5,10,7,0,10,Comanche Lake,27,Central Oklahoma/Texas Plains
+121400050020-01,"Copan Lake, Site 1",36.886408,-95.967894,Tier 1 - Full calibration,15,12,9,15,11,1,15,Copan Lake,30,Ozark Highlands
+121400050020-02,"Copan Lake, Site 2",36.911089,-95.956356,Tier 1 - Full calibration,14,12,7,14,10,0,14,Copan Lake,30,Ozark Highlands
+121400050020-03,"Copan Lake, Site 3",36.926219,-95.952817,Tier 1 - Full calibration,14,12,7,14,10,0,14,Copan Lake,30,Ozark Highlands
+121400050020-04,"Copan Lake, Site 4",36.948386,-95.940056,Tier 1 - Full calibration,14,12,7,14,10,0,14,Copan Lake,30,Ozark Highlands
+121400050020-05,"Copan Lake, Site 5",36.939343,-95.955865,Tier 1 - Full calibration,9,7,3,9,8,0,9,Copan Lake,30,Ozark Highlands
+310830060130-01,"Crowder Lake, Site 1",35.394658,-98.701731,Tier 1 - Full calibration,14,14,14,14,8,0,14,Crowder Lake,28,Cross Timbers
+310830060130-02,"Crowder Lake, Site 2",35.399803,-98.707356,Tier 1 - Full calibration,14,14,14,14,8,0,14,Crowder Lake,28,Cross Timbers
+310830060130-03,"Crowder Lake, Site 3",35.407472,-98.710431,Tier 1 - Full calibration,14,14,14,14,8,0,14,Crowder Lake,28,Cross Timbers
+620900020120-01,"Cushing  Municipal Lake, Site 1",36.011389,-96.875031,Tier 1 - Full calibration,10,10,8,10,5,0,10,Cushing  Municipal Lake,28,Cross Timbers
+620900020120-02,"Cushing  Municipal Lake, Site 2",35.997806,-96.877706,Tier 1 - Full calibration,10,10,7,10,5,0,10,Cushing  Municipal Lake,28,Cross Timbers
+620900020120-03,"Cushing  Municipal Lake, Site 3",35.991225,-96.871831,Tier 1 - Full calibration,10,10,7,10,5,0,9,Cushing  Municipal Lake,28,Cross Timbers
+311300010080-01,"Dave Boyer (Walters) Lake, Site 1",34.376239,-98.334631,Tier 1 - Full calibration,10,8,7,10,6,1,9,Dave Boyer (Walters) Lake,27,Central Oklahoma/Texas Plains
+311300010080-02,"Dave Boyer (Walters) Lake, Site 2",34.373942,-98.337972,Tier 1 - Full calibration,9,8,7,9,5,0,8,Dave Boyer (Walters) Lake,27,Central Oklahoma/Texas Plains
+311300010080-03,"Dave Boyer (Walters) Lake, Site 3",34.375031,-98.343414,Tier 1 - Full calibration,9,8,6,9,5,0,8,Dave Boyer (Walters) Lake,27,Central Oklahoma/Texas Plains
+520700020060-01,"Dripping Springs Lake, Site 1",35.573717,-96.106853,Tier 1 - Full calibration,16,14,13,16,9,0,16,Dripping Springs Lake,30,Ozark Highlands
+520700020060-02,"Dripping Springs Lake, Site 2",35.559769,-96.111022,Tier 1 - Full calibration,16,14,12,16,9,0,16,Dripping Springs Lake,30,Ozark Highlands
+520700020060-03,"Dripping Springs Lake, Site 3",35.554692,-96.125942,Tier 1 - Full calibration,16,14,11,16,9,0,16,Dripping Springs Lake,30,Ozark Highlands
+520700020060-04,"Dripping Springs Lake, Site 4",35.569981,-96.1186448,Tier 1 - Full calibration,9,6,4,9,8,0,9,Dripping Springs Lake,30,Ozark Highlands
+520700020060-05,"Dripping Springs Lake, Site 5",35.551505,-96.1180627,Tier 1 - Full calibration,6,4,3,6,6,0,6,Dripping Springs Lake,30,Ozark Highlands
+310810040080-01,"Duncan Lake, Site 1",34.519431,-97.811086,Tier 1 - Full calibration,11,9,5,11,7,0,9,Duncan Lake,27,Central Oklahoma/Texas Plains
+310810040080-02,"Duncan Lake, Site 2",34.519869,-97.815278,Tier 1 - Full calibration,11,10,5,11,7,0,9,Duncan Lake,27,Central Oklahoma/Texas Plains
+310810040080-03,"Duncan Lake, Site 3",34.519633,-97.819167,Tier 1 - Full calibration,11,10,5,11,7,0,9,Duncan Lake,27,Central Oklahoma/Texas Plains
+311500030120-01,"Elk City Lake, Site 1",35.360419,-99.407789,Tier 1 - Full calibration,6,4,4,6,6,0,6,Elk City Lake,25,Central Great Plains
+311500030120-02,"Elk City Lake, Site 2",35.361383,-99.410417,Tier 1 - Full calibration,6,4,4,6,6,0,6,Elk City Lake,25,Central Great Plains
+311500030120-03,"Elk City Lake, Site 3",35.366617,-99.417672,Tier 1 - Full calibration,6,4,4,6,6,0,5,Elk City Lake,25,Central Great Plains
+311300040050-01,"Elmer Thomas Lake, Site 1",34.727492,-98.515336,Tier 1 - Full calibration,9,9,5,9,7,0,9,Elmer Thomas Lake,27,Central Oklahoma/Texas Plains
+311300040050-02,"Elmer Thomas Lake, Site 2",34.725258,-98.520411,Tier 1 - Full calibration,9,9,4,9,7,0,9,Elmer Thomas Lake,27,Central Oklahoma/Texas Plains
+311300040050-03,"Elmer Thomas Lake, Site 3",34.725706,-98.528747,Tier 1 - Full calibration,9,9,4,9,7,0,9,Elmer Thomas Lake,27,Central Oklahoma/Texas Plains
+311300040050-04,"Elmer Thomas Lake, Site 4",34.720333,-98.526819,Tier 1 - Full calibration,9,9,4,9,7,0,9,Elmer Thomas Lake,27,Central Oklahoma/Texas Plains
+311300040050-05,"Elmer Thomas Lake, Site 5",34.729766,-98.521734,Tier 1 - Full calibration,9,8,3,9,7,0,9,Elmer Thomas Lake,27,Central Oklahoma/Texas Plains
+310810030060-01,"Elmore City Lake, Site 1",34.62831667,-97.38895,Tier 1 - Full calibration,4,4,4,4,0,0,4,Elmore City Lake,28,Cross Timbers
+310810030060-02,"Elmore City Lake, Site 2",34.6304,-97.3880166,Tier 1 - Full calibration,4,4,4,4,0,0,4,Elmore City Lake,28,Cross Timbers
+310810030060-03,"Elmore City Lake, Site 3",34.6354333,-97.3858666,Tier 1 - Full calibration,4,4,4,4,0,0,4,Elmore City Lake,28,Cross Timbers
+121600050070-01,"Eucha Lake, Site 1",36.373889,-94.933636,Tier 1 - Full calibration,17,18,15,17,13,2,15,Eucha Lake,30,Ozark Highlands
+121600050070-02,"Eucha Lake, Site 2",36.349411,-94.876356,Tier 1 - Full calibration,14,15,12,14,10,0,12,Eucha Lake,30,Ozark Highlands
+EUC02,"Eucha Lake, Site 2",36.349411,-94.876356,Tier 1 - Full calibration,18,14,19,18,18,0,15,Eucha Lake,30,Ozark Highlands
+121600050070-03,"Eucha Lake, Site 3",36.350472,-94.814033,Tier 1 - Full calibration,14,15,12,14,10,0,11,Eucha Lake,30,Ozark Highlands
+EUC03,"Eucha Lake, Site 3",36.350472,-94.814033,Tier 1 - Full calibration,18,14,19,18,18,0,15,Eucha Lake,30,Ozark Highlands
+121600050070-04,"Eucha Lake, Site 4",36.360604,-94.897685,Tier 1 - Full calibration,5,6,5,5,5,0,3,Eucha Lake,30,Ozark Highlands
+121600050070-05,"Eucha Lake, Site 5",36.3437,-94.847634,Tier 1 - Full calibration,5,6,4,5,5,0,2,Eucha Lake,30,Ozark Highlands
+EUC16,"Eucha Lake, Site 5",36.3437,-94.847634,Tier 1 - Full calibration,18,14,19,18,18,0,15,Eucha Lake,30,Ozark Highlands
+EUC01,"Eucha Lake, Surface, Site 1",36.373889,-94.933636,Tier 1 - Full calibration,18,14,19,18,18,0,15,Eucha Lake,30,Ozark Highlands
+520700010020-01,"Eufaula Lake, Site 1",35.4615,-95.60973,Tier 1 - Full calibration,15,14,12,15,9,0,13,Eufaula Lake,37,Arkansas Valley
+220600010050-10,"Eufaula Lake, Site 10",35.2028,-95.697314,Tier 1 - Full calibration,15,15,11,15,9,0,12,Eufaula Lake,37,Arkansas Valley
+220600010050-11,"Eufaula Lake, Site 11",35.228856,-95.6338,Tier 1 - Full calibration,18,18,13,18,12,2,15,Eufaula Lake,37,Arkansas Valley
+220600050010-12,"Eufaula Lake, Site 12",35.200469,-95.593789,Tier 1 - Full calibration,18,18,14,18,12,2,15,Eufaula Lake,37,Arkansas Valley
+220600050010-13,"Eufaula Lake, Site 13",35.164397,-95.599461,Tier 1 - Full calibration,15,15,11,15,9,0,12,Eufaula Lake,37,Arkansas Valley
+220600050010-14,"Eufaula Lake, Site 14",35.101444,-95.647236,Tier 1 - Full calibration,15,15,10,15,9,0,12,Eufaula Lake,37,Arkansas Valley
+220600050010-15,"Eufaula Lake, Site 15",35.050036,-95.671122,Tier 1 - Full calibration,15,15,10,15,9,0,12,Eufaula Lake,37,Arkansas Valley
+220600050010-16,"Eufaula Lake, Site 16",35.019964,-95.602278,Tier 1 - Full calibration,15,15,11,15,9,0,12,Eufaula Lake,37,Arkansas Valley
+220600050010-17,"Eufaula Lake, Site 17",34.974711,-95.630314,Tier 1 - Full calibration,14,15,12,14,8,0,12,Eufaula Lake,37,Arkansas Valley
+520700010020-02,"Eufaula Lake, Site 2",35.427667,-95.600147,Tier 1 - Full calibration,18,18,15,18,12,2,16,Eufaula Lake,37,Arkansas Valley
+520500010020-03,"Eufaula Lake, Site 3",35.382211,-95.629992,Tier 1 - Full calibration,18,18,12,18,12,2,16,Eufaula Lake,37,Arkansas Valley
+520500010020-04,"Eufaula Lake, Site 4",35.300447,-95.553956,Tier 1 - Full calibration,15,14,10,15,9,0,13,Eufaula Lake,37,Arkansas Valley
+220600010020-05,"Eufaula Lake, Site 5",35.284831,-95.514717,Tier 1 - Full calibration,15,15,10,15,9,0,13,Eufaula Lake,37,Arkansas Valley
+220600010020-06,"Eufaula Lake, Site 6",35.307044,-95.43755,Tier 1 - Full calibration,15,15,11,15,9,0,13,Eufaula Lake,37,Arkansas Valley
+220600010020-07,"Eufaula Lake, Site 7",35.306775,-95.362056,Tier 1 - Full calibration,18,18,13,18,12,2,16,Eufaula Lake,37,Arkansas Valley
+220600010060-08,"Eufaula Lake, Site 8",35.233919,-95.49991,Tier 1 - Full calibration,18,18,13,18,12,2,16,Eufaula Lake,37,Arkansas Valley
+220600010050-09,"Eufaula Lake, Site 9",35.225264,-95.596286,Tier 1 - Full calibration,15,15,10,15,9,0,12,Eufaula Lake,37,Arkansas Valley
+621200040040-01,"Fairfax Lake, Site 1",36.606983,-96.727828,Tier 1 - Full calibration,13,11,9,13,10,2,13,Fairfax Lake,30,Ozark Highlands
+621200040040-02,"Fairfax Lake, Site 2",36.611714,-96.734278,Tier 1 - Full calibration,11,9,8,11,8,0,11,Fairfax Lake,30,Ozark Highlands
+621200040040-03,"Fairfax Lake, Site 3",36.615614,-96.735919,Tier 1 - Full calibration,10,7,7,10,8,0,10,Fairfax Lake,30,Ozark Highlands
+310830060020-01,"Fort Cobb Reservoir, Site 1",35.162153000000004,-98.456836,Tier 1 - Full calibration,20,18,17,20,10,2,20,Fort Cobb Reservoir,28,Cross Timbers
+310830060020-02,"Fort Cobb Reservoir, Site 2",35.180036,-98.462275,Tier 1 - Full calibration,17,16,14,17,7,0,17,Fort Cobb Reservoir,28,Cross Timbers
+310830060020-03,"Fort Cobb Reservoir, Site 3",35.189733,-98.473447,Tier 1 - Full calibration,17,16,14,17,7,0,17,Fort Cobb Reservoir,28,Cross Timbers
+310830060020-04,"Fort Cobb Reservoir, Site 4",35.219481,-98.509489,Tier 1 - Full calibration,17,16,14,17,7,0,17,Fort Cobb Reservoir,28,Cross Timbers
+310830060020-05,"Fort Cobb Reservoir, Site 5",35.208036,-98.491072,Tier 1 - Full calibration,17,16,14,17,7,0,17,Fort Cobb Reservoir,28,Cross Timbers
+310830060020-06,"Fort Cobb Reservoir, Site 6",35.219192,-98.480425,Tier 1 - Full calibration,8,7,5,8,7,0,8,Fort Cobb Reservoir,28,Cross Timbers
+121600010050-01,"Fort Gibson Lake, Site 1",35.871667,-95.233056,Tier 1 - Full calibration,14,12,12,14,10,1,14,Fort Gibson Lake,30,Ozark Highlands
+121600010050-02,"Fort Gibson Lake, Site 2",35.911944,-95.305556,Tier 1 - Full calibration,13,11,10,13,9,0,13,Fort Gibson Lake,30,Ozark Highlands
+121600010050-03,"Fort Gibson Lake, Site 3",35.933889,-95.271389,Tier 1 - Full calibration,13,11,10,13,9,0,13,Fort Gibson Lake,30,Ozark Highlands
+121600010050-04,"Fort Gibson Lake, Site 4",35.961667,-95.281111,Tier 1 - Full calibration,13,11,11,13,9,0,13,Fort Gibson Lake,30,Ozark Highlands
+121600010200-05,"Fort Gibson Lake, Site 5",35.94444,-95.315833,Tier 1 - Full calibration,13,11,11,13,9,0,13,Fort Gibson Lake,30,Ozark Highlands
+121600010200-06,"Fort Gibson Lake, Site 6",36.001667,-95.245,Tier 1 - Full calibration,14,12,12,14,10,1,14,Fort Gibson Lake,30,Ozark Highlands
+121600010200-07,"Fort Gibson Lake, Site 7",36.031111,-95.311389,Tier 1 - Full calibration,13,11,11,13,9,0,13,Fort Gibson Lake,30,Ozark Highlands
+121600010200-08,"Fort Gibson Lake, Site 8",36.049167,-95.285833,Tier 1 - Full calibration,13,11,11,13,9,0,13,Fort Gibson Lake,30,Ozark Highlands
+720500030020-01,"Fort Supply Lake, Site 1",36.548517,-99.565136,Tier 1 - Full calibration,18,18,18,18,11,0,16,Fort Supply Lake,25,Central Great Plains
+720500030020-02,"Fort Supply Lake, Site 2",36.529067,-99.570783,Tier 1 - Full calibration,18,18,18,18,11,0,16,Fort Supply Lake,25,Central Great Plains
+720500030020-03,"Fort Supply Lake, Site 3",36.516214,-99.571344,Tier 1 - Full calibration,18,18,17,18,11,0,16,Fort Supply Lake,25,Central Great Plains
+720500030020-04,"Fort Supply Lake, Site 4",36.539772,-99.568644,Tier 1 - Full calibration,4,6,3,4,4,0,5,Fort Supply Lake,25,Central Great Plains
+720500030020-05,"Fort Supply Lake, Site 5",36.522462,-99.577559,Tier 1 - Full calibration,4,6,3,4,4,0,5,Fort Supply Lake,25,Central Great Plains
+310840010020-01,"Foss Reservoir,  Site 1",35.539364,-99.189006,Tier 1 - Full calibration,16,15,14,16,10,2,16,Foss Reservoir,28,Cross Timbers
+310840010020-02,"Foss Reservoir, Site 2",35.562039,-99.210106,Tier 1 - Full calibration,14,13,12,14,8,0,14,Foss Reservoir,28,Cross Timbers
+310840010020-03,"Foss Reservoir, Site 3",35.577531,-99.235167,Tier 1 - Full calibration,14,13,12,14,8,0,14,Foss Reservoir,28,Cross Timbers
+310840010020-04,"Foss Reservoir, Site 4",35.601983,-99.232658,Tier 1 - Full calibration,14,13,12,14,8,0,14,Foss Reservoir,28,Cross Timbers
+310840010020-05,"Foss Reservoir, Site 5",35.611087,-99.261894,Tier 1 - Full calibration,13,13,12,13,7,0,14,Foss Reservoir,28,Cross Timbers
+310810040050-01,"Fuqua Lake, Site 1",34.600833,-97.671111,Tier 1 - Full calibration,17,16,13,17,11,0,15,Fuqua Lake,27,Central Oklahoma/Texas Plains
+310810040050-02,"Fuqua Lake, Site 2",34.616944,-97.690833,Tier 1 - Full calibration,17,16,13,17,11,0,15,Fuqua Lake,27,Central Oklahoma/Texas Plains
+310810040050-03,"Fuqua Lake, Site 3",34.617222,-97.688056,Tier 1 - Full calibration,17,16,12,17,11,0,14,Fuqua Lake,27,Central Oklahoma/Texas Plains
+310810040050-04,"Fuqua Lake, Site 4",34.625,-97.6975,Tier 1 - Full calibration,17,16,13,17,11,0,14,Fuqua Lake,27,Central Oklahoma/Texas Plains
+310810040050-05,"Fuqua Lake, Site 5",34.594167,-97.687222,Tier 1 - Full calibration,17,16,13,17,11,0,14,Fuqua Lake,27,Central Oklahoma/Texas Plains
+121600030020-01,"Grand Lake, Site 1",36.474722,-95.034722,Tier 1 - Full calibration,19,18,17,19,12,2,18,Grand Lake,30,Ozark Highlands
+121600030040-10,"Grand Lake, Site 10",36.665278,-94.770278,Tier 1 - Full calibration,18,18,18,18,12,2,18,Grand Lake,30,Ozark Highlands
+121600030040-11,"Grand Lake, Site 11",36.6525,-94.718333,Tier 1 - Full calibration,15,14,14,15,8,0,14,Grand Lake,30,Ozark Highlands
+121600030040-12,"Grand Lake, Site 12",36.698889,-94.743056,Tier 1 - Full calibration,13,13,13,13,7,0,13,Grand Lake,30,Ozark Highlands
+121600030040-13,"Grand Lake, Site 13",36.733333,-94.773889,Tier 1 - Full calibration,12,13,13,12,7,0,13,Grand Lake,30,Ozark Highlands
+121600030020-02,"Grand Lake, Site 2",36.510278,-94.965,Tier 1 - Full calibration,16,15,15,16,8,0,15,Grand Lake,30,Ozark Highlands
+121600030020-03,"Grand Lake, Site 3",36.544167,-94.930278,Tier 1 - Full calibration,16,15,15,16,8,0,15,Grand Lake,30,Ozark Highlands
+121600030030-04,"Grand Lake, Site 4",36.603611,-94.903889,Tier 1 - Full calibration,16,14,14,16,9,0,15,Grand Lake,30,Ozark Highlands
+121600030030-05,"Grand Lake, Site 5",36.563611,-94.860556,Tier 1 - Full calibration,18,17,17,18,12,2,18,Grand Lake,30,Ozark Highlands
+121600030030-06,"Grand Lake, Site 6",36.563056,-94.769167,Tier 1 - Full calibration,16,15,15,16,9,0,15,Grand Lake,30,Ozark Highlands
+121600030030-07,"Grand Lake, Site 7",36.571944,-94.833056,Tier 1 - Full calibration,16,15,13,16,9,0,14,Grand Lake,30,Ozark Highlands
+121600030030-08,"Grand Lake, Site 8",36.622778,-94.843333,Tier 1 - Full calibration,16,15,15,16,9,0,15,Grand Lake,30,Ozark Highlands
+121600030030-09,"Grand Lake, Site 9",36.6375,-94.801389,Tier 1 - Full calibration,15,15,15,15,9,0,15,Grand Lake,30,Ozark Highlands
+621010010020-01,"Great Salt Plains Lake, Site 1",36.743033,-98.156006,Tier 1 - Full calibration,13,12,11,13,6,0,14,Great Salt Plains Lake,27,Central Oklahoma/Texas Plains
+621010010020-02,"Great Salt Plains Lake, Site 2",36.730661,-98.173553,Tier 1 - Full calibration,13,12,10,13,6,0,12,Great Salt Plains Lake,27,Central Oklahoma/Texas Plains
+621010010020-03,"Great Salt Plains Lake, Site 3",36.734464,-98.194811,Tier 1 - Full calibration,6,6,4,6,5,0,8,Great Salt Plains Lake,27,Central Oklahoma/Texas Plains
+120400010130-01,"Greenleaf Lake, Site 1",35.617192,-95.166389,Tier 1 - Full calibration,15,14,12,15,8,2,15,Greenleaf Lake,29,Ouachita Mountains
+120400010130-02,"Greenleaf Lake, Site 2",35.630169,-95.159978,Tier 1 - Full calibration,12,11,9,12,5,0,12,Greenleaf Lake,29,Ouachita Mountains
+120400010130-03,"Greenleaf Lake, Site 3",35.644164,-95.152194,Tier 1 - Full calibration,12,11,9,12,5,0,11,Greenleaf Lake,29,Ouachita Mountains
+620910040060-01,"Guthrie Lake, Site 1",35.818886,-97.43885,Tier 1 - Full calibration,10,10,11,10,8,1,12,Guthrie Lake,28,Cross Timbers
+620910040060-02,"Guthrie Lake, Site 2",35.813558,-97.4379,Tier 1 - Full calibration,9,8,9,9,7,0,10,Guthrie Lake,28,Cross Timbers
+620910040060-03,"Guthrie Lake, Site 3",35.808425,-97.434203,Tier 1 - Full calibration,9,8,9,9,7,0,10,Guthrie Lake,28,Cross Timbers
+620910040060-04,"Guthrie Lake, Site 4",35.814625,-97.44171,Tier 1 - Full calibration,4,4,3,4,4,0,4,Guthrie Lake,28,Cross Timbers
+620910040060-05,"Guthrie Lake, Site 5",35.816427,-97.43782,Tier 1 - Full calibration,4,4,3,4,4,0,4,Guthrie Lake,28,Cross Timbers
+311100010140-01,"Hauani Lake, Site 1",34.05858333,-96.87761111,Tier 1 - Full calibration,4,4,4,4,0,0,4,Hauani Lake,37,Arkansas Valley
+311100010140-02,"Hauani Lake, Site 2",34.06336111,-96.87497222,Tier 1 - Full calibration,4,4,4,4,0,0,4,Hauani Lake,37,Arkansas Valley
+311100010140-03,"Hauani Lake, Site 3",34.06897222,-96.87316666,Tier 1 - Full calibration,4,3,3,4,0,0,4,Hauani Lake,37,Arkansas Valley
+311100030130-01,"Healdton Lake, Site 1",34.236464,-97.449992,Tier 1 - Full calibration,10,10,9,10,8,2,11,Healdton Lake,27,Central Oklahoma/Texas Plains
+311100030130-02,"Healdton Lake, Site 2",34.241186,-97.45275,Tier 1 - Full calibration,8,8,7,8,6,0,9,Healdton Lake,27,Central Oklahoma/Texas Plains
+311100030130-03,"Healdton Lake, Site 3",34.242831,-97.457306,Tier 1 - Full calibration,8,8,6,8,6,0,9,Healdton Lake,27,Central Oklahoma/Texas Plains
+620910040200-01,"Hefner Lake, Site 1",35.581019,-97.597431,Tier 1 - Full calibration,16,14,12,16,10,2,16,Hefner Lake,28,Cross Timbers
+620910040200-02,"Hefner Lake, Site 2",35.563242,-97.604094,Tier 1 - Full calibration,15,13,11,15,9,1,14,Hefner Lake,28,Cross Timbers
+620910040200-03,"Hefner Lake, Site 3",35.562386,-97.582694,Tier 1 - Full calibration,15,13,11,15,9,1,14,Hefner Lake,28,Cross Timbers
+120420020300-01,"Heyburn Lake, Site 1",35.94935,-96.297858,Tier 1 - Full calibration,17,16,11,17,10,0,17,Heyburn Lake,28,Cross Timbers
+120420020300-02,"Heyburn Lake, Site 2",35.948419,-96.3118,Tier 1 - Full calibration,17,16,11,17,10,0,17,Heyburn Lake,28,Cross Timbers
+120420020300-03,"Heyburn Lake, Site 3",35.963522,-96.300117,Tier 1 - Full calibration,17,16,11,17,10,0,17,Heyburn Lake,28,Cross Timbers
+120420020300-04,"Heyburn Lake, Site 4",35.952253,-96.304377,Tier 1 - Full calibration,16,16,9,16,9,0,16,Heyburn Lake,28,Cross Timbers
+520800010040-01,"Holdenville Lake, Site 1",35.028506,-96.368464,Tier 1 - Full calibration,15,13,13,15,11,2,15,Holdenville Lake,37,Arkansas Valley
+520800010040-02,"Holdenville Lake, Site 2",35.032658,-96.359089,Tier 1 - Full calibration,12,10,10,12,8,0,12,Holdenville Lake,37,Arkansas Valley
+520800010040-03,"Holdenville Lake, Site 3",35.040467,-96.344928,Tier 1 - Full calibration,12,10,10,12,8,0,11,Holdenville Lake,37,Arkansas Valley
+121300040330-01,"Hominy Lake, Site 1",36.408811,-96.415092,Tier 1 - Full calibration,11,9,9,11,7,1,11,Hominy Lake,30,Ozark Highlands
+121300040330-02,"Hominy Lake, Site 2",36.406028,-96.422717,Tier 1 - Full calibration,10,7,9,10,6,0,10,Hominy Lake,30,Ozark Highlands
+121300040330-03,"Hominy Lake, Site 3",36.398228,-96.434481,Tier 1 - Full calibration,10,8,8,10,6,0,10,Hominy Lake,30,Ozark Highlands
+121400020090-01,"Hudson Lake, Site 1",36.806283,-96.034283,Tier 1 - Full calibration,12,11,10,12,7,1,11,Hudson Lake,30,Ozark Highlands
+121400020090-02,"Hudson Lake, Site 2",36.813661,-96.040303,Tier 1 - Full calibration,11,10,8,11,6,0,10,Hudson Lake,30,Ozark Highlands
+121400020090-03,"Hudson Lake, Site 3",36.820481,-96.045575,Tier 1 - Full calibration,7,6,4,7,6,0,6,Hudson Lake,30,Ozark Highlands
+410300020020-01,"Hugo Lake, Site 1",34.012039,-95.383303,Tier 1 - Full calibration,17,16,11,17,9,1,17,Hugo Lake,29,Ouachita Mountains
+410300020020-02,"Hugo Lake, Site 2",34.043547,-95.401725,Tier 1 - Full calibration,16,15,9,16,8,0,16,Hugo Lake,29,Ouachita Mountains
+410300020020-03,"Hugo Lake, Site 3",34.074478,-95.406311,Tier 1 - Full calibration,16,15,9,16,8,0,16,Hugo Lake,29,Ouachita Mountains
+410300020020-04,"Hugo Lake, Site 4",34.084953,-95.431139,Tier 1 - Full calibration,15,14,8,15,8,0,15,Hugo Lake,29,Ouachita Mountains
+410300020020-05,"Hugo Lake, Site 5",34.096556,-95.424531,Tier 1 - Full calibration,16,15,9,16,8,0,16,Hugo Lake,29,Ouachita Mountains
+121400030020-01,"Hulah Lake, Site 1",36.930564,-96.090208,Tier 1 - Full calibration,15,12,9,15,8,1,15,Hulah Lake,30,Ozark Highlands
+121400030020-02,"Hulah Lake, Site 2",36.953897,-96.107189,Tier 1 - Full calibration,14,12,8,14,7,0,14,Hulah Lake,30,Ozark Highlands
+121400030020-03,"Hulah Lake, Site 3",36.925767,-96.115556,Tier 1 - Full calibration,14,12,8,14,7,0,14,Hulah Lake,30,Ozark Highlands
+310810040150-01,"Humphreys Lake, Site 1",34.586667,-97.885278,Tier 1 - Full calibration,18,17,11,18,9,1,18,Humphreys Lake,28,Cross Timbers
+310810040150-02,"Humphreys Lake, Site 2",34.593333,-97.894444,Tier 1 - Full calibration,17,16,10,17,7,0,17,Humphreys Lake,28,Cross Timbers
+310810040150-03,"Humphreys Lake, Site 3",34.598611,-97.902778,Tier 1 - Full calibration,17,16,10,17,7,0,17,Humphreys Lake,28,Cross Timbers
+220200040030-01,"John Wells Lake, Site 1",35.226619,-95.096739,Tier 1 - Full calibration,10,8,8,10,7,0,10,John Wells Lake,37,Arkansas Valley
+220200040030-02,"John Wells Lake, Site 2",35.231144,-95.088494,Tier 1 - Full calibration,10,8,8,10,7,0,10,John Wells Lake,37,Arkansas Valley
+220200040030-03,"John Wells Lake, Site 3",35.233947,-95.081342,Tier 1 - Full calibration,10,8,8,10,7,0,10,John Wells Lake,37,Arkansas Valley
+621210000020-01,"Kaw Lake, Site 1",36.701175,-96.924208,Tier 1 - Full calibration,18,17,13,18,12,2,19,Kaw Lake,28,Cross Timbers
+621210000020-02,"Kaw Lake, Site 2",36.746214,-96.883097,Tier 1 - Full calibration,15,15,11,15,9,0,16,Kaw Lake,28,Cross Timbers
+621210000040-03,"Kaw Lake, Site 3",36.767275,-96.826939,Tier 1 - Full calibration,18,18,13,18,12,2,19,Kaw Lake,28,Cross Timbers
+621210000040-04,"Kaw Lake, Site 4",36.799686,-96.829128,Tier 1 - Full calibration,15,15,9,15,8,0,16,Kaw Lake,28,Cross Timbers
+621210000040-05,"Kaw Lake, Site 5",36.790380999999996,-96.907986,Tier 1 - Full calibration,15,15,10,15,9,0,16,Kaw Lake,28,Cross Timbers
+621200010020-01,"Keystone Lake, Site 1",36.147261,-96.257292,Tier 1 - Full calibration,19,18,17,19,10,2,19,Keystone Lake,28,Cross Timbers
+620900010090-10,"Keystone Lake, Site 10",36.192656,-96.316681,Tier 1 - Full calibration,19,18,17,19,9,2,19,Keystone Lake,28,Cross Timbers
+620900010090-11,"Keystone Lake, Site 11",36.193875,-96.391578,Tier 1 - Full calibration,16,15,14,15,6,0,16,Keystone Lake,28,Cross Timbers
+620900010090-12,"Keystone Lake, Site 12",36.157731,-96.393536,Tier 1 - Full calibration,11,10,10,11,6,0,11,Keystone Lake,28,Cross Timbers
+621200010020-02,"Keystone Lake, Site 2",36.190156,-96.253689,Tier 1 - Full calibration,16,15,14,16,6,0,16,Keystone Lake,28,Cross Timbers
+621200010050-03,"Keystone Lake, Site 3",36.232283,-96.300078,Tier 1 - Full calibration,19,18,17,19,9,2,19,Keystone Lake,28,Cross Timbers
+621200010050-04,"Keystone Lake, Site 4",36.237714,-96.355064,Tier 1 - Full calibration,16,15,14,16,6,0,16,Keystone Lake,28,Cross Timbers
+621200010050-05,"Keystone Lake, Site 5",36.28605,-96.431553,Tier 1 - Full calibration,16,15,14,16,6,0,16,Keystone Lake,28,Cross Timbers
+620900010020-06,"Keystone Lake, Site 6",36.164683,-96.293386,Tier 1 - Full calibration,16,15,14,16,6,0,16,Keystone Lake,28,Cross Timbers
+620900010020-07,"Keystone Lake, Site 7",36.114442,-96.337119,Tier 1 - Full calibration,16,15,14,16,6,0,16,Keystone Lake,28,Cross Timbers
+620900010020-08,"Keystone Lake, Site 8",36.139686,-96.328547,Tier 1 - Full calibration,19,18,17,19,9,2,19,Keystone Lake,28,Cross Timbers
+620900010020-09,"Keystone Lake, Site 9",36.166564,-96.312614,Tier 1 - Full calibration,16,15,14,16,6,0,16,Keystone Lake,28,Cross Timbers
+620900040280-01,"Lake Carl Blackwell, Site 1",36.134231,-97.194942,Tier 1 - Full calibration,15,12,12,15,9,0,5,Lake Carl Blackwell,28,Cross Timbers
+620900040280-02,"Lake Carl Blackwell, Site 2",36.135719,-97.231956,Tier 1 - Full calibration,15,13,11,15,9,0,5,Lake Carl Blackwell,28,Cross Timbers
+620900040280-03,"Lake Carl Blackwell, Site 3",36.147764,-97.212683,Tier 1 - Full calibration,15,13,12,15,9,0,5,Lake Carl Blackwell,28,Cross Timbers
+620900040280-04,"Lake Carl Blackwell, Site 4",36.141481,-97.263028,Tier 1 - Full calibration,15,13,11,15,9,0,5,Lake Carl Blackwell,28,Cross Timbers
+620900040280-05,"Lake Carl Blackwell, Site 5",36.133741,-97.212473,Tier 1 - Full calibration,6,4,3,6,6,0,0,Lake Carl Blackwell,28,Cross Timbers
+310830040020-01,"Lake Chickasha, Site 1",35.131989,-98.132894,Tier 1 - Full calibration,17,16,11,17,10,0,15,Lake Chickasha,28,Cross Timbers
+310830040020-02,"Lake Chickasha, Site 2",35.147367,-98.150164,Tier 1 - Full calibration,17,16,12,17,10,0,15,Lake Chickasha,28,Cross Timbers
+310830040020-03,"Lake Chickasha, Site 3",35.149952999999996,-98.130714,Tier 1 - Full calibration,17,16,12,17,10,0,15,Lake Chickasha,28,Cross Timbers
+520530000080-01,"Lake El Reno, Site 1",35.527264,-97.986875,Tier 1 - Full calibration,11,9,5,11,7,0,11,Lake El Reno,28,Cross Timbers
+520530000080-02,"Lake El Reno, Site 2",35.523914,-97.989681,Tier 1 - Full calibration,11,9,5,11,7,0,11,Lake El Reno,28,Cross Timbers
+520530000080-03,"Lake El Reno, Site 3",35.519553,-97.996231,Tier 1 - Full calibration,11,9,5,11,7,0,11,Lake El Reno,28,Cross Timbers
+311300030020-01,"Lake Ellsworth, Site 1",34.795461,-98.366422,Tier 1 - Full calibration,17,16,12,17,8,1,16,Lake Ellsworth,27,Central Oklahoma/Texas Plains
+311300030020-02,"Lake Ellsworth, Site 2",34.821847,-98.355961,Tier 1 - Full calibration,16,15,11,16,7,0,15,Lake Ellsworth,27,Central Oklahoma/Texas Plains
+311300030020-03,"Lake Ellsworth, Site 3",34.8574,-98.362022,Tier 1 - Full calibration,16,15,11,16,7,0,15,Lake Ellsworth,27,Central Oklahoma/Texas Plains
+311300030020-04,"Lake Ellsworth, Site 4",34.817625,-98.339705,Tier 1 - Full calibration,16,15,11,16,7,0,15,Lake Ellsworth,27,Central Oklahoma/Texas Plains
+311300030020-05,"Lake Ellsworth, Site 5",34.84256,-98.358422,Tier 1 - Full calibration,8,7,4,8,7,0,8,Lake Ellsworth,27,Central Oklahoma/Texas Plains
+720900000240-01,"Lake Etling, Site 1",36.849558,-102.868567,Tier 1 - Full calibration,7,6,5,7,5,0,7,Lake Etling,25,Central Great Plains
+720900000240-02,"Lake Etling, Site 2",36.848783,-102.874417,Tier 1 - Full calibration,7,6,5,7,5,0,7,Lake Etling,25,Central Great Plains
+720900000240-03,"Lake Etling, Site 3",36.848056,-102.880594,Tier 1 - Full calibration,7,6,4,7,5,0,7,Lake Etling,25,Central Great Plains
+311310030120-01,"Lake Frederick, Site 1",34.513272,-98.8876,Tier 1 - Full calibration,15,15,13,15,11,1,16,Lake Frederick,28,Cross Timbers
+311310030120-02,"Lake Frederick, Site 2",34.526969,-98.881944,Tier 1 - Full calibration,14,14,12,14,10,0,15,Lake Frederick,28,Cross Timbers
+311310030120-03,"Lake Frederick, Site 3",34.542636,-98.8815,Tier 1 - Full calibration,13,13,11,13,10,0,14,Lake Frederick,28,Cross Timbers
+311310030120-04,"Lake Frederick, Site 4",34.525915,-98.888384,Tier 1 - Full calibration,5,6,3,5,5,0,5,Lake Frederick,28,Cross Timbers
+311310030120-05,"Lake Frederick, Site 5",34.534711,-98.879471,Tier 1 - Full calibration,5,6,3,5,5,0,5,Lake Frederick,28,Cross Timbers
+520700010180-01,"Lake Henryetta, Site 1",35.417047,-95.922617,Tier 1 - Full calibration,16,16,11,16,8,2,16,Lake Henryetta,37,Arkansas Valley
+520700010180-02,"Lake Henryetta, Site 2",35.412942,-95.927867,Tier 1 - Full calibration,14,13,8,14,6,0,13,Lake Henryetta,37,Arkansas Valley
+520700010180-03,"Lake Henryetta, Site 3",35.398314,-95.934072,Tier 1 - Full calibration,14,13,8,14,6,0,13,Lake Henryetta,37,Arkansas Valley
+121600020020-01,"Lake Hudson, Site 1",36.232988,-95.179078,Tier 1 - Full calibration,18,18,17,18,9,1,16,Lake Hudson,30,Ozark Highlands
+121600020020-02,"Lake Hudson, Site 2",36.270294,-95.133557,Tier 1 - Full calibration,17,17,16,17,8,0,16,Lake Hudson,30,Ozark Highlands
+121600020020-03,"Lake Hudson, Site 3",36.263314,-95.150106,Tier 1 - Full calibration,17,17,16,17,8,0,16,Lake Hudson,30,Ozark Highlands
+121600020020-04,"Lake Hudson, Site 4",36.299179,-95.167404,Tier 1 - Full calibration,16,16,15,16,7,0,16,Lake Hudson,30,Ozark Highlands
+121600020140-05,"Lake Hudson, Site 5",36.341158,-95.163573,Tier 1 - Full calibration,17,17,16,17,8,1,17,Lake Hudson,30,Ozark Highlands
+121600020140-06,"Lake Hudson, Site 6",36.375849,-95.124886,Tier 1 - Full calibration,16,16,15,16,7,0,16,Lake Hudson,30,Ozark Highlands
+121600020140-07,"Lake Hudson, Site 7",36.401238,-95.146712,Tier 1 - Full calibration,16,16,15,16,7,0,16,Lake Hudson,30,Ozark Highlands
+121600020140-08,"Lake Hudson, Site 8",36.384866,-95.108341,Tier 1 - Full calibration,16,16,15,16,7,0,16,Lake Hudson,30,Ozark Highlands
+310800030140-01,"Lake Jean Neustadt, Site 1",34.282578,-97.167722,Tier 1 - Full calibration,12,11,6,12,8,1,12,Lake Jean Neustadt,37,Arkansas Valley
+310800030140-02,"Lake Jean Neustadt, Site 2",34.295367,-97.162647,Tier 1 - Full calibration,11,10,5,11,7,0,11,Lake Jean Neustadt,37,Arkansas Valley
+310800030140-03,"Lake Jean Neustadt, Site 3",34.293317,-97.178081,Tier 1 - Full calibration,11,10,5,11,7,0,11,Lake Jean Neustadt,37,Arkansas Valley
+520600010100-01,"Lake Konawa, Site 1",34.961356,-96.704008,Tier 1 - Full calibration,15,14,9,15,7,0,14,Lake Konawa,37,Arkansas Valley
+520600010100-02,"Lake Konawa, Site 2",34.957619,-96.726661000000007,Tier 1 - Full calibration,15,14,11,15,7,0,14,Lake Konawa,37,Arkansas Valley
+520600010100-03,"Lake Konawa, Site 3",34.970539,-96.708031,Tier 1 - Full calibration,15,14,10,15,7,0,14,Lake Konawa,37,Arkansas Valley
+520600010100-04,"Lake Konawa, Site 4",34.973794,-96.718394,Tier 1 - Full calibration,7,6,4,7,6,0,4,Lake Konawa,37,Arkansas Valley
+311300040070-01,"Lake Lawtonka, Site 1",34.737367,-98.50345,Tier 1 - Full calibration,17,17,14,17,9,2,18,Lake Lawtonka,27,Central Oklahoma/Texas Plains
+311300040070-02,"Lake Lawtonka, Site 2",34.748669,-98.501594,Tier 1 - Full calibration,16,15,13,16,8,0,16,Lake Lawtonka,27,Central Oklahoma/Texas Plains
+311300040070-03,"Lake Lawtonka, Site 3",34.760511,-98.507839,Tier 1 - Full calibration,16,15,13,16,8,0,16,Lake Lawtonka,27,Central Oklahoma/Texas Plains
+311300040070-04,"Lake Lawtonka, Site 4",34.771281,-98.523144,Tier 1 - Full calibration,16,15,12,16,8,0,16,Lake Lawtonka,27,Central Oklahoma/Texas Plains
+311300040070-05,"Lake Lawtonka, Site 5",34.764314,-98.517641,Tier 1 - Full calibration,6,5,3,6,6,0,6,Lake Lawtonka,27,Central Oklahoma/Texas Plains
+310820020070-01,"Lake Louis Burtschi, Site 1",34.964742,-98.064144,Tier 1 - Full calibration,6,5,4,6,6,0,6,Lake Louis Burtschi,27,Central Oklahoma/Texas Plains
+310820020070-02,"Lake Louis Burtschi, Site 2",34.969219,-98.073494,Tier 1 - Full calibration,6,5,4,6,6,0,6,Lake Louis Burtschi,27,Central Oklahoma/Texas Plains
+310820020070-03,"Lake Louis Burtschi, Site 3",34.96767,-98.068135,Tier 1 - Full calibration,6,5,4,6,6,0,6,Lake Louis Burtschi,27,Central Oklahoma/Texas Plains
+220600020030-01,"Lake McAlester, Site 1",35.018469,-95.804356,Tier 1 - Full calibration,18,16,15,18,14,2,19,Lake McAlester,37,Arkansas Valley
+220600020030-02,"Lake McAlester, Site 2",35.029989,-95.820964,Tier 1 - Full calibration,15,14,12,15,11,0,16,Lake McAlester,37,Arkansas Valley
+220600020030-03,"Lake McAlester, Site 3",35.031711,-95.850161,Tier 1 - Full calibration,15,14,12,15,11,0,16,Lake McAlester,37,Arkansas Valley
+620900040240-01,"Lake McMurtry, Site 1",36.164644,-97.180925,Tier 1 - Full calibration,16,13,13,16,8,1,16,Lake McMurtry,28,Cross Timbers
+620900040240-02,"Lake McMurtry, Site 2",36.183236,-97.181558,Tier 1 - Full calibration,15,13,12,15,7,0,15,Lake McMurtry,28,Cross Timbers
+620900040240-03,"Lake McMurtry, Site 3",36.192053,-97.192306,Tier 1 - Full calibration,15,13,12,15,7,0,15,Lake McMurtry,28,Cross Timbers
+620900040240-04,"Lake McMurtry, Site 4",36.170249,-97.1836754,Tier 1 - Full calibration,6,4,3,6,6,0,6,Lake McMurtry,28,Cross Timbers
+620900040240-05,"Lake McMurtry, Site 5",36.196226,-97.199847,Tier 1 - Full calibration,6,4,3,6,6,0,6,Lake McMurtry,28,Cross Timbers
+311100020090-01,"Lake Murray, Site 1",34.031111,-97.063889,Tier 1 - Full calibration,16,16,16,16,6,1,16,Lake Murray,28,Cross Timbers
+311100020090-02,"Lake Murray, Site 2",34.061111,-97.066389,Tier 1 - Full calibration,15,15,15,15,4,0,15,Lake Murray,28,Cross Timbers
+311100020090-03,"Lake Murray, Site 3",34.095,-97.064722,Tier 1 - Full calibration,15,15,15,15,4,0,15,Lake Murray,28,Cross Timbers
+311100020090-04,"Lake Murray, Site 4",34.074444,-97.088333,Tier 1 - Full calibration,15,15,15,15,4,0,15,Lake Murray,28,Cross Timbers
+311100020090-05,"Lake Murray, Site 5",34.118889,-97.105,Tier 1 - Full calibration,15,15,15,15,4,0,15,Lake Murray,28,Cross Timbers
+520520000260-01,"Lake Overholser, Site 1",35.487161,-97.668244,Tier 1 - Full calibration,17,15,16,17,8,2,17,Lake Overholser,28,Cross Timbers
+520520000260-02,"Lake Overholser, Site 2",35.499739,-97.676594,Tier 1 - Full calibration,16,14,15,16,7,1,16,Lake Overholser,28,Cross Timbers
+520520000260-03,"Lake Overholser, Site 3",35.508479,-97.670012,Tier 1 - Full calibration,16,14,14,16,6,0,16,Lake Overholser,28,Cross Timbers
+520520000260-04,"Lake Overholser, Site 4",35.492335,-97.675602,Tier 1 - Full calibration,4,4,4,4,4,0,4,Lake Overholser,28,Cross Timbers
+520520000260-05,"Lake Overholser, Site 5",35.506607,-97.677657,Tier 1 - Full calibration,4,4,4,4,4,0,4,Lake Overholser,28,Cross Timbers
+410300020220-01,"Lake Ozzie Cobb, Site 1",34.243917,-95.388631,Tier 1 - Full calibration,8,8,4,8,6,0,8,Lake Ozzie Cobb,37,Arkansas Valley
+410300020220-02,"Lake Ozzie Cobb, Site 2",34.246222,-95.387464,Tier 1 - Full calibration,8,8,4,8,6,0,8,Lake Ozzie Cobb,37,Arkansas Valley
+410300020220-03,"Lake Ozzie Cobb, Site 3",34.248381,-95.386586,Tier 1 - Full calibration,8,8,4,8,6,0,8,Lake Ozzie Cobb,37,Arkansas Valley
+121300030230-01,"Lake Pawhuska, Site 1",36.645464,-96.395617,Tier 1 - Full calibration,9,7,5,9,7,1,9,Lake Pawhuska,30,Ozark Highlands
+121300030230-02,"Lake Pawhuska, Site 2",36.650842,-96.397917,Tier 1 - Full calibration,8,7,4,8,6,0,8,Lake Pawhuska,30,Ozark Highlands
+121300030230-03,"Lake Pawhuska, Site 3",36.653194,-96.398667,Tier 1 - Full calibration,8,7,4,8,6,0,8,Lake Pawhuska,30,Ozark Highlands
+621200020210-01,"Lake Ponca, Site 1",36.721492,-97.025436,Tier 1 - Full calibration,18,17,14,18,12,2,19,Lake Ponca,28,Cross Timbers
+621200020210-02,"Lake Ponca, Site 2",36.736133,-97.034278,Tier 1 - Full calibration,16,16,12,16,10,0,17,Lake Ponca,28,Cross Timbers
+621200020210-03,"Lake Ponca, Site 3",36.724317,-97.009569,Tier 1 - Full calibration,16,16,12,16,10,0,17,Lake Ponca,28,Cross Timbers
+410300010040-01,"Lake Raymond Gary, Site 1",33.991769,-95.259231,Tier 1 - Full calibration,9,9,5,9,7,0,9,Lake Raymond Gary,37,Arkansas Valley
+410300010040-02,"Lake Raymond Gary, Site 2",33.999692,-95.263342,Tier 1 - Full calibration,9,9,5,9,7,0,9,Lake Raymond Gary,37,Arkansas Valley
+410300010040-03,"Lake Raymond Gary, Site 3",34.015433,-95.260297,Tier 1 - Full calibration,8,8,4,8,7,0,8,Lake Raymond Gary,37,Arkansas Valley
+120420020130-01,"Lake Sahoma, Site 1",36.029922,-96.152269,Tier 1 - Full calibration,12,10,8,12,11,2,12,Lake Sahoma,28,Cross Timbers
+120420020130-02,"Lake Sahoma, Site 2",36.034219,-96.154958,Tier 1 - Full calibration,10,8,6,10,9,0,10,Lake Sahoma,28,Cross Timbers
+120420020130-03,"Lake Sahoma, Site 3",36.035536,-96.163456,Tier 1 - Full calibration,10,8,6,10,9,0,10,Lake Sahoma,28,Cross Timbers
+120420020130-04,"Lake Sahoma, Site 4",36.035382,-96.168609,Tier 1 - Full calibration,5,5,3,5,5,0,5,Lake Sahoma,28,Cross Timbers
+120420020130-05,"Lake Sahoma, Site 5",36.032777,-96.151137,Tier 1 - Full calibration,4,4,3,4,4,0,4,Lake Sahoma,28,Cross Timbers
+520810000130-01,"Lake Stanley Draper, Site 1",35.327661,-97.351253,Tier 1 - Full calibration,16,14,13,16,10,1,16,Lake Stanley Draper,28,Cross Timbers
+520810000130-02,"Lake Stanley Draper, Site 2",35.341964,-97.351633,Tier 1 - Full calibration,15,13,11,15,9,0,14,Lake Stanley Draper,28,Cross Timbers
+520810000130-03,"Lake Stanley Draper, Site 3",35.358208,-97.360614,Tier 1 - Full calibration,15,12,11,15,9,0,14,Lake Stanley Draper,28,Cross Timbers
+520810000130-04,"Lake Stanley Draper, Site 4",35.372653,-97.372258,Tier 1 - Full calibration,11,9,8,11,9,0,11,Lake Stanley Draper,28,Cross Timbers
+520810000130-05,"Lake Stanley Draper, Site 5",35.364197,-97.357589,Tier 1 - Full calibration,6,4,3,6,6,0,6,Lake Stanley Draper,28,Cross Timbers
+311100010020-01,"Lake Texoma, Site 1",33.829969,-96.576756,Tier 1 - Full calibration,17,16,13,17,11,1,6,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-10,"Lake Texoma, Site 10",33.785928,-96.796225,Tier 1 - Full calibration,16,15,12,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-11,"Lake Texoma, Site 11",33.868203,-96.838269,Tier 1 - Full calibration,16,15,12,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010080-12,"Lake Texoma, Site 12",33.894283,-96.888758,Tier 1 - Full calibration,16,15,12,16,10,1,6,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010080-13,"Lake Texoma, Site 13",33.942519,-96.907375,Tier 1 - Full calibration,15,14,11,15,9,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010020-02,"Lake Texoma, Site 2",33.893017,-96.611267,Tier 1 - Full calibration,16,15,11,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+310800010011-03,"Lake Texoma, Site 3",33.957564,-96.587081,Tier 1 - Full calibration,17,16,12,17,11,1,6,Lake Texoma,27,Central Oklahoma/Texas Plains
+310800010011-04,"Lake Texoma, Site 4",34.007622,-96.629931,Tier 1 - Full calibration,16,15,11,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-05,"Lake Texoma, Site 5",33.904456,-96.67805,Tier 1 - Full calibration,17,16,12,17,11,1,6,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-06,"Lake Texoma, Site 6",33.856039,-96.691514,Tier 1 - Full calibration,16,15,11,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-07,"Lake Texoma, Site 7",33.828142,-96.737644,Tier 1 - Full calibration,16,15,11,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-08,"Lake Texoma, Site 8",33.846936,-96.780069,Tier 1 - Full calibration,16,15,12,16,10,0,5,Lake Texoma,27,Central Oklahoma/Texas Plains
+311100010030-09,"Lake Texoma, Site 9",33.819892,-96.805361,Tier 1 - Full calibration,17,16,13,17,11,1,6,Lake Texoma,27,Central Oklahoma/Texas Plains
+520810000020-01,"Lake Thunderbird, Site 1",35.223333,-97.220833,Tier 1 - Full calibration,23,23,23,23,23,13,18,Lake Thunderbird,28,Cross Timbers
+520810000020-11,"Lake Thunderbird, Site 11",35.212375,-97.302454,Tier 1 - Full calibration,14,14,14,14,14,4,10,Lake Thunderbird,28,Cross Timbers
+520810000020-02,"Lake Thunderbird, Site 2",35.238889,-97.228889,Tier 1 - Full calibration,18,22,22,18,14,9,17,Lake Thunderbird,28,Cross Timbers
+520810000020-03,"Lake Thunderbird, Site 3",35.262222,-97.238889,Tier 1 - Full calibration,14,22,22,14,10,2,17,Lake Thunderbird,28,Cross Timbers
+520810000020-04,"Lake Thunderbird, Site 4",35.224444,-97.250833,Tier 1 - Full calibration,18,22,22,18,14,9,17,Lake Thunderbird,28,Cross Timbers
+520810000020-05,"Lake Thunderbird, Site 5",35.220278,-97.290556,Tier 1 - Full calibration,15,22,22,15,11,2,16,Lake Thunderbird,28,Cross Timbers
+520810000020-06,"Lake Thunderbird, Site 6",35.231667,-97.305556,Tier 1 - Full calibration,20,22,22,20,20,7,17,Lake Thunderbird,28,Cross Timbers
+520810000020-07,"Lake Thunderbird, Site 7",35.203056,-97.258056,Tier 1 - Full calibration,11,16,17,11,8,0,13,Lake Thunderbird,28,Cross Timbers
+520810000020-08,"Lake Thunderbird, Site 8",35.285692,-97.244119,Tier 1 - Full calibration,15,15,15,15,15,5,11,Lake Thunderbird,28,Cross Timbers
+310830020110-01,"Lake Vanderwork, Site 1",35.16295,-98.824381,Tier 1 - Full calibration,6,4,3,6,6,0,6,Lake Vanderwork,28,Cross Timbers
+310830020110-02,"Lake Vanderwork, Site 2",35.167878,-98.826819,Tier 1 - Full calibration,6,5,3,6,6,0,6,Lake Vanderwork,28,Cross Timbers
+310830020110-03,"Lake Vanderwork, Site 3",35.171822,-98.830539,Tier 1 - Full calibration,6,5,3,6,6,0,6,Lake Vanderwork,28,Cross Timbers
+520620050200-01,"Lake Vincent, Site 1",36.056672,-99.916445,Tier 1 - Full calibration,8,6,4,8,6,0,6,Lake Vincent,37,Arkansas Valley
+520620050200-02,"Lake Vincent, Site 2",36.058798,-99.923054,Tier 1 - Full calibration,8,7,4,8,6,0,6,Lake Vincent,37,Arkansas Valley
+520620050200-03,"Lake Vincent, Site 3",36.061864,-99.926626,Tier 1 - Full calibration,8,7,4,8,6,0,6,Lake Vincent,37,Arkansas Valley
+220100040150-01,"Lake Wayne Wallace, Site 1",34.993027,-95.356202,Tier 1 - Full calibration,11,10,11,11,5,0,11,Lake Wayne Wallace,28,Cross Timbers
+220100040150-02,"Lake Wayne Wallace, Site 2",34.998718,-95.357397,Tier 1 - Full calibration,11,11,11,11,5,0,11,Lake Wayne Wallace,28,Cross Timbers
+220100040150-03,"Lake Wayne Wallace, Site 3",35.001418,-95.360476,Tier 1 - Full calibration,6,6,6,6,5,0,6,Lake Wayne Wallace,28,Cross Timbers
+620900030180-01,"Langston Lake, Site 1",35.925122,-97.278531,Tier 1 - Full calibration,13,12,10,13,9,1,12,Langston Lake,28,Cross Timbers
+620900030180-02,"Langston Lake, Site 2",35.918419,-97.275506,Tier 1 - Full calibration,12,11,8,12,8,0,11,Langston Lake,28,Cross Timbers
+620900030180-03,"Langston Lake, Site 3",35.910128,-97.275894,Tier 1 - Full calibration,12,11,8,12,8,0,10,Langston Lake,28,Cross Timbers
+620910040080-01,"Liberty Lake, Site 1",35.804328,-97.4667,Tier 1 - Full calibration,12,10,9,12,9,2,12,Liberty Lake,28,Cross Timbers
+620910040080-02,"Liberty Lake, Site 2",35.798689,-97.464244,Tier 1 - Full calibration,9,7,7,9,7,0,9,Liberty Lake,28,Cross Timbers
+620910040080-03,"Liberty Lake, Site 3",35.79005,-97.460533,Tier 1 - Full calibration,9,7,7,9,7,0,9,Liberty Lake,28,Cross Timbers
+220100040100-01,"Lloyd Church, Site 1",34.881656,-95.336564,Tier 1 - Full calibration,11,10,10,11,7,2,11,Lloyd Church,37,Arkansas Valley
+220100040100-02,"Lloyd Church, Site 2",34.876486,-95.337886,Tier 1 - Full calibration,9,8,9,9,5,0,9,Lloyd Church,37,Arkansas Valley
+220100040100-03,"Lloyd Church, Site 3",34.875664,-95.343292,Tier 1 - Full calibration,9,8,8,9,5,0,9,Lloyd Church,37,Arkansas Valley
+621200030060-01,"Lone Chimney Lake, Site 1",36.255375,-96.825731,Tier 1 - Full calibration,14,12,12,14,9,2,15,Lone Chimney Lake,28,Cross Timbers
+621200030060-02,"Lone Chimney Lake, Site 2",36.249817,-96.832953,Tier 1 - Full calibration,12,10,10,12,7,0,13,Lone Chimney Lake,28,Cross Timbers
+621200030060-03,"Lone Chimney Lake, Site 3",36.242061,-96.832764,Tier 1 - Full calibration,12,10,9,12,7,0,12,Lone Chimney Lake,28,Cross Timbers
+621200030060-04,"Lone Chimney Lake, Site 4",36.239335,-96.844809,Tier 1 - Full calibration,4,4,4,4,4,0,4,Lone Chimney Lake,28,Cross Timbers
+410400070020-01,"McGee Creek Reservoir, Site 1",34.313364,-95.874431,Tier 1 - Full calibration,17,16,12,17,12,1,17,McGee Creek Reservoir,29,Ouachita Mountains
+410400070020-02,"McGee Creek Reservoir, Site 2",34.359761,-95.870411,Tier 1 - Full calibration,16,15,11,16,11,0,15,McGee Creek Reservoir,29,Ouachita Mountains
+410400070020-03,"McGee Creek Reservoir, Site 3",34.332319,-95.913739,Tier 1 - Full calibration,16,14,11,16,11,0,15,McGee Creek Reservoir,29,Ouachita Mountains
+410400070020-04,"McGee Creek Reservoir, Site 4",34.375575,-95.900186,Tier 1 - Full calibration,16,15,11,16,11,0,15,McGee Creek Reservoir,29,Ouachita Mountains
+410400070020-05,"McGee Creek Reservoir, Site 5",34.325118,-95.881543,Tier 1 - Full calibration,16,15,11,16,11,0,16,McGee Creek Reservoir,29,Ouachita Mountains
+520700040370-01,"Meeker Lake, Site 1",35.497461,-96.936797,Tier 1 - Full calibration,10,8,6,10,7,0,10,Meeker Lake,28,Cross Timbers
+520700040370-02,"Meeker Lake, Site 2",35.491864,-96.943914,Tier 1 - Full calibration,10,8,7,10,7,0,10,Meeker Lake,28,Cross Timbers
+520700040370-03,"Meeker Lake, Site 3",35.487328,-96.945911,Tier 1 - Full calibration,10,8,7,10,7,0,10,Meeker Lake,28,Cross Timbers
+310800030200-01,"Mountain Lake, Site 1",34.36622,-97.28484,Tier 1 - Full calibration,3,3,3,3,2,0,3,Mountain Lake,29,Ouachita Mountains
+220100010050-01,"New Spiro Lake, Site 1",35.193536,-94.616222,Tier 1 - Full calibration,10,10,10,10,6,1,10,New Spiro Lake,28,Cross Timbers
+220100010050-02,"New Spiro Lake, Site 2",35.199681,-94.619847,Tier 1 - Full calibration,9,9,9,9,5,0,9,New Spiro Lake,28,Cross Timbers
+220100010050-03,"New Spiro Lake, Site 3",35.207589,-94.629594,Tier 1 - Full calibration,9,9,9,9,5,0,9,New Spiro Lake,28,Cross Timbers
+520700020290-01,"Okemah Lake, Site 1",35.533583,-96.316953,Tier 1 - Full calibration,17,15,12,17,9,2,17,Okemah Lake,37,Arkansas Valley
+520700020290-02,"Okemah Lake, Site 2",35.525367,-96.320339,Tier 1 - Full calibration,14,12,8,14,6,0,14,Okemah Lake,37,Arkansas Valley
+520700020290-03,"Okemah Lake, Site 3",35.52375,-96.332306,Tier 1 - Full calibration,14,12,9,14,6,0,14,Okemah Lake,37,Arkansas Valley
+520700020290-04,"Okemah Lake, Site 4",35.508911,-96.323119,Tier 1 - Full calibration,12,10,6,12,6,0,12,Okemah Lake,37,Arkansas Valley
+520700020040-01,"Okmulgee Lake, Site 1",35.62215,-96.062664,Tier 1 - Full calibration,15,13,11,15,8,1,15,Okmulgee Lake,37,Arkansas Valley
+520700020040-02,"Okmulgee Lake, Site 2",35.612619,-96.074736,Tier 1 - Full calibration,14,12,10,14,7,0,14,Okmulgee Lake,37,Arkansas Valley
+520700020040-03,"Okmulgee Lake, Site 3",35.5973,-96.081108,Tier 1 - Full calibration,14,12,10,14,7,0,14,Okmulgee Lake,37,Arkansas Valley
+121510010020-01,"Oologah Lake, Site 1",36.422569,-95.676092,Tier 1 - Full calibration,15,14,11,15,7,1,15,Oologah Lake,30,Ozark Highlands
+121510010020-02,"Oologah Lake, Site 2",36.436083000000004,-95.656497,Tier 1 - Full calibration,14,13,10,14,6,0,14,Oologah Lake,30,Ozark Highlands
+121510010020-03,"Oologah Lake, Site 3",36.455378,-95.599028,Tier 1 - Full calibration,14,13,10,14,6,0,14,Oologah Lake,30,Ozark Highlands
+121510010020-04,"Oologah Lake, Site 4",36.493028,-95.596817,Tier 1 - Full calibration,14,13,10,14,6,0,14,Oologah Lake,30,Ozark Highlands
+121510010020-05,"Oologah Lake, Site 5",36.537147,-95.606822,Tier 1 - Full calibration,14,13,10,14,6,0,14,Oologah Lake,30,Ozark Highlands
+121510010020-06,"Oologah Lake, Site 6",36.573406,-95.587617,Tier 1 - Full calibration,15,14,11,15,7,1,14,Oologah Lake,30,Ozark Highlands
+121510010020-07,"Oologah Lake, Site 7",36.603967,-95.565636,Tier 1 - Full calibration,14,13,9,14,6,0,13,Oologah Lake,30,Ozark Highlands
+310810010180-01,"Pauls Valley City Lake, Site 1",34.769386,-97.204419,Tier 1 - Full calibration,18,16,14,18,12,1,18,Pauls Valley City Lake,28,Cross Timbers
+310810010180-02,"Pauls Valley City Lake, Site 2",34.779647,-97.203997,Tier 1 - Full calibration,17,16,13,17,11,0,17,Pauls Valley City Lake,28,Cross Timbers
+310810010180-03,"Pauls Valley City Lake, Site 3",34.786933,-97.211808,Tier 1 - Full calibration,16,15,12,16,10,0,16,Pauls Valley City Lake,28,Cross Timbers
+621200030100-01,"Pawnee Lake, Site 1",36.357633,-96.806492,Tier 1 - Full calibration,8,6,4,8,6,0,8,Pawnee Lake,28,Cross Timbers
+621200030100-02,"Pawnee Lake, Site 2",36.364539,-96.804503,Tier 1 - Full calibration,8,6,5,8,6,0,8,Pawnee Lake,28,Cross Timbers
+621200030100-03,"Pawnee Lake, Site 3",36.370825,-96.804042,Tier 1 - Full calibration,8,6,5,8,6,0,8,Pawnee Lake,28,Cross Timbers
+621200030350-01,"Perry Lake, Site 1",36.252986,-97.337378,Tier 1 - Full calibration,15,14,11,15,11,2,15,Perry Lake,28,Cross Timbers
+621200030350-02,"Perry Lake, Site 2",36.242433,-97.340869,Tier 1 - Full calibration,12,11,8,12,8,0,12,Perry Lake,28,Cross Timbers
+621200030350-03,"Perry Lake, Site 3",36.238267,-97.349592,Tier 1 - Full calibration,12,11,8,12,8,0,12,Perry Lake,28,Cross Timbers
+621200030350-04,"Perry Lake, Site 4",36.257628,-97.342869,Tier 1 - Full calibration,7,7,4,7,7,0,7,Perry Lake,28,Cross Timbers
+410210020020-01,"Pine Creek Lake, Site 1",34.113231,-95.078511,Tier 1 - Full calibration,17,16,13,17,8,0,17,Pine Creek Lake,29,Ouachita Mountains
+410210020020-02,"Pine Creek Lake, Site 2",34.108086,-95.100736,Tier 1 - Full calibration,17,15,13,17,8,0,17,Pine Creek Lake,29,Ouachita Mountains
+410210020020-03,"Pine Creek Lake, Site 3",34.136406,-95.083153,Tier 1 - Full calibration,17,15,13,17,8,0,17,Pine Creek Lake,29,Ouachita Mountains
+410210020020-04,"Pine Creek Lake, Site 4",34.16255,-95.11005,Tier 1 - Full calibration,17,15,13,17,8,0,17,Pine Creek Lake,29,Ouachita Mountains
+410210020020-05,"Pine Creek Lake, Site 5",34.18341,-95.108992,Tier 1 - Full calibration,17,16,13,17,8,0,17,Pine Creek Lake,29,Ouachita Mountains
+310810010186-01,"RC Longmire Lake, Site 1",34.745889,-97.056636,Tier 1 - Full calibration,15,13,9,15,7,0,12,RC Longmire Lake,37,Arkansas Valley
+310810010186-02,"RC Longmire Lake, Site 2",34.75152,-97.051084,Tier 1 - Full calibration,15,14,10,15,7,0,12,RC Longmire Lake,37,Arkansas Valley
+310810010186-03,"RC Longmire Lake, Site 3",34.765773,-97.046768,Tier 1 - Full calibration,15,14,10,15,7,0,12,RC Longmire Lake,37,Arkansas Valley
+220200020020-01,"Robert S. Kerr Reservoir, Site 1",35.345342,-94.779706,Tier 1 - Full calibration,14,12,10,14,9,0,12,Robert S. Kerr Reservoir,37,Arkansas Valley
+220200020020-02,"Robert S. Kerr Reservoir, Site 2",35.341431,-94.827117,Tier 1 - Full calibration,14,13,9,14,9,0,12,Robert S. Kerr Reservoir,37,Arkansas Valley
+220200020020-03,"Robert S. Kerr Reservoir, Site 3",35.316169,-94.92435,Tier 1 - Full calibration,14,14,10,14,9,0,12,Robert S. Kerr Reservoir,37,Arkansas Valley
+220200020020-04,"Robert S. Kerr Reservoir, Site 4",35.358722,-94.878553,Tier 1 - Full calibration,14,13,10,14,9,0,12,Robert S. Kerr Reservoir,37,Arkansas Valley
+220200020020-05,"Robert S. Kerr Reservoir, Site 5",35.395186,-94.914978,Tier 1 - Full calibration,14,13,10,14,9,0,12,Robert S. Kerr Reservoir,37,Arkansas Valley
+220200020020-06,"Robert S. Kerr Reservoir, Site 6",35.407047,-94.965331,Tier 1 - Full calibration,13,12,9,13,8,0,11,Robert S. Kerr Reservoir,37,Arkansas Valley
+310800030120-01,"Rock Creek Reservoir, Site 1",34.257444,-97.179964,Tier 1 - Full calibration,12,11,7,12,11,1,12,Rock Creek Reservoir,37,Arkansas Valley
+310800030120-02,"Rock Creek Reservoir, Site 2",34.251122,-97.181869,Tier 1 - Full calibration,11,10,6,11,9,0,11,Rock Creek Reservoir,37,Arkansas Valley
+310800030120-03,"Rock Creek Reservoir, Site 3",34.2478,-97.189689,Tier 1 - Full calibration,11,10,6,11,9,0,11,Rock Creek Reservoir,37,Arkansas Valley
+311500030060-01,"Rocky Lake, Site 1",35.167161,-99.074258,Tier 1 - Full calibration,10,9,7,10,6,0,9,Rocky Lake,37,Arkansas Valley
+311500030060-02,"Rocky Lake, Site 2",35.173031,-99.076792,Tier 1 - Full calibration,10,9,7,10,6,0,9,Rocky Lake,37,Arkansas Valley
+311500030060-03,"Rocky Lake, Site 3",35.183122,-99.073808,Tier 1 - Full calibration,10,9,7,10,6,0,9,Rocky Lake,37,Arkansas Valley
+410310030020-01,"Sardis Lake, Site 1",34.632086,-95.350847,Tier 1 - Full calibration,17,17,14,17,9,2,16,Sardis Lake,29,Ouachita Mountains
+410310030020-02,"Sardis Lake, Site 2",34.656472,-95.454328,Tier 1 - Full calibration,14,15,11,14,6,0,13,Sardis Lake,29,Ouachita Mountains
+410310030020-03,"Sardis Lake, Site 3",34.677492,-95.3738,Tier 1 - Full calibration,13,14,10,13,6,0,12,Sardis Lake,29,Ouachita Mountains
+410310030020-04,"Sardis Lake, Site 4",34.679075,-95.334831,Tier 1 - Full calibration,13,14,10,13,6,0,12,Sardis Lake,29,Ouachita Mountains
+410310030020-05,"Sardis Lake, Site 5",34.656814,-95.388769,Tier 1 - Full calibration,14,15,11,14,6,0,13,Sardis Lake,29,Ouachita Mountains
+520510000280-01,"Shawnee Twin #1 Lake, Site 1",35.347314,-97.064994,Tier 1 - Full calibration,15,15,13,15,7,2,17,Shawnee Twin #1 Lake,28,Cross Timbers
+520510000280-02,"Shawnee Twin #1 Lake, Site 2",35.337975,-97.075111,Tier 1 - Full calibration,14,13,11,14,6,0,14,Shawnee Twin #1 Lake,28,Cross Timbers
+520510000280-03,"Shawnee Twin #1 Lake, Site 3",35.327589,-97.073414,Tier 1 - Full calibration,14,13,10,14,6,0,14,Shawnee Twin #1 Lake,28,Cross Timbers
+520510000280-04,"Shawnee Twin #1 Lake, Site 4",35.336667,-97.092358,Tier 1 - Full calibration,14,13,10,14,6,0,14,Shawnee Twin #1 Lake,28,Cross Timbers
+520510000300-01,"Shawnee Twin #2 Lake, Site 1",35.356297,-97.068978,Tier 1 - Full calibration,16,14,12,16,8,2,16,Shawnee Twin #2 Lake,28,Cross Timbers
+520510000300-02,"Shawnee Twin #2 Lake, Site 2",35.357803,-97.083297,Tier 1 - Full calibration,15,14,10,15,7,1,14,Shawnee Twin #2 Lake,28,Cross Timbers
+520510000300-03,"Shawnee Twin #2 Lake, Site 3",35.359903,-97.100506,Tier 1 - Full calibration,14,13,10,14,6,0,14,Shawnee Twin #2 Lake,28,Cross Timbers
+120420010250-01,"Shell Lake, Site 1",36.181003,-96.181058,Tier 1 - Full calibration,13,11,8,13,10,1,13,Shell Lake,37,Arkansas Valley
+120420010250-02,"Shell Lake, Site 2",36.186383,-96.167044,Tier 1 - Full calibration,12,10,7,12,9,0,12,Shell Lake,37,Arkansas Valley
+120420010250-03,"Shell Lake, Site 3",36.193778,-96.183125,Tier 1 - Full calibration,12,10,7,12,9,0,12,Shell Lake,37,Arkansas Valley
+121300040080-01,"Skiatook Lake, Site 1",36.350275,-96.093058,Tier 1 - Full calibration,19,18,14,19,12,2,19,Skiatook Lake,28,Cross Timbers
+121300040080-02,"Skiatook Lake, Site 2",36.363817,-96.134642,Tier 1 - Full calibration,16,15,11,16,9,0,16,Skiatook Lake,28,Cross Timbers
+121300040080-03,"Skiatook Lake, Site 3",36.379681,-96.183381,Tier 1 - Full calibration,16,15,11,16,9,0,16,Skiatook Lake,28,Cross Timbers
+121300040080-04,"Skiatook Lake, Site 4",36.385719,-96.233839,Tier 1 - Full calibration,19,18,14,19,12,2,19,Skiatook Lake,28,Cross Timbers
+121300040080-05,"Skiatook Lake, Site 5",36.407183,-96.216722,Tier 1 - Full calibration,16,15,11,16,9,0,16,Skiatook Lake,28,Cross Timbers
+121300040080-06,"Skiatook Lake, Site 6",36.36315,-96.169106,Tier 1 - Full calibration,16,15,11,16,9,0,16,Skiatook Lake,28,Cross Timbers
+121300040080-07,"Skiatook Lake, Site 7",36.326536,-96.122569,Tier 1 - Full calibration,16,15,11,16,9,0,16,Skiatook Lake,28,Cross Timbers
+621200020130-01,"Sooner Reservoir, Site 1",36.457703,-96.996131,Tier 1 - Full calibration,14,13,10,14,10,0,14,Sooner Reservoir,28,Cross Timbers
+621200020130-02,"Sooner Reservoir, Site 2",36.431439,-97.031433,Tier 1 - Full calibration,14,13,10,14,10,0,14,Sooner Reservoir,28,Cross Timbers
+621200020130-03,"Sooner Reservoir, Site 3",36.417306,-97.057256,Tier 1 - Full calibration,14,13,10,14,10,0,14,Sooner Reservoir,28,Cross Timbers
+121600050020-01,"Spavinaw Lake, Site 1",36.382919,-95.046614,Tier 1 - Full calibration,18,17,13,18,8,1,18,Spavinaw Lake,30,Ozark Highlands
+121600050020-02,"Spavinaw Lake, Site 2",36.391783,-95.022142,Tier 1 - Full calibration,17,16,12,17,7,0,17,Spavinaw Lake,30,Ozark Highlands
+SPA02,"Spavinaw Lake, Site 2",36.391783,-95.022142,Tier 1 - Full calibration,18,14,19,18,18,0,16,Spavinaw Lake,30,Ozark Highlands
+121600050020-03,"Spavinaw Lake, Site 3",36.401419,-95.005553,Tier 1 - Full calibration,17,16,12,17,7,0,17,Spavinaw Lake,30,Ozark Highlands
+SPA05,"Spavinaw Lake, Site 3",36.401419,-95.005553,Tier 1 - Full calibration,18,14,19,18,18,0,16,Spavinaw Lake,30,Ozark Highlands
+SPA01,"Spavinaw Lake, Surface, Site 1",36.382919,-95.046614,Tier 1 - Full calibration,18,14,19,19,18,0,16,Spavinaw Lake,30,Ozark Highlands
+520500020220-01,"Sportsman Lake, Site 1",35.203481,-96.543331,Tier 1 - Full calibration,9,9,6,9,5,0,10,Sportsman Lake,28,Cross Timbers
+520500020220-02,"Sportsman Lake, Site 2",35.209692,-96.548297,Tier 1 - Full calibration,10,9,6,10,6,0,9,Sportsman Lake,28,Cross Timbers
+520500020220-03,"Sportsman Lake, Site 3",35.213453,-96.556689,Tier 1 - Full calibration,10,9,6,10,6,0,9,Sportsman Lake,28,Cross Timbers
+220200030120-01,"Stilwell City Lake, Site 1",35.763475,-94.706228,Tier 1 - Full calibration,10,9,9,10,8,2,10,Stilwell City Lake,29,Ouachita Mountains
+220200030120-02,"Stilwell City Lake, Site 2",35.766356,-94.713264,Tier 1 - Full calibration,8,7,8,8,6,0,8,Stilwell City Lake,29,Ouachita Mountains
+220200030120-03,"Stilwell City Lake, Site 3",35.771508,-94.711736,Tier 1 - Full calibration,8,7,6,8,6,0,8,Stilwell City Lake,29,Ouachita Mountains
+520700030240-01,"Stroud Lake, Site 1",35.79595,-96.603275,Tier 1 - Full calibration,14,12,11,14,6,0,14,Stroud Lake,37,Arkansas Valley
+520700030240-02,"Stroud Lake, Site 2",35.807444,-96.603578,Tier 1 - Full calibration,14,12,11,14,6,0,14,Stroud Lake,37,Arkansas Valley
+520700030240-03,"Stroud Lake, Site 3",35.814703,-96.620942,Tier 1 - Full calibration,14,12,10,14,6,0,14,Stroud Lake,37,Arkansas Valley
+220600020060-01,"Talawanda Lake #1, Site 1",34.977739,-95.793492,Tier 1 - Full calibration,12,10,9,12,8,0,13,Talawanda Lake #1,37,Arkansas Valley
+220600020060-02,"Talawanda Lake #1, Site 2",34.975206,-95.788492,Tier 1 - Full calibration,12,11,9,12,8,0,13,Talawanda Lake #1,37,Arkansas Valley
+220600020060-03,"Talawanda Lake #1, Site 3",34.974653000000004,-95.798103,Tier 1 - Full calibration,6,5,3,6,6,0,7,Talawanda Lake #1,37,Arkansas Valley
+220600020050-01,"Talawanda Lake #2, Site 1",34.990225,-95.793439,Tier 1 - Full calibration,13,11,10,13,8,0,14,Talawanda Lake #2,37,Arkansas Valley
+220600020050-02,"Talawanda Lake #2, Site 2",34.986017,-95.785778,Tier 1 - Full calibration,13,12,10,13,8,0,14,Talawanda Lake #2,37,Arkansas Valley
+310810050060-01,"Taylor (Marlow) Lake, Site 1",34.749603,-97.921542,Tier 1 - Full calibration,12,10,8,12,7,0,12,Taylor (Marlow) Lake,27,Central Oklahoma/Texas Plains
+310810050060-02,"Taylor (Marlow) Lake, Site 2",34.750483,-97.927836,Tier 1 - Full calibration,12,12,8,12,7,0,12,Taylor (Marlow) Lake,27,Central Oklahoma/Texas Plains
+310810050060-03,"Taylor (Marlow) Lake, Site 3",34.752672,-97.932156,Tier 1 - Full calibration,12,12,8,12,7,0,12,Taylor (Marlow) Lake,27,Central Oklahoma/Texas Plains
+520510000220-01,"Tecumseh Lake, Site 1",35.295764,-96.954878,Tier 1 - Full calibration,10,8,7,10,6,0,11,Tecumseh Lake,28,Cross Timbers
+520510000220-02,"Tecumseh Lake, Site 2",35.290553,-96.959397,Tier 1 - Full calibration,10,9,7,10,6,0,11,Tecumseh Lake,28,Cross Timbers
+520510000220-03,"Tecumseh Lake, Site 3",35.286489,-96.962497,Tier 1 - Full calibration,10,9,7,10,6,0,11,Tecumseh Lake,28,Cross Timbers
+121700020020-01,"Tenkiller Ferry Lake, Site 1",35.600017,-95.044628,Tier 1 - Full calibration,19,19,18,19,11,2,19,Tenkiller Ferry Lake,29,Ouachita Mountains
+121700020020-02,"Tenkiller Ferry Lake, Site 2",35.674433,-94.976408,Tier 1 - Full calibration,16,17,16,16,8,0,16,Tenkiller Ferry Lake,29,Ouachita Mountains
+121700020220-03,"Tenkiller Ferry Lake, Site 3",35.73905,-94.954261,Tier 1 - Full calibration,19,19,18,19,11,2,19,Tenkiller Ferry Lake,29,Ouachita Mountains
+121700020220-04,"Tenkiller Ferry Lake, Site 4",35.755422,-94.905072,Tier 1 - Full calibration,16,16,14,16,8,0,16,Tenkiller Ferry Lake,29,Ouachita Mountains
+121700020220-05,"Tenkiller Ferry Lake, Site 5",35.763844,-94.8924,Tier 1 - Full calibration,16,16,16,16,8,0,16,Tenkiller Ferry Lake,29,Ouachita Mountains
+121700020220-06,"Tenkiller Ferry Lake, Site 6",35.766339,-94.887192,Tier 1 - Full calibration,16,16,16,16,8,0,16,Tenkiller Ferry Lake,29,Ouachita Mountains
+121700020020-07,"Tenkiller Ferry Lake, Site 7",35.639381,-95.014631,Tier 1 - Full calibration,16,17,16,16,8,0,15,Tenkiller Ferry Lake,29,Ouachita Mountains
+311500020060-01,"Tom Steed Reservoir, Site 1",34.749953,-98.968383,Tier 1 - Full calibration,16,16,12,16,10,0,16,Tom Steed Reservoir,27,Central Oklahoma/Texas Plains
+311500020060-02,"Tom Steed Reservoir, Site 2",34.782683,-98.992947,Tier 1 - Full calibration,16,16,12,16,10,0,16,Tom Steed Reservoir,27,Central Oklahoma/Texas Plains
+311500020060-03,"Tom Steed Reservoir, Site 3",34.757406,-99.019192,Tier 1 - Full calibration,16,16,12,16,10,0,4,Tom Steed Reservoir,27,Central Oklahoma/Texas Plains
+311500020060-05,"Tom Steed Reservoir, Site 5",34.758736,-99.000557,Tier 1 - Full calibration,6,7,3,6,6,0,7,Tom Steed Reservoir,27,Central Oklahoma/Texas Plains
+311500020060-06,"Tom Steed Reservoir, Site 6",34.74027,-98.98759,Tier 1 - Full calibration,3,3,3,3,2,1,15,Tom Steed Reservoir,27,Central Oklahoma/Texas Plains
+121600020050-01,"WR Holway, Site 1",36.25634,-95.102314,Tier 1 - Full calibration,15,15,11,15,13,4,15,WR Holway,37,Arkansas Valley
+121600020050-02,"WR Holway, Site 2",36.24564,-95.09958,Tier 1 - Full calibration,13,13,9,13,11,2,13,WR Holway,37,Arkansas Valley
+121600020050-03,"WR Holway, Site 3",36.256946,-95.086832,Tier 1 - Full calibration,13,13,9,13,11,2,13,WR Holway,37,Arkansas Valley
+311210000020-01,"Waurika Lake, Site 1",34.234869,-98.046964,Tier 1 - Full calibration,15,13,15,15,11,1,15,Waurika Lake,27,Central Oklahoma/Texas Plains
+311210000020-02,"Waurika Lake, Site 2",34.261369,-98.051103,Tier 1 - Full calibration,14,14,14,14,10,0,14,Waurika Lake,27,Central Oklahoma/Texas Plains
+311210000020-03,"Waurika Lake, Site 3",34.289206,-98.083453,Tier 1 - Full calibration,14,14,14,14,10,0,14,Waurika Lake,27,Central Oklahoma/Texas Plains
+311210000020-04,"Waurika Lake, Site 4",34.301625,-98.110581,Tier 1 - Full calibration,14,14,14,14,11,1,14,Waurika Lake,27,Central Oklahoma/Texas Plains
+311210000020-05,"Waurika Lake, Site 5",34.321854,-98.132833,Tier 1 - Full calibration,11,11,11,11,8,0,11,Waurika Lake,27,Central Oklahoma/Texas Plains
+121300020190-01,"Waxhoma Lake, Site 1",36.554806,-96.115556,Tier 1 - Full calibration,10,8,6,10,6,0,10,Waxhoma Lake,37,Arkansas Valley
+121300020190-02,"Waxhoma Lake, Site 2",36.557828,-96.109639,Tier 1 - Full calibration,10,8,6,10,6,0,10,Waxhoma Lake,37,Arkansas Valley
+121300020190-03,"Waxhoma Lake, Site 3",36.561617,-96.10715,Tier 1 - Full calibration,10,8,6,10,6,0,10,Waxhoma Lake,37,Arkansas Valley
+120400010070-01,"Webbers Falls Reservoir, Site 1",35.554722,-95.170556,Tier 1 - Full calibration,14,13,11,14,6,0,14,Webbers Falls Reservoir,37,Arkansas Valley
+120400010070-02,"Webbers Falls Reservoir, Site 2",35.601667,-95.181667,Tier 1 - Full calibration,14,13,11,14,6,0,14,Webbers Falls Reservoir,37,Arkansas Valley
+120400010070-03,"Webbers Falls Reservoir, Site 3",35.590278,-95.229444,Tier 1 - Full calibration,14,13,11,14,6,0,14,Webbers Falls Reservoir,37,Arkansas Valley
+120400010070-04,"Webbers Falls Reservoir, Site 4",35.630556,-95.271667,Tier 1 - Full calibration,14,13,11,14,6,0,14,Webbers Falls Reservoir,37,Arkansas Valley
+120400010070-05,"Webbers Falls Reservoir, Site 5",35.668611,-95.259444,Tier 1 - Full calibration,14,13,11,14,6,0,14,Webbers Falls Reservoir,37,Arkansas Valley
+120400010070-06,"Webbers Falls Reservoir, Site 6",35.7,-95.231389,Tier 1 - Full calibration,13,12,11,13,6,0,13,Webbers Falls Reservoir,37,Arkansas Valley
+520510000255-01,"Wes Watkins Reservoir, Site 1",35.402592,-97.098186,Tier 1 - Full calibration,16,14,14,16,8,1,16,Wes Watkins Reservoir,28,Cross Timbers
+520510000255-02,"Wes Watkins Reservoir, Site 2",35.406014,-97.124164,Tier 1 - Full calibration,15,13,12,15,7,0,15,Wes Watkins Reservoir,28,Cross Timbers
+520510000255-03,"Wes Watkins Reservoir, Site 3",35.400494,-97.143061,Tier 1 - Full calibration,15,13,14,15,7,0,15,Wes Watkins Reservoir,28,Cross Timbers
+520510000255-04,"Wes Watkins Reservoir, Site 4",35.407766,-97.1279207,Tier 1 - Full calibration,6,4,4,6,6,0,6,Wes Watkins Reservoir,28,Cross Timbers
+520510000255-05,"Wes Watkins Reservoir, Site 5",35.396373,-97.146335,Tier 1 - Full calibration,5,4,3,5,5,0,5,Wes Watkins Reservoir,28,Cross Timbers
+520500010270-01,"Wetumka Lake, Site 1",35.284675,-96.246731,Tier 1 - Full calibration,8,7,7,8,6,1,8,Wetumka Lake,37,Arkansas Valley
+520500010270-02,"Wetumka Lake, Site 2",35.290236,-96.247958,Tier 1 - Full calibration,7,6,6,7,5,0,7,Wetumka Lake,37,Arkansas Valley
+520500010270-03,"Wetumka Lake, Site 3",35.288953,-96.257572,Tier 1 - Full calibration,7,6,6,7,5,0,7,Wetumka Lake,37,Arkansas Valley
+520500020190-01,"Wewoka Lake, Site 1",35.181158,-96.52485,Tier 1 - Full calibration,13,11,9,13,10,1,13,Wewoka Lake,37,Arkansas Valley
+520500020190-02,"Wewoka Lake, Site 2",35.195953,-96.519103,Tier 1 - Full calibration,12,10,8,12,9,0,12,Wewoka Lake,37,Arkansas Valley
+520500020190-03,"Wewoka Lake, Site 3",35.209897,-96.511414,Tier 1 - Full calibration,11,9,7,11,8,0,11,Wewoka Lake,37,Arkansas Valley
+520500020190-04,"Wewoka Lake, Site 4",35.189978,-96.522382,Tier 1 - Full calibration,4,4,3,4,4,0,4,Wewoka Lake,37,Arkansas Valley
+520500020190-05,"Wewoka Lake, Site 5",35.203637,-96.513495,Tier 1 - Full calibration,4,4,3,4,4,0,4,Wewoka Lake,37,Arkansas Valley
+310810010220-01,"Wiley Post Memorial (Maysville) Lake, Site 1",34.863672,-97.383761,Tier 1 - Full calibration,10,8,6,10,8,0,10,Wiley Post Memorial (Maysville) Lake,28,Cross Timbers
+310810010220-02,"Wiley Post Memorial (Maysville) Lake, Site 2",34.865494,-97.379672,Tier 1 - Full calibration,10,9,6,10,8,0,10,Wiley Post Memorial (Maysville) Lake,28,Cross Timbers
+310810010220-03,"Wiley Post Memorial (Maysville) Lake, Site 3",34.868964,-97.372544,Tier 1 - Full calibration,10,9,7,10,8,0,10,Wiley Post Memorial (Maysville) Lake,28,Cross Timbers
+310810010220-04,"Wiley Post Memorial (Maysville) Lake, Site 4",34.86988,-97.38199,Tier 1 - Full calibration,8,8,6,8,5,0,8,Wiley Post Memorial (Maysville) Lake,28,Cross Timbers
+220100020020-01,"Wister Lake, Site 1",34.940133,-94.724117,Tier 1 - Full calibration,18,18,15,18,12,2,19,Wister Lake,37,Arkansas Valley
+220100020020-02,"Wister Lake, Site 2",34.937569,-94.758336,Tier 1 - Full calibration,16,17,13,16,10,0,17,Wister Lake,37,Arkansas Valley
+220100020020-03,"Wister Lake, Site 3",34.933825,-94.781606,Tier 1 - Full calibration,16,17,12,16,10,0,17,Wister Lake,37,Arkansas Valley
+220100020020-04,"Wister Lake, Site 4",34.930513,-94.742789,Tier 1 - Full calibration,16,17,13,16,10,0,17,Wister Lake,37,Arkansas Valley
+220100020020-05,"Wister Lake, Site 5",34.946338,-94.730368,Tier 1 - Full calibration,16,17,12,16,10,0,17,Wister Lake,37,Arkansas Valley
+311510010020-05,"Altus Reservoir, Site 5",34.92359,-99.29111,Tier 3 - Partial calibration,4,4,2,4,4,0,0,Altus Reservoir,27,Central Oklahoma/Texas Plains
+520620010100-01,"American Horse Lake, Site 1",35.6287,-98.506811,Tier 3 - Partial calibration,5,5,2,5,5,0,6,American Horse Lake,25,Central Great Plains
+520620010100-02,"American Horse Lake, Site 2",35.630394,-98.503875,Tier 3 - Partial calibration,5,5,2,5,5,0,5,American Horse Lake,25,Central Great Plains
+520620010100-03,"American Horse Lake, Site 3",35.633011,-98.501278,Tier 3 - Partial calibration,5,5,2,5,5,0,5,American Horse Lake,25,Central Great Plains
+520720040025-04,"Bellcow Lake, Site 4",35.738781,-96.946124,Tier 3 - Partial calibration,4,5,0,4,4,0,4,Bellcow Lake,28,Cross Timbers
+520720040025-05,"Bellcow Lake, Site 5",35.732905,-96.927927,Tier 3 - Partial calibration,4,5,0,4,4,0,4,Bellcow Lake,28,Cross Timbers
+121300030040-05,"Birch Lake, Site 5",36.515956,-96.190372,Tier 3 - Partial calibration,5,4,0,5,5,0,5,Birch Lake,30,Ozark Highlands
+121300030300-05,"Bluestem Lake, Site 5",36.702446,-96.419803,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Bluestem Lake,28,Cross Timbers
+620900040190-04,"Boomer Lake, Site 4",36.147847,-97.063683,Tier 3 - Partial calibration,4,4,1,4,4,0,4,Boomer Lake,28,Cross Timbers
+620900040190-05,"Boomer Lake, Site 5",36.155443,-97.062612,Tier 3 - Partial calibration,4,4,1,4,4,0,4,Boomer Lake,28,Cross Timbers
+220200030040-04,"Brushy Creek Reservoir, Site 4",35.538508,-94.823088,Tier 3 - Partial calibration,4,4,0,4,4,0,4,Brushy Creek Reservoir,37,Arkansas Valley
+220200030040-05,"Brushy Creek Reservoir, Site 5",35.546425,-94.822327,Tier 3 - Partial calibration,4,4,0,4,4,0,4,Brushy Creek Reservoir,37,Arkansas Valley
+310800010040-01,"Carter Lake, Site 1",34.122819,-96.795997,Tier 3 - Partial calibration,4,5,2,4,4,0,6,Carter Lake,29,Ouachita Mountains
+310800010040-02,"Carter Lake, Site 2",34.127269,-96.799367,Tier 3 - Partial calibration,4,4,1,4,4,0,5,Carter Lake,29,Ouachita Mountains
+310800010040-03,"Carter Lake, Site 3",34.129575,-96.805081,Tier 3 - Partial calibration,4,4,1,4,4,0,5,Carter Lake,29,Ouachita Mountains
+121500040020-04,"Claremore, Site 4",36.333509,-95.57858,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Claremore,30,Ozark Highlands
+121500040020-05,"Claremore, Site 5",36.33818,-95.562984,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Claremore,30,Ozark Highlands
+310810040120-04,"Clear Creek Lake, Site 4",34.590081,-97.842302,Tier 3 - Partial calibration,5,5,0,5,5,0,5,Clear Creek Lake,28,Cross Timbers
+310810040120-05,"Clear Creek Lake, Site 5",34.603268,-97.847978,Tier 3 - Partial calibration,5,5,1,5,5,0,5,Clear Creek Lake,28,Cross Timbers
+310830030280-04,"Clinton Lake, Site 4",35.436884,-99.223782,Tier 3 - Partial calibration,3,4,1,3,3,0,2,Clinton Lake,28,Cross Timbers
+310830030280-05,"Clinton Lake, Site 5",35.431257,-99.220936,Tier 3 - Partial calibration,3,4,1,3,3,0,2,Clinton Lake,28,Cross Timbers
+410400060040-04,"Coalgate City Lake, Site 4",34.582404,-96.234442,Tier 3 - Partial calibration,6,6,2,6,6,0,5,Coalgate City Lake,37,Arkansas Valley
+410400060040-05,"Coalgate City Lake, Site 5",34.56991,-96.240125,Tier 3 - Partial calibration,6,6,2,6,6,0,5,Coalgate City Lake,37,Arkansas Valley
+620900020120-04,"Cushing  Municipal Lake, Site 4",35.992646,-96.877307,Tier 3 - Partial calibration,4,5,1,4,4,0,4,Cushing  Municipal Lake,28,Cross Timbers
+620900020120-05,"Cushing  Municipal Lake, Site 5",36.005388,-96.879964,Tier 3 - Partial calibration,4,5,1,4,4,0,4,Cushing  Municipal Lake,28,Cross Timbers
+310810040080-04,"Duncan Lake, Site 4",34.515948,-97.812525,Tier 3 - Partial calibration,5,5,0,5,5,0,3,Duncan Lake,27,Central Oklahoma/Texas Plains
+310810040080-05,"Duncan Lake, Site 5",34.517953,-97.821879,Tier 3 - Partial calibration,5,5,0,5,5,0,3,Duncan Lake,27,Central Oklahoma/Texas Plains
+621010010020-04,"Great Salt Plains Lake, Site 4",36.740915,-98.175415,Tier 3 - Partial calibration,4,5,2,4,4,0,4,Great Salt Plains Lake,27,Central Oklahoma/Texas Plains
+621010010020-05,"Great Salt Plains Lake, Site 5",36.752436,-98.174022,Tier 3 - Partial calibration,4,5,2,4,4,0,4,Great Salt Plains Lake,27,Central Oklahoma/Texas Plains
+120400010130-04,"Greenleaf Lake, Site 4",35.648522,-95.140821,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Greenleaf Lake,29,Ouachita Mountains
+120400010130-05,"Greenleaf Lake, Site 5",35.621829,-95.16048,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Greenleaf Lake,29,Ouachita Mountains
+311100030130-04,"Healdton Lake, Site 4",34.243998,-97.460361,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Healdton Lake,27,Central Oklahoma/Texas Plains
+311100030130-05,"Healdton Lake, Site 5",34.245512,-97.448915,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Healdton Lake,27,Central Oklahoma/Texas Plains
+620910040200-04,"Hefner Lake, Site 4",35.555279,-97.592902,Tier 3 - Partial calibration,4,4,1,4,4,0,4,Hefner Lake,28,Cross Timbers
+620910040200-05,"Hefner Lake, Site 5",35.575421,-97.589619,Tier 3 - Partial calibration,4,4,1,4,4,0,4,Hefner Lake,28,Cross Timbers
+120420020300-05,"Heyburn Lake, Site 5",35.952278,-96.319192,Tier 3 - Partial calibration,3,3,0,3,3,0,3,Heyburn Lake,28,Cross Timbers
+520800010040-04,"Holdenville Lake, Site 4",35.033538,-96.364093,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Holdenville Lake,37,Arkansas Valley
+520800010040-05,"Holdenville Lake, Site 5",35.038785,-96.351544,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Holdenville Lake,37,Arkansas Valley
+121400030020-04,"Hulah Lake, Site 4",36.941495,-96.096159,Tier 3 - Partial calibration,6,5,0,6,5,0,6,Hulah Lake,30,Ozark Highlands
+121400030020-05,"Hulah Lake, Site 5",36.931228,-96.102911,Tier 3 - Partial calibration,5,4,0,5,5,0,5,Hulah Lake,30,Ozark Highlands
+310810040150-04,"Humphreys Lake, Site 4",34.58891,-97.890036,Tier 3 - Partial calibration,5,6,0,5,5,0,5,Humphreys Lake,28,Cross Timbers
+310810040150-05,"Humphreys Lake, Site 5",34.602962,-97.899259,Tier 3 - Partial calibration,5,6,0,5,5,0,5,Humphreys Lake,28,Cross Timbers
+310830040020-04,"Lake Chickasha, Site 4",35.135586000000004,-98.140212,Tier 3 - Partial calibration,5,5,1,5,5,0,3,Lake Chickasha,28,Cross Timbers
+310830040020-05,"Lake Chickasha, Site 5",35.143725,-98.136802,Tier 3 - Partial calibration,5,5,0,5,5,0,3,Lake Chickasha,28,Cross Timbers
+520700010180-04,"Lake Henryetta, Site 4",35.407021,-95.932739,Tier 3 - Partial calibration,5,5,0,5,5,0,4,Lake Henryetta,37,Arkansas Valley
+520700010180-05,"Lake Henryetta, Site 5",35.393879,-95.934236,Tier 3 - Partial calibration,5,5,0,5,5,0,4,Lake Henryetta,37,Arkansas Valley
+310800030140-04,"Lake Jean Neustadt, Site 4",34.288343,-97.165445,Tier 3 - Partial calibration,5,6,0,5,5,0,5,Lake Jean Neustadt,37,Arkansas Valley
+310800030140-05,"Lake Jean Neustadt, Site 5",34.602962,-97.171254,Tier 3 - Partial calibration,5,6,1,5,5,0,5,Lake Jean Neustadt,37,Arkansas Valley
+520600010100-05,"Lake Konawa, Site 5",34.95363,-96.711896,Tier 3 - Partial calibration,6,5,1,6,6,0,3,Lake Konawa,37,Arkansas Valley
+220600020030-04,"Lake McAlester, Site 4",35.024314,-95.811587,Tier 3 - Partial calibration,4,5,2,4,4,0,5,Lake McAlester,37,Arkansas Valley
+220600020030-05,"Lake McAlester, Site 5",35.034488,-95.832467,Tier 3 - Partial calibration,4,5,2,4,4,0,5,Lake McAlester,37,Arkansas Valley
+410310010050-01,"Lake Nanih Waiya, Site 1",34.631242,-95.299314,Tier 3 - Partial calibration,5,5,0,5,5,0,6,Lake Nanih Waiya,29,Ouachita Mountains
+410310010050-02,"Lake Nanih Waiya, Site 2",34.633972,-95.300202,Tier 3 - Partial calibration,5,6,0,5,5,0,6,Lake Nanih Waiya,29,Ouachita Mountains
+410310010050-03,"Lake Nanih Waiya, Site 3",34.636039,-95.300509,Tier 3 - Partial calibration,5,6,0,5,5,0,6,Lake Nanih Waiya,29,Ouachita Mountains
+621200020210-04,"Lake Ponca, Site 4",36.729295,-97.029381,Tier 3 - Partial calibration,4,5,2,4,4,0,5,Lake Ponca,28,Cross Timbers
+621200020210-05,"Lake Ponca, Site 5",36.718849,-97.016691,Tier 3 - Partial calibration,4,5,2,4,4,0,5,Lake Ponca,28,Cross Timbers
+410300010040-04,"Lake Raymond Gary, Site 4",33.992956,-95.264732,Tier 3 - Partial calibration,5,6,2,5,5,0,5,Lake Raymond Gary,37,Arkansas Valley
+410300010040-05,"Lake Raymond Gary, Site 5",34.005453,-95.263905,Tier 3 - Partial calibration,5,6,2,5,5,0,5,Lake Raymond Gary,37,Arkansas Valley
+520810000020-12,"Lake Thunderbird, Site 12",35.225431,-97.224079,Tier 3 - Partial calibration,2,4,7,2,2,0,7,Lake Thunderbird,28,Cross Timbers
+620900030180-04,"Langston Lake, Site 4",35.922085,-97.276589,Tier 3 - Partial calibration,5,5,2,5,5,0,3,Langston Lake,28,Cross Timbers
+620900030180-05,"Langston Lake, Site 5",35.914373,-97.274764,Tier 3 - Partial calibration,5,5,2,5,5,0,3,Langston Lake,28,Cross Timbers
+520700020290-05,"Okemah Lake, Site 5",35.516026,-96.324453,Tier 3 - Partial calibration,4,4,0,4,4,0,4,Okemah Lake,37,Arkansas Valley
+520700020040-04,"Okmulgee Lake, Site 4",35.623444,-96.073845,Tier 3 - Partial calibration,4,4,1,4,4,0,4,Okmulgee Lake,37,Arkansas Valley
+520700020040-05,"Okmulgee Lake, Site 5",35.606372,-96.079196,Tier 3 - Partial calibration,4,4,0,4,4,0,4,Okmulgee Lake,37,Arkansas Valley
+310810010180-04,"Pauls Valley City Lake, Site 4",34.773945,-97.201747,Tier 3 - Partial calibration,5,6,2,5,5,0,5,Pauls Valley City Lake,28,Cross Timbers
+310810010180-05,"Pauls Valley City Lake, Site 5",34.78337,-97.207739,Tier 3 - Partial calibration,5,6,2,5,5,0,5,Pauls Valley City Lake,28,Cross Timbers
+621200030100-04,"Pawnee Lake, Site 4",36.3662,-96.809473,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Pawnee Lake,28,Cross Timbers
+621200030100-05,"Pawnee Lake, Site 5",36.37324,-96.800534,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Pawnee Lake,28,Cross Timbers
+621200030350-05,"Perry Lake, Site 5",36.246797,-97.339773,Tier 3 - Partial calibration,5,5,2,5,5,0,5,Perry Lake,28,Cross Timbers
+520700040220-01,"Prague City Lake, Site 1",35.531339,-96.722683,Tier 3 - Partial calibration,6,4,2,6,6,0,6,Prague City Lake,28,Cross Timbers
+520700040220-02,"Prague City Lake, Site 2",35.524314,-96.721911,Tier 3 - Partial calibration,6,6,2,6,6,0,6,Prague City Lake,28,Cross Timbers
+520700040220-03,"Prague City Lake, Site 3",35.518439,-96.717997,Tier 3 - Partial calibration,6,6,2,6,6,0,6,Prague City Lake,28,Cross Timbers
+520610030040-01,"Purcell Lake, Site 1",34.993214,-97.377867,Tier 3 - Partial calibration,5,4,2,5,5,0,6,Purcell Lake,28,Cross Timbers
+520610030040-02,"Purcell Lake, Site 2",34.992742,-97.382836,Tier 3 - Partial calibration,5,5,2,5,5,0,6,Purcell Lake,28,Cross Timbers
+520610030040-03,"Purcell Lake, Site 3",34.992681,-97.387603,Tier 3 - Partial calibration,5,5,2,5,5,0,6,Purcell Lake,28,Cross Timbers
+310810010186-04,"RC Longmire Lake, Site 4",34.7506,-97.044665,Tier 3 - Partial calibration,5,6,1,5,5,0,5,RC Longmire Lake,37,Arkansas Valley
+310810010186-05,"RC Longmire Lake, Site 5",34.755331,-97.052088,Tier 3 - Partial calibration,5,6,1,5,5,0,5,RC Longmire Lake,37,Arkansas Valley
+311500030060-04,"Rocky Lake, Site 4",35.176941,-99.078844,Tier 3 - Partial calibration,4,4,2,4,4,0,3,Rocky Lake,37,Arkansas Valley
+311500030060-05,"Rocky Lake, Site 5",35.171582,-99.072444,Tier 3 - Partial calibration,4,4,2,4,4,0,3,Rocky Lake,37,Arkansas Valley
+520510000280-05,"Shawnee Twin #1 Lake, Site 5",35.323236,-97.078811,Tier 3 - Partial calibration,5,4,1,5,5,0,5,Shawnee Twin #1 Lake,28,Cross Timbers
+520510000300-04,"Shawnee Twin #2 Lake, Site 4",35.362388,-97.089787,Tier 3 - Partial calibration,5,4,1,5,5,0,5,Shawnee Twin #2 Lake,28,Cross Timbers
+520510000300-05,"Shawnee Twin #2 Lake, Site 5",35.356691,-97.076257,Tier 3 - Partial calibration,4,4,1,4,4,0,3,Shawnee Twin #2 Lake,28,Cross Timbers
+120420010250-04,"Shell Lake, Site 4",36.193903,-96.17831333,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Shell Lake,37,Arkansas Valley
+120420010250-05,"Shell Lake, Site 5",36.188395,-96.1795623,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Shell Lake,37,Arkansas Valley
+621200020130-04,"Sooner Reservoir, Site 4",36.448377,-97.018711,Tier 3 - Partial calibration,5,5,2,5,5,0,5,Sooner Reservoir,28,Cross Timbers
+621200020130-05,"Sooner Reservoir, Site 5",36.418189,-97.031634,Tier 3 - Partial calibration,5,5,2,5,5,0,5,Sooner Reservoir,28,Cross Timbers
+121600050020-04,"Spavinaw Lake, Site 4",36.387454,-95.033166,Tier 3 - Partial calibration,5,5,2,5,5,0,5,Spavinaw Lake,30,Ozark Highlands
+121600050020-05,"Spavinaw Lake, Site 5",36.397236026,-95.014005837,Tier 3 - Partial calibration,5,5,2,5,5,0,5,Spavinaw Lake,30,Ozark Highlands
+520500020220-04,"Sportsman Lake, Site 4",35.212464,-96.54885,Tier 3 - Partial calibration,4,5,2,4,4,0,4,Sportsman Lake,28,Cross Timbers
+520500020220-05,"Sportsman Lake, Site 5",35.215058,-96.559731,Tier 3 - Partial calibration,4,5,2,4,4,0,4,Sportsman Lake,28,Cross Timbers
+520700030240-04,"Stroud Lake, Site 4",35.812368,-96.602007,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Stroud Lake,37,Arkansas Valley
+520700030240-05,"Stroud Lake, Site 5",35.813397,-96.610194,Tier 3 - Partial calibration,4,4,2,4,4,0,4,Stroud Lake,37,Arkansas Valley
+220600020050-03,"Talawanda Lake #2, Site 3",34.984594,-95.794008,Tier 3 - Partial calibration,5,5,2,5,5,0,6,Talawanda Lake #2,37,Arkansas Valley
+311500020060-04,"Tom Steed Reservoir, Site 4",34.772099,-98.972794,Tier 3 - Partial calibration,6,6,2,6,6,0,6,Tom Steed Reservoir,27,Central Oklahoma/Texas Plains
+121600020050-04,"WR Holway, Site 4",36.251,-95.102135,Tier 3 - Partial calibration,5,6,2,5,5,0,5,WR Holway,37,Arkansas Valley
+121600020050-05,"WR Holway, Site 5",36.252091,-95.093118,Tier 3 - Partial calibration,5,6,2,5,5,0,5,WR Holway,37,Arkansas Valley
+310810010220-05,"Wiley Post Memorial (Maysville) Lake, Site 5",34.865206,-97.387188,Tier 3 - Partial calibration,3,4,2,3,3,0,4,Wiley Post Memorial (Maysville) Lake,28,Cross Timbers

@@ -1,0 +1,45 @@
+Package: okBATHTUB
+Title: Reservoir Eutrophication Modeling for Oklahoma Lakes
+Version: 0.1.0
+Authors@R: c(
+    person("Jordon", "Henderson",
+           email = "jordon.henderson@owrb.ok.gov",
+           role  = c("aut", "cre"),
+           comment = c(ORCID = "")),
+    person("Oklahoma Water Resources Board", role = "cph")
+  )
+Description: Implements steady-state empirical reservoir water quality modeling
+    based on Walker's BATHTUB framework (Walker 1996), extended with
+    Oklahoma-specific calibration options for lakes in the OWRB Lake Monitoring
+    Program. Predicts in-lake total phosphorus, total nitrogen, chlorophyll-a,
+    and Secchi depth from tributary nutrient and hydraulic loading inputs, and
+    computes Carlson (1977) Trophic State Indices. Supports single-segment and
+    multi-segment reservoir configurations, load reduction scenario analysis,
+    and optional integration with OWRB AWQMS water quality data. Designed to
+    complement watershed loading models such as OK-HAWQS/SWAT in a two-model
+    nutrient management workflow.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = FALSE)
+RoxygenNote: 7.3.1
+Depends:
+    R (>= 4.1.0)
+Imports:
+    dplyr (>= 1.1.0),
+    tidyr (>= 1.3.0),
+    stringr (>= 1.5.0)
+Suggests:
+    ggplot2 (>= 3.4.0),
+    DBI (>= 1.1.0),
+    odbc (>= 1.3.0),
+    keyring (>= 1.3.0),
+    readr (>= 2.1.0),
+    openxlsx (>= 4.2.0),
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+LazyData: true
+URL: https://github.com/0011235813/okBATHTUB
+BugReports: https://github.com/0011235813/okBATHTUB/issues

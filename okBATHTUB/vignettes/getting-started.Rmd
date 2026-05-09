@@ -1,0 +1,283 @@
+---
+title: "Getting Started with okBATHTUB"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with okBATHTUB}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse  = TRUE,
+  comment   = "#>",
+  fig.width = 7,
+  fig.height = 4.5,
+  dpi       = 120
+)
+```
+
+## Overview
+
+okBATHTUB implements steady-state empirical reservoir eutrophication modelling based on Walker's (1996) BATHTUB framework, extended with Oklahoma-specific regression coefficients calibrated from OWRB Lake Monitoring Program (LMP) data.
+
+The package predicts:
+
+- **In-lake total phosphorus (TP)** from tributary loading and hydraulic retention
+- **Chlorophyll-a** from in-lake TP via log-log regression
+- **Secchi depth** from chlorophyll-a via log-log regression
+- **Carlson Trophic State Indices (TSI)** from all three
+
+It is designed to complement watershed loading models such as OK-HAWQS/SWAT by translating nutrient loads into in-lake water quality predictions.
+
+## Installation
+
+```{r install, eval=FALSE}
+# Install from GitHub (until CRAN submission)
+# install.packages("remotes")
+remotes::install_github("0011235813/okBATHTUB")
+```
+
+```{r load}
+library(okBATHTUB)
+```
+
+## The Core Pipeline
+
+The standard single-segment workflow chains five functions with the base pipe operator:
+
+```
+ok_load() |> ok_hydraulics() |> ok_retention() |> ok_inlake() |> ok_tsi()
+```
+
+Every function returns an `okBATHTUB` S3 object. Data accumulates through the pipeline so the final result contains everything from every step.
+
+### Step 1 — Assemble inflow loads
+
+`ok_load()` is the pipeline entry point. Supply annual inflow volume, flow-weighted mean TP concentration, and optionally TN:
+
+```{r load_step}
+result <- ok_load(
+  inflow_m3yr   = 45e6,    # 45 million m³/yr (~1.43 m³/s mean flow)
+  tp_inflow_ugl = 120,     # 120 µg/L flow-weighted mean TP
+  tn_inflow_ugl = 1800,    # 1800 µg/L flow-weighted mean TN
+  segment_label = "lacustrine"
+)
+
+print(result)
+```
+
+### Step 2 — Reservoir hydraulics
+
+`ok_hydraulics()` computes hydraulic residence time (τ) and areal water load (q_s) from reservoir morphometry:
+
+```{r hydraulics_step}
+result <- result |>
+  ok_hydraulics(
+    surface_area_ha = 890,   # normal pool surface area
+    mean_depth_m    = 4.2    # mean depth at normal pool
+  )
+
+cat("Hydraulic residence time:", round(result$data$hydraulic_residence_time_yr, 2), "yr\n")
+cat("Areal water load (qs):   ", round(result$data$areal_water_load_myr, 2), "m/yr\n")
+```
+
+### Step 3 — Nutrient retention
+
+`ok_retention()` estimates the fraction of incoming TP and TN retained in the reservoir. The default uses the Larsen-Mercier (1976) formulation from Walker (1996):
+
+$$R_{TP} = \frac{1}{1 + 1/\sqrt{\tau}}$$
+
+```{r retention_step}
+result <- result |> ok_retention()
+
+cat("TP retention coefficient:", round(result$data$tp_retention_coeff, 3), "\n")
+cat("TN retention coefficient:", round(result$data$tn_retention_coeff, 3), "\n")
+```
+
+### Step 4 — In-lake predictions
+
+`ok_inlake()` applies the mass balance and regression equations:
+
+```{r inlake_step}
+result <- result |> ok_inlake()
+
+cat("In-lake TP:    ", round(result$data$tp_inlake_ugl, 1), "µg/L\n")
+cat("Chlorophyll-a: ", round(result$data$chla_ugl, 2),    "µg/L\n")
+cat("Secchi depth:  ", round(result$data$secchi_m, 2),    "m\n")
+```
+
+### Step 5 — Trophic State Index
+
+`ok_tsi()` computes Carlson (1977) TSI from all predicted variables:
+
+```{r tsi_step}
+result <- result |> ok_tsi()
+
+summary(result)
+```
+
+### Full pipeline in one call
+
+All five steps can be chained together:
+
+```{r full_pipeline}
+result <- ok_load(
+    inflow_m3yr   = 45e6,
+    tp_inflow_ugl = 120,
+    tn_inflow_ugl = 1800
+  ) |>
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention() |>
+  ok_inlake()    |>
+  ok_tsi()
+
+summary(result)
+```
+
+## Using the Oklahoma Reservoir Lookup
+
+The `ok_reservoirs` dataset contains morphometry for all OWRB LMP reservoirs. Use `ok_reservoir()` instead of looking up surface area and mean depth manually:
+
+```{r reservoir_lookup}
+# Look up Arcadia Lake from the built-in dataset
+res <- ok_reservoir("Arcadia")
+if (nrow(res) == 0) {
+  # Fallback: use known Arcadia Lake morphometry if not in local dataset
+  res <- data.frame(
+    lake_name       = "Arcadia Lake",
+    surface_area_ha = 890,
+    mean_depth_m    = 4.2,
+    eco_l3_name     = "Cross Timbers",
+    data_quality    = "A",
+    notes           = "Hardcoded fallback"
+  )
+}
+cat("Surface area:", res$surface_area_ha, "ha\n")
+cat("Mean depth:  ", res$mean_depth_m, "m\n")
+```
+
+```{r reservoir_pipeline}
+# Use known Arcadia Lake morphometry for a reproducible example
+result <- ok_load(
+    inflow_m3yr   = 45e6,
+    tp_inflow_ugl = 120,
+    tn_inflow_ugl = 1800
+  ) |>
+  ok_hydraulics(
+    surface_area_ha = 890,
+    mean_depth_m    = 4.2
+  ) |>
+  ok_retention() |>
+  ok_inlake()    |>
+  ok_tsi()
+
+cat("Trophic state:", result$data$trophic_state, "\n")
+cat("Mean TSI:     ", round(result$data$tsi_mean, 1), "\n")
+```
+
+## Multiple Tributaries
+
+When more than one tributary contributes to the reservoir, use `ok_load_multi()` to compute flow-weighted mean concentrations automatically:
+
+```{r multi_trib}
+tributaries <- data.frame(
+  inflow_m3yr   = c(30e6, 15e6),
+  tp_inflow_ugl = c(100,  160),
+  tn_inflow_ugl = c(1500, 2400)
+)
+
+result_multi <- ok_load_multi(tributaries) |>
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention() |>
+  ok_inlake()    |>
+  ok_tsi()
+
+# Flow-weighted mean TP: (100*30e6 + 160*15e6) / 45e6 = 120 µg/L
+cat("FW mean TP inflow:", round(result_multi$data$tp_inflow_ugl, 1), "µg/L\n")
+```
+
+## Computing TSI from Observed Data
+
+`ok_tsi_observed()` computes Carlson TSI directly from monitoring data without running the full pipeline — useful for checking observed trophic state against modelled predictions:
+
+```{r tsi_observed}
+obs <- ok_tsi_observed(
+  tp_ugl    = 85,
+  chla_ugl  = 22,
+  secchi_m  = 0.8
+)
+
+cat("TSI(TP):    ", round(obs$tsi_tp,     1), "\n")
+cat("TSI(Chl-a): ", round(obs$tsi_chla,   1), "\n")
+cat("TSI(Secchi):", round(obs$tsi_secchi, 1), "\n")
+cat("Mean TSI:   ", round(obs$tsi_mean,   1), "\n")
+cat("Class:      ", obs$trophic_state,         "\n")
+```
+
+## Coefficient Sets
+
+All pipeline functions accept a `coefficients` argument:
+
+- **`"walker"`** (default) — Walker (1996) nationally-derived coefficients
+- **`"oklahoma"`** — Oklahoma LMP-calibrated coefficients (Chl-a and Secchi regressions); Walker retention defaults
+
+When using Oklahoma coefficients, supply the EPA Level III ecoregion for best results:
+
+```{r coeff_comparison}
+# Walker coefficients (national defaults)
+r_walker <- ok_load(
+    inflow_m3yr   = 45e6,
+    tp_inflow_ugl = 120,
+    coefficients  = "walker"
+  ) |>
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention() |>
+  ok_inlake()    |>
+  ok_tsi()
+
+# Oklahoma ecoregion-specific coefficients
+r_oklahoma <- ok_load(
+    inflow_m3yr   = 45e6,
+    tp_inflow_ugl = 120,
+    coefficients  = "oklahoma",
+    ecoregion     = "Cross Timbers"
+  ) |>
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention() |>
+  ok_inlake()    |>
+  ok_tsi()
+
+cat("Chlorophyll-a (Walker):   ", round(r_walker$data$chla_ugl, 2),   "µg/L\n")
+cat("Chlorophyll-a (Oklahoma): ", round(r_oklahoma$data$chla_ugl, 2), "µg/L\n\n")
+cat("Mean TSI (Walker):        ", round(r_walker$data$tsi_mean, 1),   "\n")
+cat("Mean TSI (Oklahoma):      ", round(r_oklahoma$data$tsi_mean, 1), "\n")
+```
+
+Oklahoma reservoirs typically show shallower Chl-a vs TP slopes than Walker's national coefficients predict, because turbid, flood-dominated systems show a more muted algal response per unit phosphorus.
+
+## Visualization
+
+```{r plot_response, fig.height=5}
+baseline <- ok_load(
+    inflow_m3yr   = 45e6,
+    tp_inflow_ugl = 120,
+    coefficients  = "oklahoma",
+    ecoregion     = "Cross Timbers"
+  ) |>
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2)
+
+ok_plot_response(
+  baseline,
+  response     = "tsi",
+  target_class = "mesotrophic",
+  current_tp   = 120,
+  lake_name    = "Arcadia Lake"
+)
+```
+
+## References
+
+- Walker, W.W. (1996). *Simplified Procedures for Eutrophication Assessment and Prediction: User Manual*. U.S. Army Corps of Engineers, Instruction Report W-96-2.
+- Carlson, R.E. (1977). A trophic state index for lakes. *Limnology and Oceanography*, 22(2), 361–369.
+- Larsen, D.P. and Mercier, H.T. (1976). Phosphorus retention capacity of lakes. *Journal of the Fisheries Research Board of Canada*, 33, 1742–1750.
