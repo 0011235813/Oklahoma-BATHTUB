@@ -35,34 +35,8 @@ turbidity (Secchi below Chl-a line).
 Can accept either a single \code{okBATHTUB} result, a data frame from
 \code{ok_from_awqms()}, or a data frame from \code{ok_scenario()}.
 }
-\examples{
-\dontrun{
-# From a single pipeline result
-result <- ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120,
-                   coefficients = "oklahoma",
-                   ecoregion    = "Cross Timbers") |>
-  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
-  ok_retention() |>
-  ok_inlake()    |>
-  ok_tsi()
-ok_plot_tsi(result, lake_name = "Arcadia Lake")
-
-# From observed AWQMS data
-obs_tsi <- all_lakes |>
-  dplyr::filter(!is.na(tp_ugl), !is.na(chla_ugl), !is.na(secchi_m)) |>
-  dplyr::rowwise() |>
-  dplyr::mutate(
-    tsi_tp     = 14.42 * log(tp_ugl)   + 4.15,
-    tsi_chla   = 9.81  * log(chla_ugl) + 30.6,
-    tsi_secchi = 60.0  - 14.41 * log(secchi_m)
-  )
-ok_plot_tsi(obs_tsi, color_by = "eco_l3_name")
-}
-
-}
 \references{
-Carlson, R.E. (1977). A trophic state index for lakes.
-\emph{Limnology and Oceanography}, 22(2), 361-369.
+
 }
 \seealso{
 \code{\link{ok_tsi}}, \code{\link{ok_tsi_observed}}

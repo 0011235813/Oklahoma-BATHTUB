@@ -40,7 +40,7 @@ library(dplyr)
 
 `ok_from_awqms()` connects to AWQMS, retrieves growing-season surface grab samples for the target lake(s), and returns a tidy annual summary data frame. It handles unit conversion, non-detect substitution, TN reconstruction, and phaeophytin-corrected chlorophyll prioritisation automatically.
 
-```{r awqms_pull}
+```{r awqms_pull, eval=FALSE}
 # Pull 10 years of data for Arcadia Lake
 arcadia_data <- ok_from_awqms(
   lake_names            = "Arcadia Lake",
@@ -49,7 +49,7 @@ arcadia_data <- ok_from_awqms(
   ecoregion_lookup_path = ok_path("lake_ecoregion_lookup.csv")
 )
 
-glimpse(arcadia_data)
+dplyr::glimpse(arcadia_data)
 ```
 
 The output contains one row per monitoring station per year, with growing-season means for TP, TN, chlorophyll-a (phaeophytin-corrected), Secchi depth, TSS, and turbidity, plus ecoregion and sample counts for each parameter.
@@ -58,7 +58,7 @@ The output contains one row per monitoring station per year, with growing-season
 
 Before modelling, compute observed TSI from the monitoring data to establish a baseline:
 
-```{r observed_tsi}
+```{r observed_tsi, eval=FALSE}
 obs_tsi <- arcadia_data |>
   dplyr::filter(!is.na(tp_ugl), !is.na(chla_ugl), !is.na(secchi_m)) |>
   rowwise() |>
@@ -119,7 +119,7 @@ summary(result)
 
 ### Compare predicted vs observed
 
-```{r compare}
+```{r compare, eval=FALSE}
 cat("--- Predicted (okBATHTUB) vs Observed (LMP) ---\n")
 cat(sprintf("In-lake TP:   predicted = %.1f µg/L | observed = %.1f µg/L\n",
             result$data$tp_inlake_ugl,
