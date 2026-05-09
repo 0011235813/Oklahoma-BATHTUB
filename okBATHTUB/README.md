@@ -1,10 +1,4 @@
-# okBATHTUB <img src="man/figures/logo.png" align="right" height="139" alt="" />
-
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/0011235813/okBATHTUB/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/0011235813/okBATHTUB/actions/workflows/R-CMD-check.yaml)
-[![CRAN status](https://www.r-pkg.org/badges/version/okBATHTUB)](https://CRAN.R-project.org/package=okBATHTUB)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-<!-- badges: end -->
+# okBATHTUB
 
 ## Overview
 
