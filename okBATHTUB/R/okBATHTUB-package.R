@@ -439,10 +439,32 @@ utils::globalVariables(c(
 # Declared here so roxygen2 adds them to NAMESPACE correctly
 # =============================================================================
 
-#' @importFrom dplyr filter mutate select group_by summarise arrange
-#'   left_join anti_join bind_rows distinct n n_distinct first all_of
-#'   if_else recode case_when ungroup rowwise pull slice
-#' @importFrom tidyr pivot_wider pivot_longer
-#' @importFrom stringr str_remove str_trim str_replace_all
-#' @importFrom utils head tail
+#' @importFrom dplyr filter
+#' @importFrom dplyr mutate
+#' @importFrom dplyr select
+#' @importFrom dplyr group_by
+#' @importFrom dplyr summarise
+#' @importFrom dplyr arrange
+#' @importFrom dplyr left_join
+#' @importFrom dplyr anti_join
+#' @importFrom dplyr bind_rows
+#' @importFrom dplyr distinct
+#' @importFrom dplyr n
+#' @importFrom dplyr n_distinct
+#' @importFrom dplyr first
+#' @importFrom dplyr all_of
+#' @importFrom dplyr if_else
+#' @importFrom dplyr recode
+#' @importFrom dplyr case_when
+#' @importFrom dplyr ungroup
+#' @importFrom dplyr rowwise
+#' @importFrom dplyr pull
+#' @importFrom dplyr slice
+#' @importFrom tidyr pivot_wider
+#' @importFrom tidyr pivot_longer
+#' @importFrom stringr str_remove
+#' @importFrom stringr str_trim
+#' @importFrom stringr str_replace_all
+#' @importFrom utils head
+#' @importFrom utils tail
 NULL

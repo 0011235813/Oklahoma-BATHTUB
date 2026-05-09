@@ -48,7 +48,6 @@
 #' OWRB Beneficial Use Monitoring Program reports.
 #'
 #' @examples
-#' @examples
 #' # View all reservoirs
 #' head(ok_reservoirs)
 #'

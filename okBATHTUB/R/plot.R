@@ -116,10 +116,11 @@ ok_theme <- function(base_size = 11, legend_position = "bottom") {
 #'                  target_class = "mesotrophic",
 #'                  current_tp   = 120,
 #'                  lake_name    = "Arcadia Lake")
+#' }
 #'
 #' @seealso \code{\link{ok_scenario}}, \code{\link{ok_plot_scenario}}
 #' @export
-#' }
+
 ok_plot_response <- function(baseline,
                               response           = c("chla", "secchi",
                                                      "tsi", "tp_inlake"),
@@ -316,10 +317,11 @@ ok_plot_response <- function(baseline,
 #'
 #' sweep <- ok_scenario_sweep(baseline, target_class = "mesotrophic")
 #' ok_plot_scenario(sweep, lake_name = "Arcadia Lake")
+#' }
 #'
 #' @seealso \code{\link{ok_scenario}}, \code{\link{ok_scenario_sweep}}
 #' @export
-#' }
+
 ok_plot_scenario <- function(scenario_result,
                               metrics          = c("tp_inlake_ugl", "chla_ugl",
                                                    "secchi_m", "tsi_mean"),
@@ -461,10 +463,11 @@ ok_plot_scenario <- function(scenario_result,
 #' )
 #' chain <- ok_segment_chain(45e6, 150, tn_inflow_ugl = 2200, segments = segs)
 #' ok_plot_segments(chain, lake_name = "Example Reservoir")
+#' }
 #'
 #' @seealso \code{\link{ok_segment_chain}}, \code{\link{ok_segment_summary}}
 #' @export
-#' }
+
 ok_plot_segments <- function(segment_data,
                               metrics    = c("tp_inlake_ugl", "chla_ugl",
                                              "secchi_m", "tsi_mean"),
@@ -592,10 +595,11 @@ ok_plot_segments <- function(segment_data,
 #' @references
 #' Carlson, R.E. (1977). A trophic state index for lakes.
 #' \emph{Limnology and Oceanography}, 22(2), 361-369.
+#' }
 #'
 #' @seealso \code{\link{ok_tsi}}, \code{\link{ok_tsi_observed}}
 #' @export
-#' }
+
 ok_plot_tsi <- function(x,
                          color_by      = NULL,
                          lake_name     = NULL,
