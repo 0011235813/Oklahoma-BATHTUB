@@ -35,6 +35,30 @@ Oklahoma Lake Monitoring Program reservoirs from the bundled
 \code{\link{ok_reservoirs}} dataset. Returns a data frame that can be
 used directly with \code{ok_hydraulics()} in the okBATHTUB pipeline.
 }
+\examples{
+\dontrun{
+# Look up a single lake
+ok_reservoir("Arcadia Lake")
+
+# Partial match
+ok_reservoir("Arcadia")
+
+# Use in pipeline
+res <- ok_reservoir("Arcadia Lake")
+ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120) |>
+  ok_hydraulics(
+    surface_area_ha = res$surface_area_ha,
+    mean_depth_m    = res$mean_depth_m
+  )
+
+# Get all Cross Timbers lakes with quality A data
+ok_reservoir(ecoregion = "Cross Timbers", data_quality = "A")
+
+# List all available lakes
+ok_reservoir()$lake_name
+}
+
+}
 \seealso{
 \code{\link{ok_reservoirs}}, \code{\link{ok_hydraulics}}
 }
