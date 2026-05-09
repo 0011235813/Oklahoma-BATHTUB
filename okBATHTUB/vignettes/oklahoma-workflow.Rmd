@@ -211,7 +211,7 @@ sweep <- ok_scenario_sweep(
 )
 
 sweep |>
-  select(scenario, tp_inflow_ugl, tp_inlake_ugl,
+  dplyr::select(scenario, tp_inflow_ugl, tp_inlake_ugl,
          chla_ugl, secchi_m, tsi_mean, trophic_state, meets_target) |>
   print()
 ```
@@ -261,7 +261,7 @@ custom <- ok_scenario(
 )
 
 custom |>
-  select(scenario, tp_inflow_ugl, tsi_mean, trophic_state, meets_target) |>
+  dplyr::select(scenario, tp_inflow_ugl, tsi_mean, trophic_state, meets_target) |>
   print()
 ```
 
@@ -269,7 +269,7 @@ custom |>
 
 ### Load-response curve
 
-```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE)}
+```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("baseline") && exists("tp_inflow_est")}
 ok_plot_response(
   baseline,
   response     = "tsi",
@@ -281,7 +281,7 @@ ok_plot_response(
 
 ### Scenario comparison
 
-```{r scenario_plot, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE)}
+```{r scenario_plot, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("sweep")}
 ok_plot_scenario(sweep, lake_name = "Arcadia Lake")
 ```
 
