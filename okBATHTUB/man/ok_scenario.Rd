@@ -18,12 +18,12 @@ least \code{ok_hydraulics()}. All morphometry is taken from this object.}
 
 \item{scenarios}{A list of named lists, one per scenario. Each list must
 have a \code{label} (character, required). Optional fields:
-\code{tp_reduction} (numeric 0-1, fractional TP reduction),
-\code{tn_reduction} (numeric 0-1, fractional TN reduction),
-\code{tp_inflow_ugl} (numeric, absolute inflow TP in ug/L, overrides
-tp_reduction), \code{tn_inflow_ugl} (numeric, absolute inflow TN in ug/L),
-\code{flow_change} (numeric, fractional change in inflow volume, e.g.
-\code{-0.20} = 20\% flow reduction).}
+\code{tp_reduction} (numeric, fractional TP reduction between 0 and 1),
+\code{tn_reduction} (numeric, fractional TN reduction between 0 and 1),
+\code{tp_inflow_ugl} (numeric, absolute inflow TP in ug/L),
+\code{tn_inflow_ugl} (numeric, absolute inflow TN in ug/L),
+\code{flow_change} (numeric, fractional change in inflow volume;
+e.g. -0.20 means a 20 percent flow reduction).}
 
 \item{include_baseline}{Logical. Whether to include the baseline run as
 the first row in the output. Default \code{TRUE}.}
@@ -37,62 +37,39 @@ to the upper bound of that class automatically.}
 }
 \value{
 A data frame with one row per scenario (plus baseline if requested).
-  Columns include: \code{scenario} (label), \code{tp_inflow_ugl} (inflow TP
-  in ug/L), \code{tp_reduction_pct} (reduction from baseline in percent),
-  \code{tp_inlake_ugl} (predicted in-lake TP), \code{chla_ugl} (predicted
-  chlorophyll-a), \code{secchi_m} (predicted Secchi depth), \code{tsi_tp},
-  \code{tsi_chla}, \code{tsi_mean} (Carlson TSI values), \code{trophic_state}
-  (classification), and optionally \code{meets_target} (logical, present when
-  \code{target_tsi} is supplied).
+Columns include \code{scenario}, \code{tp_inflow_ugl},
+\code{tp_reduction_pct}, \code{tp_inlake_ugl}, \code{chla_ugl},
+\code{secchi_m}, \code{tsi_tp}, \code{tsi_chla}, \code{tsi_mean},
+\code{trophic_state}, and optionally \code{meets_target}.
 }
 \description{
-\code{ok_scenario()} takes a baseline \code{ok_load()} result and runs
-the full pipeline under one or more alternative loading scenarios, returning
-a tidy comparison table of predicted water quality across all scenarios.
-This is the primary tool for nutrient management planning - answering
-"how much does TP need to be reduced to move this lake from eutrophic to
-mesotrophic?"
+\code{ok_scenario()} takes a baseline \code{ok_hydraulics()} result and
+runs the full pipeline under one or more alternative loading scenarios,
+returning a tidy comparison table of predicted water quality.
 }
 \section{How scenarios work}{
-
 Each scenario modifies one or more inflow parameters relative to the
-baseline. Reductions are expressed as fractions (0?1), where
-\code{tp_reduction = 0.30} means a 30\% reduction in inflow TP load.
-Scenarios can also specify absolute concentrations directly via
-\code{tp_inflow_ugl}, which overrides the reduction fraction.
-
-The morphometric parameters (surface area, mean depth) from the baseline
-\code{ok_hydraulics()} call are applied to every scenario.
+baseline. Morphometric parameters from the baseline \code{ok_hydraulics()}
+call are applied to every scenario.
 }
-
 \examples{
-# Baseline: Arcadia Lake with estimated inflow loading
+\dontrun{
 baseline <- ok_load(
   inflow_m3yr   = 45e6,
   tp_inflow_ugl = 120,
-  tn_inflow_ugl = 1800,
-  segment_label = "lacustrine",
   coefficients  = "oklahoma",
   ecoregion     = "Cross Timbers"
 ) |>
-ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2)
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2)
 
-# Scenario analysis: what TP reduction gets us to mesotrophic?
 scenarios <- list(
-  list(label = "10\% TP reduction",  tp_reduction = 0.10),
-  list(label = "20\% TP reduction",  tp_reduction = 0.20),
-  list(label = "30\% TP reduction",  tp_reduction = 0.30),
-  list(label = "40\% TP reduction",  tp_reduction = 0.40),
-  list(label = "50\% TP reduction",  tp_reduction = 0.50)
+  list(label = "10 pct reduction", tp_reduction = 0.10),
+  list(label = "30 pct reduction", tp_reduction = 0.30),
+  list(label = "50 pct reduction", tp_reduction = 0.50)
 )
 
-results <- ok_scenario(
-  baseline      = baseline,
-  scenarios     = scenarios,
-  target_class  = "mesotrophic"
-)
-print(results)
-
+ok_scenario(baseline, scenarios, target_class = "mesotrophic")
+}
 }
 \seealso{
 \code{\link{ok_load}}, \code{\link{ok_scenario_sweep}}

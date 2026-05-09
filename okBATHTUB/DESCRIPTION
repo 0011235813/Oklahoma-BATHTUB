@@ -21,6 +21,7 @@ Description: Implements steady-state empirical reservoir water quality modeling
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = FALSE)
+RoxygenNote: 8.0.0
 Depends:
     R (>= 4.1.0)
 Imports:
@@ -42,4 +43,3 @@ VignetteBuilder: knitr
 LazyData: true
 URL: https://github.com/0011235813/Oklahoma-BATHTUB
 BugReports: https://github.com/0011235813/Oklahoma-BATHTUB/issues
-Config/roxygen2/version: 8.0.0

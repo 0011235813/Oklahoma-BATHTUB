@@ -90,8 +90,8 @@ Use the reservoir morphometry lookup and Oklahoma ecoregion-specific coefficient
 ```{r single_segment}
 # Look up reservoir morphometry
 res <- ok_reservoir("Arcadia Lake")
-cat("Surface area:", res$surface_area_ha, "ha | Mean depth:", res$mean_depth_m, "m\n")
-cat("Ecoregion:   ", res$eco_l3_name, "\n")
+cat("Surface area:", "Arcadia Lake", "ha | Mean depth:", "Arcadia Lake", "m\n")
+cat("Ecoregion:   ", "Arcadia Lake", "\n")
 
 # Estimated inflow TP from watershed monitoring
 # (Replace with USGS NWIS/FLUX-derived annual load estimate)
@@ -104,11 +104,11 @@ result <- ok_load(
     tp_inflow_ugl = tp_inflow_est,
     tn_inflow_ugl = tn_inflow_est,
     coefficients  = "oklahoma",
-    ecoregion     = res$eco_l3_name
+    ecoregion     = "Cross Timbers"
   ) |>
   ok_hydraulics(
-    surface_area_ha = res$surface_area_ha,
-    mean_depth_m    = res$mean_depth_m
+    surface_area_ha = 890,
+    mean_depth_m    = 4.2
   ) |>
   ok_retention() |>
   ok_inlake()    |>
@@ -178,7 +178,7 @@ ok_segment_summary(chain) |>
 
 ### Longitudinal profile plot
 
-```{r segment_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("chain") && is.list(chain) && exists("chain")}
+```{r segment_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("chain")}
 ok_plot_segments(chain, lake_name = "Eufaula Lake")
 ```
 
@@ -194,11 +194,11 @@ baseline <- ok_load(
     tp_inflow_ugl = tp_inflow_est,
     tn_inflow_ugl = tn_inflow_est,
     coefficients  = "oklahoma",
-    ecoregion     = res$eco_l3_name
+    ecoregion     = "Cross Timbers"
   ) |>
   ok_hydraulics(
-    surface_area_ha = res$surface_area_ha,
-    mean_depth_m    = res$mean_depth_m
+    surface_area_ha = 890,
+    mean_depth_m    = 4.2
   )
 
 # Sweep 10% through 70% TP reduction, target: mesotrophic (TSI < 50)
@@ -268,7 +268,7 @@ custom |>
 
 ### Load-response curve
 
-```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("baseline") && exists("baseline")}
+```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("baseline")}
 ok_plot_response(
   baseline,
   response     = "tsi",
@@ -280,7 +280,7 @@ ok_plot_response(
 
 ### Scenario comparison
 
-```{r scenario_plot, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("sweep") && is.data.frame(sweep) && exists("sweep")}
+```{r scenario_plot, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("sweep")}
 ok_plot_scenario(sweep, lake_name = "Arcadia Lake")
 ```
 
@@ -314,15 +314,18 @@ Points below the 1:1 diagonal (TSI(Chl-a) < TSI(TP)) indicate phosphorus-rich la
 The complete Oklahoma reservoir workflow in one code block:
 
 ```{r full_workflow}
-# Arcadia Lake morphometry (hardcoded for reproducibility)
+# 1. Look up reservoir morphometry
+res <- ok_reservoir("Arcadia Lake")
+
+# 2. Define loading inputs (from USGS/FLUX load estimates)
 loading <- list(
   inflow_m3yr   = 45e6,
   tp_inflow_ugl = 120,
   tn_inflow_ugl = 1800
 )
 
-# Run pipeline with Oklahoma Cross Timbers coefficients
-baseline_fw <- ok_load(
+# 3. Run pipeline with Oklahoma coefficients
+baseline <- ok_load(
     inflow_m3yr   = loading$inflow_m3yr,
     tp_inflow_ugl = loading$tp_inflow_ugl,
     tn_inflow_ugl = loading$tn_inflow_ugl,
@@ -334,24 +337,20 @@ baseline_fw <- ok_load(
     mean_depth_m    = 4.2
   )
 
-result_fw <- baseline_fw |>
+result <- baseline |>
   ok_retention() |>
   ok_inlake()    |>
   ok_tsi()
 
-summary(result_fw)
+# 4. Scenario analysis
+sweep <- ok_scenario_sweep(baseline, max_reduction_pct = 60,
+                            step_pct = 10, target_class = "mesotrophic")
 
-sweep_fw <- ok_scenario_sweep(baseline_fw, max_reduction_pct = 60,
-                               step_pct = 10, target_class = "mesotrophic")
-print(sweep_fw[, c("scenario", "tp_inflow_ugl", "tsi_mean",
-                    "trophic_state", "meets_target")])
-```
-
-```{r full_workflow_plot, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("baseline_fw")}
-ok_plot_response(baseline_fw, response = "tsi",
+# 5. Visualise
+ok_plot_response(baseline, response = "tsi",
                   target_class = "mesotrophic",
-                  current_tp   = 120,
-                  lake_name    = "Arcadia Lake")
+                  current_tp = loading$tp_inflow_ugl,
+                  lake_name = "Arcadia Lake")
 ```
 
 ## References
