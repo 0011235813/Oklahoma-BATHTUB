@@ -27,15 +27,19 @@ The BATHTUB framework (Walker 1996) is a steady-state mass-balance model for
 reservoir eutrophication. For a single well-mixed segment, the in-lake TP
 concentration is:
 
-$$C_{lake} = C_{in} \times (1 - R_{TP})$$
+```
+C_lake = C_in × (1 - R_TP)
+```
 
-where $C_{in}$ is the flow-weighted mean inflow TP concentration (µg/L) and
-$R_{TP}$ is the TP retention coefficient, estimated using the Larsen-Mercier
+where *C_in* is the flow-weighted mean inflow TP concentration (µg/L) and
+*R_TP* is the TP retention coefficient, estimated using the Larsen-Mercier
 (1976) hydraulic residence time model:
 
-$$R_{TP} = \frac{1}{1 + \tau^{-0.5}}$$
+```
+R_TP = 1 / (1 + τ^(-0.5))
+```
 
-where $\tau$ is hydraulic residence time (years). TN retention uses the
+where *τ* is hydraulic residence time (years). TN retention uses the
 Vollenweider settling-velocity formulation with Walker's default apparent
 settling velocity of 10 m/yr.
 
@@ -44,9 +48,10 @@ settling velocity of 10 m/yr.
 Chlorophyll-*a* and Secchi depth are predicted from in-lake TP and
 chlorophyll-*a*, respectively, using log-log ordinary least squares regression:
 
-$$\log_{10}(\text{Chl-}a) = a + b \cdot \log_{10}(\text{TP}_{lake})$$
-
-$$\log_{10}(\text{Secchi}) = a + b \cdot \log_{10}(\text{Chl-}a)$$
+```
+log10(Chl-a)  = a + b × log10(TP_lake)
+log10(Secchi) = a + b × log10(Chl-a)
+```
 
 Coefficients are calibrated from OWRB LMP grab sample data (2000–2024, 82
 lakes, ~250 lake-station-year observations; growing season May–October, surface
@@ -78,7 +83,7 @@ install.packages("okBATHTUB")
 
 # Development version from GitHub:
 # install.packages("remotes")
-remotes::install_github("0011235813/okBATHTUB")
+remotes::install_github("0011235813/Oklahoma-BATHTUB")
 ```
 
 ---
@@ -259,7 +264,7 @@ Dzialowski, A.R., Smith, V.H., Huggins, D.G., deNoyelles, F., Lim, N.C.,
 Baker, D.S., and Beury, J.H. (2011). Effects of non-algal turbidity on
 cyanobacterial biomass in seven turbid Kansas reservoirs. *Lake and Reservoir
 Management*, 27(1), 6–14.
-<https://doi.org/10.1080/07438141.2010.536556>
+<https://doi.org/10.1080/07438141.2011.551027>
 
 Jones, J.R. and Knowlton, M.F. (2005). Chlorophyll response to nutrients and
 non-algal seston in Missouri reservoirs and oxbow lakes. *Lake and Reservoir
@@ -285,7 +290,7 @@ citation("okBATHTUB")
 ```
 Henderson, J. (2025). okBATHTUB: Reservoir Eutrophication Modeling for
 Oklahoma Lakes. R package version 0.1.0.
-https://github.com/0011235813/okBATHTUB
+https://github.com/0011235813/Oklahoma-BATHTUB
 ```
 
 ---
@@ -305,4 +310,4 @@ have been added to AWQMS since the calibration date recorded in
 `data-raw/ok_coefficients.R`.
 
 Bug reports and feature requests:
-<https://github.com/0011235813/okBATHTUB/issues>
+<https://github.com/0011235813/Oklahoma-BATHTUB/issues>

@@ -172,14 +172,14 @@ chain <- ok_segment_chain(
 )
 
 ok_segment_summary(chain) |>
-  select(segment, tp_inflow_ugl, tp_inlake_ugl, tp_retention,
-         chla_ugl, secchi_m, tsi_mean, trophic_state) |>
+  dplyr::select(segment, tp_inflow_ugl, tp_inlake_ugl, tp_retention,
+                chla_ugl, secchi_m, tsi_mean, trophic_state) |>
   print()
 ```
 
 ### Longitudinal profile plot
 
-```{r segment_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE)}
+```{r segment_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("chain")}
 ok_plot_segments(chain, lake_name = "Eufaula Lake")
 ```
 
