@@ -41,5 +41,5 @@ Suggests:
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 LazyData: true
-URL: https://github.com/0011235813/okBATHTUB
-BugReports: https://github.com/0011235813/okBATHTUB/issues
+URL: https://github.com/0011235813/Oklahoma-BATHTUB
+BugReports: https://github.com/0011235813/Oklahoma-BATHTUB/issues
