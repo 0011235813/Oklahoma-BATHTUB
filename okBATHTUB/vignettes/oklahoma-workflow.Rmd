@@ -139,24 +139,25 @@ For reservoirs with pronounced longitudinal gradients (common in Oklahoma's floo
 Eufaula Lake — Oklahoma's largest reservoir — has a strongly stratified riverine-to-lacustrine gradient:
 
 ```{r multi_segment}
-eufaula <- ok_reservoir("Eufaula Lake")
-
+# Eufaula Lake: surface_area_ha = 40100, mean_depth_m = 5.5 (ok_reservoirs dataset)
 # Three segments representing the longitudinal gradient
 # Segment proportions estimated from USACE bathymetric data
+eufaula_area_ha <- 40100
+
 segments <- list(
   list(
     label           = "Riverine",
-    surface_area_ha = eufaula$surface_area_ha * 0.25,
+    surface_area_ha = eufaula_area_ha * 0.25,
     mean_depth_m    = 3.2
   ),
   list(
     label           = "Transitional",
-    surface_area_ha = eufaula$surface_area_ha * 0.35,
+    surface_area_ha = eufaula_area_ha * 0.35,
     mean_depth_m    = 4.8
   ),
   list(
     label           = "Lacustrine",
-    surface_area_ha = eufaula$surface_area_ha * 0.40,
+    surface_area_ha = eufaula_area_ha * 0.40,
     mean_depth_m    = 7.1
   )
 )
