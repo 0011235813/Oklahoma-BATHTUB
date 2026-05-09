@@ -296,7 +296,7 @@ cat(sprintf("Secchi range: %.2f - %.2f m\n",
 
 The load-response curve places the HAWQS scenarios in the context of the full TP range:
 
-```{r response_plot, fig.height=5.5}
+```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE)}
 ok_plot_response(
   baseline,
   response     = "tsi",

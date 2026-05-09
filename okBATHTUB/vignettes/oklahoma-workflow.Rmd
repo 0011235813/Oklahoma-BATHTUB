@@ -179,7 +179,7 @@ ok_segment_summary(chain) |>
 
 ### Longitudinal profile plot
 
-```{r segment_plot, fig.height=5.5}
+```{r segment_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE)}
 ok_plot_segments(chain, lake_name = "Eufaula Lake")
 ```
 
@@ -269,7 +269,7 @@ custom |>
 
 ### Load-response curve
 
-```{r response_plot, fig.height=5.5}
+```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE)}
 ok_plot_response(
   baseline,
   response     = "tsi",
@@ -281,7 +281,7 @@ ok_plot_response(
 
 ### Scenario comparison
 
-```{r scenario_plot, fig.height=5}
+```{r scenario_plot, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE)}
 ok_plot_scenario(sweep, lake_name = "Arcadia Lake")
 ```
 
@@ -314,7 +314,7 @@ Points below the 1:1 diagonal (TSI(Chl-a) < TSI(TP)) indicate phosphorus-rich la
 
 The complete Oklahoma reservoir workflow in one code block:
 
-```{r full_workflow}
+```{r full_workflow, eval=requireNamespace("ggplot2", quietly=TRUE)}
 # 1. Look up reservoir morphometry
 res <- ok_reservoir("Arcadia Lake")
 

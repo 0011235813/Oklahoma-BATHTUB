@@ -258,7 +258,7 @@ Oklahoma reservoirs typically show shallower Chl-a vs TP slopes than Walker's na
 
 ## Visualization
 
-```{r plot_response, fig.height=5}
+```{r plot_response, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE)}
 baseline <- ok_load(
     inflow_m3yr   = 45e6,
     tp_inflow_ugl = 120,
