@@ -591,11 +591,11 @@ ok_plot_segments <- function(segment_data,
 #'     tsi_secchi = 60.0  - 14.41 * log(secchi_m)
 #'   )
 #' ok_plot_tsi(obs_tsi, color_by = "eco_l3_name")
+#' }
 #'
 #' @references
 #' Carlson, R.E. (1977). A trophic state index for lakes.
 #' \emph{Limnology and Oceanography}, 22(2), 361-369.
-#' }
 #'
 #' @seealso \code{\link{ok_tsi}}, \code{\link{ok_tsi_observed}}
 #' @export

@@ -23,31 +23,33 @@ Default 70.}
 \item{target_tsi}{Numeric. Optional TSI target passed to
 \code{ok_scenario()}. Default \code{NULL}.}
 
-\item{target_class}{Character. Optional trophic class target:
-\code{"oligotrophic"}, \code{"mesotrophic"}, or \code{"eutrophic"}.
-Default \code{NULL}.}
+\item{target_class}{Character. Optional trophic class target
+(\code{"oligotrophic"}, \code{"mesotrophic"}, or \code{"eutrophic"})
+passed to \code{ok_scenario()}. Default \code{NULL}.}
 }
 \value{
 A data frame as returned by \code{ok_scenario()}, with one row
-per reduction step plus the baseline.
+  per reduction step plus the baseline.
 }
 \description{
 A convenience wrapper around \code{ok_scenario()} that automatically
-generates a sequence of TP reduction scenarios from 0 to
-\code{max_reduction_pct} percent in steps of \code{step_pct} percent.
+generates a sequence of TP reduction scenarios from 0 to max_reduction_pct percent in steps of step_pct percent. Useful for
+generating load-response curves and finding the minimum reduction needed
+to achieve a trophic state target.
 }
 \examples{
-\dontrun{
 baseline <- ok_load(
   inflow_m3yr   = 45e6,
   tp_inflow_ugl = 120,
-  coefficients  = "oklahoma",
-  ecoregion     = "Cross Timbers"
+  ecoregion     = "Cross Timbers",
+  coefficients  = "oklahoma"
 ) |>
-  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2)
+ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2)
 
-ok_scenario_sweep(baseline, target_class = "mesotrophic")
-}
+sweep <- ok_scenario_sweep(baseline, target_class = "mesotrophic")
+print(sweep[, c("scenario", "tp_inflow_ugl", "tsi_mean",
+                "trophic_state", "meets_target")])
+
 }
 \seealso{
 \code{\link{ok_scenario}}

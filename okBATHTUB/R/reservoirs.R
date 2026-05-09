@@ -100,10 +100,10 @@
 #'
 #' # List all available lakes
 #' ok_reservoir()$lake_name
+#' }
 #'
 #' @seealso \code{\link{ok_reservoirs}}, \code{\link{ok_hydraulics}}
 #' @export
-#' }
 ok_reservoir <- function(lake_name    = NULL,
                           exact        = FALSE,
                           ecoregion    = NULL,
