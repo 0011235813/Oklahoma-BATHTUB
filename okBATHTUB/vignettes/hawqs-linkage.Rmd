@@ -110,7 +110,7 @@ hawqs_annual <- data.frame(
 # Compute flow-weighted mean concentrations
 # Concentration (µg/L) = load (kg/yr) / volume (m³/yr) * 1e6
 hawqs_annual <- hawqs_annual |>
-  mutate(
+  dplyr::mutate(
     tp_conc_ugl = tp_load_kgyr / flow_m3yr * 1e6,
     tn_conc_ugl = tn_load_kgyr / flow_m3yr * 1e6
   )

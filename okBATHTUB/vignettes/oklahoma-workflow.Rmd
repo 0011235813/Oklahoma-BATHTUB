@@ -61,9 +61,9 @@ Before modelling, compute observed TSI from the monitoring data to establish a b
 
 ```{r observed_tsi}
 obs_tsi <- arcadia_data |>
-  filter(!is.na(tp_ugl), !is.na(chla_ugl), !is.na(secchi_m)) |>
+  dplyr::filter(!is.na(tp_ugl), !is.na(chla_ugl), !is.na(secchi_m)) |>
   rowwise() |>
-  mutate(
+  dplyr::mutate(
     tsi_tp     = 14.42 * log(tp_ugl)   + 4.15,
     tsi_chla   = 9.81  * log(chla_ugl) + 30.6,
     tsi_secchi = 60.0  - 14.41 * log(secchi_m),
@@ -73,8 +73,8 @@ obs_tsi <- arcadia_data |>
 
 # Annual mean TSI by site
 obs_tsi |>
-  group_by(sample_year) |>
-  summarise(
+  dplyr::group_by(sample_year) |>
+  dplyr::summarise(
     tsi_tp     = round(mean(tsi_tp,     na.rm = TRUE), 1),
     tsi_chla   = round(mean(tsi_chla,   na.rm = TRUE), 1),
     tsi_secchi = round(mean(tsi_secchi, na.rm = TRUE), 1),
@@ -220,8 +220,8 @@ sweep |>
 
 ```{r min_reduction}
 min_met <- sweep |>
-  filter(meets_target == TRUE) |>
-  slice(1)
+  dplyr::filter(meets_target == TRUE) |>
+  dplyr::slice(1)
 
 if (nrow(min_met) > 0) {
   cat(sprintf(
@@ -299,8 +299,8 @@ all_lakes <- ok_from_awqms(
 
 # Compute observed TSI
 all_tsi <- all_lakes |>
-  filter(!is.na(tp_ugl), !is.na(chla_ugl)) |>
-  mutate(
+  dplyr::filter(!is.na(tp_ugl), !is.na(chla_ugl)) |>
+  dplyr::mutate(
     tsi_tp   = 14.42 * log(tp_ugl)   + 4.15,
     tsi_chla = 9.81  * log(chla_ugl) + 30.6
   )
