@@ -11,6 +11,11 @@
 #   ok_trophic_colors()  - trophic state color palette
 # =============================================================================
 
+# Declare global variables used in ggplot2 aes() calls to avoid R CMD check notes
+utils::globalVariables(c(
+  "metric", "point_color", "tsi_chla", "tsi_secchi", "tsi_tp", "xmin", "xmax"
+))
+
 
 # =============================================================================
 # SHARED THEME AND PALETTE
