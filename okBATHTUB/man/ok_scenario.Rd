@@ -17,12 +17,13 @@ ok_scenario(
 least \code{ok_hydraulics()}. All morphometry is taken from this object.}
 
 \item{scenarios}{A list of named lists, one per scenario. Each list must
-have a \code{label} (character, required). Optional fields include
-\code{tp_reduction} (numeric 0-1), \code{tn_reduction} (numeric 0-1),
+have a \code{label} (character, required). Optional fields:
+\code{tp_reduction} (numeric 0-1, fractional TP reduction),
+\code{tn_reduction} (numeric 0-1, fractional TN reduction),
 \code{tp_inflow_ugl} (numeric, absolute inflow TP in ug/L, overrides
-\code{tp_reduction}), \code{tn_inflow_ugl} (numeric, absolute inflow TN
-in ug/L), and \code{flow_change} (numeric, fractional change in inflow
-volume, e.g. \code{-0.20} for 20\% flow reduction).}
+tp_reduction), \code{tn_inflow_ugl} (numeric, absolute inflow TN in ug/L),
+\code{flow_change} (numeric, fractional change in inflow volume, e.g.
+\code{-0.20} = 20\% flow reduction).}
 
 \item{include_baseline}{Logical. Whether to include the baseline run as
 the first row in the output. Default \code{TRUE}.}

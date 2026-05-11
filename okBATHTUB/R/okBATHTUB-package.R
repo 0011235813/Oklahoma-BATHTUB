@@ -67,6 +67,7 @@
 #'   U.S. Army Engineer Waterways Experiment Station.
 #'
 #' @keywords internal
+#' @importFrom utils globalVariables
 "_PACKAGE"
 
 
@@ -548,6 +549,8 @@ utils::globalVariables(c(
   "tp_inflow", "ymin", "ymax", "state",
   "tsi_y", "metric_label", "scenario", "meets_target",
   "value", "segment", "tsi_type",
+  "metric", "point_color",
+  "tsi_chla", "tsi_secchi", "tsi_tp", "xmin", "xmax",
   # dataset columns referenced in ok_reservoir / ok_reservoir_summary
   "ok_reservoirs", "data_quality", "surface_area_ha", "mean_depth_m",
   "eco_l3_name",

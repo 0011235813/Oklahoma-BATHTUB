@@ -22,10 +22,36 @@ nutrient retention. Ecoregion-specific regressions are applied where
 calibration support is sufficient (n >= 15 observations, n >= 5 lakes,
 R^2 >= 0.25); a statewide pooled regression is used otherwise.
 }
-\details{
-Calibration metadata note: the per-ecoregion sample sizes reported below
-reflect each ecoregion's specific fit; the statewide pooled fit reflects
-a separate filtering pass on a different aggregate dataset, so per-
-ecoregion sample sizes do not necessarily sum to the pooled total.
+\section{Calibration data}{
+
+Calibration used 2000-2024 growing-season (May-October) surface grab
+samples from publicly available state lake monitoring data, aggregated
+to lake-station-year means requiring at least 3 samples per parameter,
+then filtered to records with valid TP, chlorophyll-a, and Secchi
+values (joint filter). The same filtered dataset feeds both the
+Chl-a-from-TP and Secchi-from-Chl-a regressions, so per-ecoregion
+n values are identical across the two fits. The statewide pooled
+total (n=250 observations from 82 lakes) is larger than the sum of
+the per-ecoregion fits because the pooled fit includes records from
+ecoregions where the per-ecoregion fit did not meet the sample size
+threshold (e.g. Ouachita Mountains, Central Great Plains). See
+\code{data-raw/CALIBRATION_README.md} and
+\code{data-raw/ok_calibration_report.xlsx} in the package source for full
+provenance.
 }
+
+\section{Ecoregions with ecoregion-specific fits}{
+
+\itemize{
+\item Cross Timbers (Chl-a and Secchi)
+\item Central Oklahoma/Texas Plains (Chl-a and Secchi)
+\item Ozark Highlands (Chl-a only; Secchi fit fell below
+R^2 = 0.25 threshold and uses statewide pooled)
+}
+All other ecoregions use the statewide pooled coefficients.
+Arkansas Valley Chl-a was rejected at R^2 = 0.120 due to inorganic
+turbidity decoupling the TP-Chl-a relationship; see the calibration
+README for context.
+}
+
 \keyword{internal}
