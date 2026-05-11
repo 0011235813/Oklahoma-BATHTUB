@@ -28,8 +28,6 @@ Neither model alone spans the full management question. Together they answer: *"
 
 ```{r load}
 library(okBATHTUB)
-library(dplyr)
-library(readr)
 ```
 
 ## The Two-Model Workflow
@@ -92,7 +90,7 @@ read_swat_rch <- function(rch_path) {
 
 ## Simulated Example: 604(b) Sensitive Water Supply Workflow
 
-This example replicates the analytical approach used in the OWRB 604(b) BIL-funded watershed modeling project. We use simulated OK-HAWQS output representing annual TP and flow loads at the reservoir inlet for a Sensitive Water Supply reservoir.
+This example demonstrates the analytical approach typical of state-level Clean Water Act Section 604(b) watershed modeling projects. We use simulated OK-HAWQS output representing annual TP and flow loads at the reservoir inlet for a hypothetical sensitive water supply reservoir.
 
 ```{r simulate_hawqs}
 # Simulated OK-HAWQS annual output at reservoir inlet
@@ -109,11 +107,8 @@ hawqs_annual <- data.frame(
 
 # Compute flow-weighted mean concentrations
 # Concentration (µg/L) = load (kg/yr) / volume (m³/yr) * 1e6
-hawqs_annual <- hawqs_annual |>
-  dplyr::mutate(
-    tp_conc_ugl = tp_load_kgyr / flow_m3yr * 1e6,
-    tn_conc_ugl = tn_load_kgyr / flow_m3yr * 1e6
-  )
+hawqs_annual$tp_conc_ugl <- hawqs_annual$tp_load_kgyr / hawqs_annual$flow_m3yr * 1e6
+hawqs_annual$tn_conc_ugl <- hawqs_annual$tn_load_kgyr / hawqs_annual$flow_m3yr * 1e6
 
 cat("--- OK-HAWQS Annual Load Summary ---\n")
 cat(sprintf("Mean annual flow:    %.1f million m³/yr\n",
@@ -314,7 +309,7 @@ ok_plot_response(
 
 **Load vs concentration** — HAWQS produces loads (kg/yr). Convert to concentration (µg/L) using `C = L / Q * 1e6` before calling `ok_load()`. Verify that the resulting concentration is physically plausible for the watershed — very high concentrations with low flows may indicate numerical artefacts in the HAWQS calibration.
 
-**Retention sensitivity** — BATHTUB's Larsen-Mercier retention is sensitive to hydraulic residence time, which depends on inflow volume. In drought years, lower inflow → longer residence time → higher retention → lower in-lake TP. Check that this behaviour is captured when comparing wet and dry year scenarios.
+**Retention sensitivity** — Walker BATHTUB Model 1 retention is sensitive to hydraulic residence time, which depends on inflow volume. In drought years, lower inflow → longer residence time → higher retention → lower in-lake TP. Check that this behaviour is captured when comparing wet and dry year scenarios.
 
 **Uncertainty propagation** — both HAWQS and BATHTUB have calibration uncertainty. Report predictions as ranges (e.g., ± one standard deviation across years) rather than single values, particularly for regulatory applications.
 

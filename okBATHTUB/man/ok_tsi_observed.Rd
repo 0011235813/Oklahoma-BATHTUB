@@ -7,21 +7,22 @@
 ok_tsi_observed(tp_ugl = NULL, chla_ugl = NULL, secchi_m = NULL)
 }
 \arguments{
-\item{tp_ugl}{Numeric. Observed in-lake total phosphorus (ug/L). Optional.}
+\item{tp_ugl}{Numeric. Observed in-lake total phosphorus (ug/L).
+Optional.}
 
 \item{chla_ugl}{Numeric. Observed chlorophyll-a (ug/L). Optional.}
 
 \item{secchi_m}{Numeric. Observed Secchi depth (m). Optional.}
 }
 \value{
-A named list with elements \code{tsi_tp}, \code{tsi_chla},
-  \code{tsi_secchi}, \code{tsi_mean}, and \code{trophic_state}.
+A named list with elements \code{tsi_tp}, \code{tsi_chla}, \code{tsi_secchi},
+\code{tsi_n}, \code{tsi_mean}, and \code{trophic_state}.
 }
 \description{
-A standalone helper for computing Carlson TSI directly from observed water
-quality measurements, without running the full BATHTUB prediction pipeline.
-Useful for computing observed trophic state from AWQMS or LMP grab sample
-data for comparison against modeled predictions.
+A standalone helper for computing Carlson TSI directly from observed
+water quality measurements, without running the full prediction
+pipeline. Useful for computing observed trophic state from grab
+sample data for comparison against modelled predictions.
 }
 \examples{
 ok_tsi_observed(tp_ugl = 85, chla_ugl = 22, secchi_m = 0.8)
@@ -29,5 +30,5 @@ ok_tsi_observed(tp_ugl = 85, chla_ugl = 22, secchi_m = 0.8)
 }
 \references{
 Carlson, R.E. (1977). A trophic state index for lakes.
-\emph{Limnology and Oceanography}, 22(2), 361--369.
+\emph{Limnology and Oceanography}, 22(2), 361-369.
 }

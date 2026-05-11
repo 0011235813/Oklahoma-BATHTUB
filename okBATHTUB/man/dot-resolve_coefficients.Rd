@@ -4,18 +4,23 @@
 \alias{.resolve_coefficients}
 \title{Resolve coefficient set from argument}
 \usage{
-.resolve_coefficients(coefficients)
+.resolve_coefficients(coefficients, ecoregion = NULL)
 }
 \arguments{
-\item{coefficients}{One of \code{"walker"} (default), \code{"oklahoma"},
+\item{coefficients}{One of \code{"walker"}, \code{"vollenweider"}, \code{"oklahoma"},
 or a named list of custom coefficients.}
+
+\item{ecoregion}{EPA Level III ecoregion name. Used only with
+\code{coefficients = "oklahoma"}.}
 }
 \value{
 A named list of coefficients.
 }
 \description{
 Returns the appropriate named coefficient list given a \code{coefficients}
-argument. Accepts \code{"walker"}, \code{"oklahoma"}, or a user-supplied
-named list.
+argument. Accepts \code{"walker"} (Walker BATHTUB Model 1, default),
+\code{"vollenweider"} (Vollenweider/Larsen-Mercier, equivalent to Walker
+Model 5), \code{"oklahoma"} (Walker Model 1 retention plus Oklahoma-specific
+chlorophyll/Secchi regressions), or a user-supplied named list.
 }
 \keyword{internal}

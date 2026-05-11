@@ -6,6 +6,9 @@
 \usage{
 .classify_trophic_state(tsi)
 }
+\arguments{
+\item{tsi}{Numeric TSI value.}
+}
 \description{
 Classify trophic state from mean TSI
 }

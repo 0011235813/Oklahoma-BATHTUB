@@ -15,67 +15,69 @@ ok_load(
 )
 }
 \arguments{
-\item{inflow_m3yr}{Numeric. Total annual tributary inflow volume (m\eqn{^3}/yr).
-Must be positive. To convert from acre-feet/yr multiply by 1233.48.
-To convert from cfs annual mean multiply by 28.3168 * 86400 * 365.}
+\item{inflow_m3yr}{Numeric. Total annual tributary inflow volume
+(m^3/yr). Must be positive.}
 
 \item{tp_inflow_ugl}{Numeric. Flow-weighted mean total phosphorus
 concentration of tributary inflow (ug/L). Must be non-negative.}
 
 \item{tn_inflow_ugl}{Numeric. Flow-weighted mean total nitrogen
-concentration of tributary inflow (ug/L). Must be non-negative.
-Pass \code{NULL} (default) if TN data are unavailable; TN predictions
-will be skipped downstream.}
+concentration of tributary inflow (ug/L). Optional. Default \code{NULL}.}
 
-\item{tss_inflow_mgl}{Numeric. Flow-weighted mean total suspended solids
-concentration of tributary inflow (mg/L). Optional. Used in future
-turbidity-corrected chlorophyll-a predictions. Default \code{NULL}.}
+\item{tss_inflow_mgl}{Numeric. Flow-weighted mean total suspended
+solids concentration (mg/L). Optional. Default \code{NULL}.}
 
-\item{segment_label}{Character. Optional label for this reservoir segment
-(e.g., \code{"riverine"}, \code{"lacustrine"}, \code{"segment_1"}).
-Useful when running multi-segment workflows. Default \code{"main"}.}
+\item{segment_label}{Character. Optional label for this reservoir
+segment (e.g. \code{"riverine"}, \code{"lacustrine"}). Default \code{"main"}.}
 
-\item{coefficients}{One of \code{"walker"} (default), \code{"oklahoma"},
-or a named list of custom coefficients. The coefficient set is set here
-and propagated through the entire pipeline.}
+\item{coefficients}{One of \code{"walker"} (default, Walker BATHTUB Model 1),
+\code{"vollenweider"} (Vollenweider 1976 / Larsen-Mercier 1976),
+\code{"oklahoma"} (Walker Model 1 retention plus Oklahoma-specific Chl-a /
+Secchi regressions), or a named list of custom coefficients.}
 
-\item{ecoregion}{Character. EPA Level III ecoregion name (e.g.
-\code{"Cross Timbers"}, \code{"Central Oklahoma/Texas Plains"}).
-Used when \code{coefficients = "oklahoma"}. Default \code{NULL}.}
+\item{ecoregion}{Character. EPA Level III ecoregion name
+(e.g. \code{"Cross Timbers"}). Used only when \code{coefficients = "oklahoma"};
+silently ignored otherwise (with a message if the combination is
+suspicious). Default \code{NULL}.}
 }
 \value{
 An \code{okBATHTUB} object at pipeline step \code{"load"}.
 }
 \description{
-\code{ok_load()} is the entry point for the okBATHTUB pipeline. It
-accepts tributary hydraulic and nutrient loading data, validates all
-inputs, converts to consistent internal units, and returns an
-\code{okBATHTUB} object ready to pass into \code{ok_hydraulics()}.
+\code{ok_load()} is the entry point for the okBATHTUB pipeline. It accepts
+tributary hydraulic and nutrient loading data, validates inputs,
+resolves the coefficient set, and returns an \code{okBATHTUB} object ready
+to pass into \code{\link[=ok_hydraulics]{ok_hydraulics()}}.
 
-All concentration inputs are volume-flow-weighted means representing the
-period of analysis (typically an annual or seasonal average). If multiple
-tributaries contribute to the reservoir, aggregate them to a single
-combined inflow before calling \code{ok_load()}, or use
-\code{ok_load_multi()} to supply tributary data as a data frame.
+All concentration inputs are volume-flow-weighted means representing
+the period of analysis (typically an annual or seasonal average). If
+multiple tributaries contribute to the reservoir, either aggregate
+them manually before calling \code{ok_load()}, or use \code{\link[=ok_load_multi]{ok_load_multi()}} to
+supply tributary data as a data frame.
 }
 \examples{
-# Minimum required inputs (TP only, no TN)
-result <- ok_load(
-  inflow_m3yr   = 45e6,
-  tp_inflow_ugl = 120
-)
+# Minimum required inputs (TP only)
+result <- ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120)
 print(result)
 
 # Full inputs with TN and TSS
 result <- ok_load(
+  inflow_m3yr    = 45e6,
+  tp_inflow_ugl  = 120,
+  tn_inflow_ugl  = 1800,
+  tss_inflow_mgl = 35,
+  segment_label  = "lacustrine"
+)
+
+# Oklahoma ecoregion-specific coefficients
+result <- ok_load(
   inflow_m3yr   = 45e6,
   tp_inflow_ugl = 120,
-  tn_inflow_ugl = 1800,
-  tss_inflow_mgl = 35,
-  segment_label = "lacustrine"
+  coefficients  = "oklahoma",
+  ecoregion     = "Cross Timbers"
 )
 
 }
 \seealso{
-\code{\link{ok_load_multi}}, \code{\link{ok_hydraulics}}
+\code{\link[=ok_load_multi]{ok_load_multi()}}, \code{\link[=ok_hydraulics]{ok_hydraulics()}}
 }

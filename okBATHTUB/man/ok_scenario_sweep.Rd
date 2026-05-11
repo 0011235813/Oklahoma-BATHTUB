@@ -29,7 +29,7 @@ passed to \code{ok_scenario()}. Default \code{NULL}.}
 }
 \value{
 A data frame as returned by \code{ok_scenario()}, with one row
-  per reduction step plus the baseline.
+per reduction step plus the baseline.
 }
 \description{
 A convenience wrapper around \code{ok_scenario()} that automatically

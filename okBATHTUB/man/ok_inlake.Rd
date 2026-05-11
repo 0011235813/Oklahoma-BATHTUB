@@ -7,58 +7,50 @@
 ok_inlake(x, predict_chla = TRUE, predict_secchi = TRUE)
 }
 \arguments{
-\item{x}{An \code{okBATHTUB} object produced by \code{ok_retention()}.}
+\item{x}{An \code{okBATHTUB} object produced by \code{\link[=ok_retention]{ok_retention()}}.}
 
-\item{predict_chla}{Logical. Whether to predict chlorophyll-a from in-lake
-TP. Default \code{TRUE}.}
+\item{predict_chla}{Logical. Whether to predict chlorophyll-a from
+in-lake TP. Default \code{TRUE}.}
 
 \item{predict_secchi}{Logical. Whether to predict Secchi depth from
 chlorophyll-a. Requires \code{predict_chla = TRUE}. Default \code{TRUE}.}
 }
 \value{
-An \code{okBATHTUB} object at pipeline step \code{"inlake"},
-  with the following fields added to \code{$data}:
-  \describe{
-    \item{\code{tp_inlake_ugl}}{Predicted in-lake TP (ug/L).}
-    \item{\code{tn_inlake_ugl}}{Predicted in-lake TN (ug/L), or \code{NULL}
-      if TN was not supplied.}
-    \item{\code{chla_ugl}}{Predicted chlorophyll-a (ug/L), or \code{NULL}
-      if \code{predict_chla = FALSE}.}
-    \item{\code{secchi_m}}{Predicted Secchi depth (m), or \code{NULL} if
-      \code{predict_secchi = FALSE} or \code{predict_chla = FALSE}.}
-  }
+An \code{okBATHTUB} object at pipeline step \code{"inlake"}.
 }
 \description{
 \code{ok_inlake()} applies nutrient retention coefficients from
-\code{ok_retention()} to predict in-lake total phosphorus (TP) and total
-nitrogen (TN) concentrations, then uses empirical regression equations to
-predict chlorophyll-a and Secchi depth from in-lake TP.
-}
-\section{In-lake TP and TN}{
-
-In-lake concentration is derived from the mass balance:
+\code{\link[=ok_retention]{ok_retention()}} to predict in-lake total phosphorus (TP) and total
+nitrogen (TN) concentrations via the mass balance
 \deqn{C_{lake} = C_{in} \times (1 - R)}
-where \eqn{C_{in}} is the inflow concentration (ug/L) and \eqn{R} is
-the retention coefficient from \code{ok_retention()}.
-}
+then uses empirical log-log regression to predict chlorophyll-a from
+in-lake TP and Secchi depth from chlorophyll-a.
 
+Note on retention identity: when \code{coefficients = "walker"} (Walker
+BATHTUB Model 1), the retention coefficient stored by \code{\link[=ok_retention]{ok_retention()}}
+is back-calculated from Walker's quadratic mass balance solution so
+that \code{C_lake = C_in * (1 - R)} exactly reproduces the Model 1 result.
+}
 \section{Chlorophyll-a from TP}{
 
-Log-log linear regression (Walker 1996 defaults):
+Log-log linear regression:
 \deqn{\log_{10}(\text{Chl-a}) = a + b \times \log_{10}(\text{TP}_{lake})}
-Default coefficients: \eqn{a = -1.136}, \eqn{b = 1.449}.
+Default coefficients are Walker's nationally-derived values
+(\eqn{a = -1.136}, \eqn{b = 1.449}); Oklahoma ecoregion-specific
+values are applied when \code{coefficients = "oklahoma"}.
 }
 
 \section{Secchi depth from chlorophyll-a}{
 
-Log-log linear regression (Walker 1996 defaults):
 \deqn{\log_{10}(\text{Secchi}) = a + b \times \log_{10}(\text{Chl-a})}
-Default coefficients: \eqn{a = 0.616}, \eqn{b = -0.473}.
+Default Walker national: \eqn{a = 0.616}, \eqn{b = -0.473}.
 
-Note that Secchi depth in high-turbidity Oklahoma reservoirs is often
-controlled more by inorganic suspended sediment than by algae. The
-Oklahoma coefficient set will apply a TSS correction when those
-coefficients are calibrated.
+In high-turbidity Oklahoma reservoirs, Secchi depth is often
+controlled more by inorganic suspended sediment than by algal biomass.
+This is partly captured by the Oklahoma ecoregion-specific Secchi
+regressions, but for reservoirs with very high non-algal turbidity
+(e.g. central and western Oklahoma), Secchi predictions should be
+interpreted with caution.
 }
 
 \examples{
@@ -67,12 +59,12 @@ result <- ok_load(
   tp_inflow_ugl = 120,
   tn_inflow_ugl = 1800
 ) |>
-ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
-ok_retention() |>
-ok_inlake()
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention() |>
+  ok_inlake()
 print(result)
 
 }
 \seealso{
-\code{\link{ok_retention}}, \code{\link{ok_tsi}}
+\code{\link[=ok_retention]{ok_retention()}}, \code{\link[=ok_tsi]{ok_tsi()}}
 }

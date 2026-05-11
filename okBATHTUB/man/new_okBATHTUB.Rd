@@ -10,10 +10,11 @@ new_okBATHTUB(data, step, meta = list())
 \item{data}{A named list of model state values accumulated across steps.}
 
 \item{step}{Character string naming the pipeline step that produced this
-object (e.g., \code{"load"}, \code{"hydraulics"}, \code{"retention"},
-\code{"inlake"}, \code{"tsi"}).}
+object (e.g. \code{"load"}, \code{"hydraulics"}, \code{"retention"}, \code{"inlake"},
+\code{"tsi"}).}
 
-\item{meta}{A named list of metadata (segment label, coefficient set, etc.).}
+\item{meta}{A named list of metadata (segment label, coefficient set,
+etc.).}
 }
 \value{
 An object of class \code{okBATHTUB}.

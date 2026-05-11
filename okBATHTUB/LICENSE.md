@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2025 Jordon Henderson, Oklahoma Water Resources Board
+Copyright (c) 2026 Jordon Henderson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

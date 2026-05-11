@@ -12,36 +12,25 @@ ok_tsi(
 )
 }
 \arguments{
-\item{x}{An \code{okBATHTUB} object produced by \code{ok_inlake()}.}
+\item{x}{An \code{okBATHTUB} object produced by \code{\link[=ok_inlake]{ok_inlake()}}.}
 
-\item{observed_tp_ugl}{Numeric. If supplied, computes TSI(TP) from this
-observed value instead of the model-predicted in-lake TP. Useful for
-comparing predicted vs. observed trophic state. Default \code{NULL}.}
+\item{observed_tp_ugl}{Numeric. If supplied, computes TSI(TP) from
+this observed value instead of the model-predicted in-lake TP.
+Default \code{NULL}.}
 
 \item{observed_chla_ugl}{Numeric. Observed chlorophyll-a (ug/L) to use
 instead of predicted. Default \code{NULL}.}
 
-\item{observed_secchi_m}{Numeric. Observed Secchi depth (m) to use instead
-of predicted. Default \code{NULL}.}
+\item{observed_secchi_m}{Numeric. Observed Secchi depth (m) to use
+instead of predicted. Default \code{NULL}.}
 }
 \value{
-An \code{okBATHTUB} object at pipeline step \code{"tsi"},
-  with the following fields added to \code{$data}:
-  \describe{
-    \item{\code{tsi_tp}}{Carlson TSI computed from TP.}
-    \item{\code{tsi_chla}}{Carlson TSI computed from chlorophyll-a, or
-      \code{NULL} if chlorophyll-a was not predicted.}
-    \item{\code{tsi_secchi}}{Carlson TSI computed from Secchi depth, or
-      \code{NULL} if Secchi depth was not predicted.}
-    \item{\code{tsi_mean}}{Mean TSI across all available parameters.}
-    \item{\code{trophic_state}}{Character. Trophic state classification
-      based on \code{tsi_mean}.}
-  }
+An \code{okBATHTUB} object at pipeline step \code{"tsi"}.
 }
 \description{
 \code{ok_tsi()} computes Carlson (1977) Trophic State Index (TSI) values
-from in-lake water quality predictions produced by \code{ok_inlake()} and
-assigns an overall trophic state classification.
+from in-lake water quality predictions and assigns an overall trophic
+state classification.
 }
 \section{TSI equations (Carlson 1977)}{
 
@@ -50,17 +39,30 @@ assigns an overall trophic state classification.
 \deqn{TSI(Secchi) = 60.0  - 14.41 \times \ln(Secchi)}
 
 where TP is in ug/L, chlorophyll-a is in ug/L, and Secchi depth is in
-metres.
+metres. The Chl-a coefficient 9.81 matches the original Carlson (1977)
+paper; Walker's BATHTUB documentation uses 9.84 (likely a rounding
+artifact). The package uses 9.81, consistent with the primary
+limnological literature.
 }
 
 \section{Trophic state classification}{
 
-TSI below 40: Oligotrophic (clear, low nutrients).
-TSI 40 to 50: Mesotrophic (moderate nutrients and clarity).
-TSI 50 to 70: Eutrophic (high nutrients, algal blooms possible).
-TSI above 70: Hypereutrophic (severe enrichment, high HAB risk).
+Based on the mean TSI across available indices:
+\itemize{
+\item TSI < 40    -> Oligotrophic
+\item 40 <= TSI < 50 -> Mesotrophic
+\item 50 <= TSI < 70 -> Eutrophic
+\item TSI >= 70   -> Hypereutrophic
+}
+}
 
-Classification is based on the mean TSI across all available parameters.
+\section{Note on partial indices}{
+
+When only one or two of the three TSI components are available
+(e.g. because Secchi depth could not be predicted), \code{tsi_mean} is the
+arithmetic mean of the available components and \code{tsi_n} reports how
+many were used. Carlson's deviation analysis assumes all three are
+available; interpret \code{tsi_mean} with caution when \code{tsi_n < 3}.
 }
 
 \examples{
@@ -69,28 +71,17 @@ result <- ok_load(
   tp_inflow_ugl = 120,
   tn_inflow_ugl = 1800
 ) |>
-ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
-ok_retention() |>
-ok_inlake()   |>
-ok_tsi()
-
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention() |>
+  ok_inlake() |>
+  ok_tsi()
 summary(result)
-
-# With observed values for comparison
-result_obs <- ok_load(
-  inflow_m3yr   = 45e6,
-  tp_inflow_ugl = 120
-) |>
-ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
-ok_retention() |>
-ok_inlake()   |>
-ok_tsi(observed_tp_ugl = 85, observed_chla_ugl = 22, observed_secchi_m = 0.8)
 
 }
 \references{
 Carlson, R.E. (1977). A trophic state index for lakes.
-\emph{Limnology and Oceanography}, 22(2), 361--369.
+\emph{Limnology and Oceanography}, 22(2), 361-369.
 }
 \seealso{
-\code{\link{ok_inlake}}, \code{\link{ok_tsi_observed}}
+\code{\link[=ok_inlake]{ok_inlake()}}, \code{\link[=ok_tsi_observed]{ok_tsi_observed()}}
 }

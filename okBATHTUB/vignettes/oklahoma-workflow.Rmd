@@ -19,96 +19,83 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-This vignette demonstrates the full Oklahoma-specific workflow for reservoir eutrophication modelling with okBATHTUB. It covers:
+This vignette demonstrates Oklahoma-focused workflows with okBATHTUB:
 
-1. Pulling in-lake water quality data from AWQMS via `ok_from_awqms()`
-2. Running the pipeline with Oklahoma LMP-calibrated coefficients
-3. Multi-segment reservoir modelling
-4. Load reduction scenario analysis
-5. Visualising results
-
-All functions that connect to AWQMS require access to the OWRB network. Code blocks in this vignette are shown for illustration; set `eval = TRUE` in your own R session to run them.
-
-## Setup
+1. Looking up reservoir morphometry from the bundled dataset
+2. Selecting appropriate coefficient sets for different ecoregions
+3. Comparing model predictions to observed monitoring data
+4. Multi-segment reservoir modelling
+5. Load reduction scenario analysis
 
 ```{r load}
 library(okBATHTUB)
-library(dplyr)
 ```
 
-## Step 1 — Pull Lake Monitoring Data from AWQMS
+## Reservoir lookup
 
-`ok_from_awqms()` connects to AWQMS, retrieves growing-season surface grab samples for the target lake(s), and returns a tidy annual summary data frame. It handles unit conversion, non-detect substitution, TN reconstruction, and phaeophytin-corrected chlorophyll prioritisation automatically.
+The bundled `ok_reservoirs` dataset includes morphometric data for major
+Oklahoma reservoirs compiled from publicly available sources (USACE
+Tulsa District design memoranda, U.S. Bureau of Reclamation design
+data, the National Inventory of Dams, and published OWRB reports).
 
-```{r awqms_pull, eval=FALSE}
-# Pull 10 years of data for Arcadia Lake
-arcadia_data <- ok_from_awqms(
-  lake_names            = "Arcadia Lake",
-  year_start            = 2015,
-  year_end              = 2024,
-  ecoregion_lookup_path = ok_path("lake_ecoregion_lookup.csv")
-)
-
-dplyr::glimpse(arcadia_data)
+```{r summary}
+ok_reservoir_summary()
 ```
 
-The output contains one row per monitoring station per year, with growing-season means for TP, TN, chlorophyll-a (phaeophytin-corrected), Secchi depth, TSS, and turbidity, plus ecoregion and sample counts for each parameter.
+Look up any reservoir by name (partial or exact match):
 
-### Observed trophic state from monitoring data
+```{r lookup}
+# Partial match
+ok_reservoir("Tenkiller")[, c("lake_name", "surface_area_ha", "mean_depth_m",
+                              "eco_l3_name")]
 
-Before modelling, compute observed TSI from the monitoring data to establish a baseline:
-
-```{r observed_tsi, eval=FALSE}
-obs_tsi <- arcadia_data |>
-  dplyr::filter(!is.na(tp_ugl), !is.na(chla_ugl), !is.na(secchi_m)) |>
-  rowwise() |>
-  dplyr::mutate(
-    tsi_tp     = 14.42 * log(tp_ugl)   + 4.15,
-    tsi_chla   = 9.81  * log(chla_ugl) + 30.6,
-    tsi_secchi = 60.0  - 14.41 * log(secchi_m),
-    tsi_mean   = mean(c(tsi_tp, tsi_chla, tsi_secchi))
-  ) |>
-  ungroup()
-
-# Annual mean TSI by site
-obs_tsi |>
-  dplyr::group_by(sample_year) |>
-  dplyr::summarise(
-    tsi_tp     = round(mean(tsi_tp,     na.rm = TRUE), 1),
-    tsi_chla   = round(mean(tsi_chla,   na.rm = TRUE), 1),
-    tsi_secchi = round(mean(tsi_secchi, na.rm = TRUE), 1),
-    tsi_mean   = round(mean(tsi_mean,   na.rm = TRUE), 1),
-    .groups    = "drop"
-  ) |>
-  print()
+# Filter by ecoregion
+ct <- ok_reservoir(ecoregion = "Cross Timbers")
+nrow(ct)
+head(ct[, c("lake_name", "surface_area_ha", "mean_depth_m")], 5)
 ```
 
-## Step 2 — Single-Segment Pipeline with Oklahoma Coefficients
+## Choosing a coefficient set
 
-Use the reservoir morphometry lookup and Oklahoma ecoregion-specific coefficients:
+Three coefficient families are supported:
 
-```{r single_segment}
-# Look up reservoir morphometry
-res <- ok_reservoir("Arcadia Lake")
-cat("Surface area:", "Arcadia Lake", "ha | Mean depth:", "Arcadia Lake", "m\n")
-cat("Ecoregion:   ", "Arcadia Lake", "\n")
+| Set            | Retention model        | Chl-a / Secchi             |
+|----------------|------------------------|----------------------------|
+| `"walker"`     | Walker BATHTUB Model 1 | Walker (1985) national     |
+| `"vollenweider"` | Vollenweider/Larsen-Mercier | Walker (1985) national |
+| `"oklahoma"`   | Walker BATHTUB Model 1 | Oklahoma ecoregion-specific|
 
-# Estimated inflow TP from watershed monitoring
-# (Replace with USGS NWIS/FLUX-derived annual load estimate)
-tp_inflow_est  <- 120   # µg/L flow-weighted mean
-tn_inflow_est  <- 1800  # µg/L
-inflow_vol_est <- 45e6  # m³/yr (~1.43 m³/s mean)
+For Oklahoma reservoirs, `"oklahoma"` is generally preferred because the
+Chl-a / Secchi regressions are calibrated to Oklahoma data. The
+retention model is still Walker Model 1, which is the canonical default
+in the BATHTUB program and is calibrated to U.S. Army Corps of
+Engineers reservoir data — many Oklahoma reservoirs are Corps projects,
+so this is appropriate.
+
+If you have reason to prefer a simpler retention model (no ortho-P /
+total-P data, very rough screening, or comparison to legacy results),
+`"vollenweider"` is available. Be aware that this form is *not*
+calibrated to Corps of Engineers reservoir data.
+
+## Worked example: Arcadia Lake
+
+Arcadia Lake is a 716 ha Cross Timbers reservoir managed by the City of
+Edmond for water supply. Suppose we have estimated tributary loads
+from a watershed model:
+
+```{r arcadia_inputs}
+arcadia <- ok_reservoir("Arcadia Lake", exact = TRUE)
 
 result <- ok_load(
-    inflow_m3yr   = inflow_vol_est,
-    tp_inflow_ugl = tp_inflow_est,
-    tn_inflow_ugl = tn_inflow_est,
+    inflow_m3yr   = 45e6,    # ~36,500 acre-feet/yr
+    tp_inflow_ugl = 120,     # flow-weighted mean TP
+    tn_inflow_ugl = 1800,    # flow-weighted mean TN
     coefficients  = "oklahoma",
     ecoregion     = "Cross Timbers"
   ) |>
   ok_hydraulics(
-    surface_area_ha = 890,
-    mean_depth_m    = 4.2
+    surface_area_ha = arcadia$surface_area_ha,
+    mean_depth_m    = arcadia$mean_depth_m
   ) |>
   ok_retention() |>
   ok_inlake()    |>
@@ -117,246 +104,99 @@ result <- ok_load(
 summary(result)
 ```
 
-### Compare predicted vs observed
+## Comparing to observed monitoring data
 
-```{r compare, eval=FALSE}
-cat("--- Predicted (okBATHTUB) vs Observed (LMP) ---\n")
-cat(sprintf("In-lake TP:   predicted = %.1f µg/L | observed = %.1f µg/L\n",
-            result$data$tp_inlake_ugl,
-            mean(arcadia_data$tp_ugl, na.rm = TRUE)))
-cat(sprintf("Chl-a:        predicted = %.2f µg/L | observed = %.2f µg/L\n",
-            result$data$chla_ugl,
-            mean(arcadia_data$chla_ugl, na.rm = TRUE)))
-cat(sprintf("Secchi depth: predicted = %.2f m    | observed = %.2f m\n",
-            result$data$secchi_m,
-            mean(arcadia_data$secchi_m, na.rm = TRUE)))
+If you have observed in-lake monitoring data, use `ok_tsi_observed()`
+to compute observed TSI and compare to predictions:
+
+```{r compare_observed}
+# Suppose lake monitoring data summary for Arcadia gives these
+# growing-season means:
+obs <- ok_tsi_observed(
+  tp_ugl   = 56,
+  chla_ugl = 18,
+  secchi_m = 0.95
+)
+
+cat("--- Predicted (okBATHTUB) vs Observed ---\n")
+cat(sprintf("TP    : pred = %5.1f, obs = %5.1f ug/L\n",
+            result$data$tp_inlake_ugl, 56))
+cat(sprintf("Chl-a : pred = %5.2f, obs = %5.2f ug/L\n",
+            result$data$chla_ugl, 18))
+cat(sprintf("Secchi: pred = %5.2f, obs = %5.2f m\n",
+            result$data$secchi_m, 0.95))
+cat(sprintf("TSI   : pred = %5.1f, obs = %5.1f\n",
+            result$data$tsi_mean, obs$tsi_mean))
 ```
 
-## Step 3 — Multi-Segment Reservoir
+The predicted-vs-observed comparison is the most important diagnostic
+for any empirical model. Persistent biases in one direction may indicate
+that the model coefficients need site-specific calibration: pass a
+custom named list as `coefficients` to `ok_load()` if you have
+sufficient data to fit your own.
 
-For reservoirs with pronounced longitudinal gradients (common in Oklahoma's flood-dominated, elongated impoundments), the multi-segment approach produces more accurate predictions than treating the whole reservoir as a single mixed pool.
+## Multi-segment reservoir modelling
 
-Eufaula Lake — Oklahoma's largest reservoir — has a strongly stratified riverine-to-lacustrine gradient:
+Reservoirs with strong longitudinal gradients (Tenkiller, Eufaula, and
+Texoma are classic Oklahoma examples) are often best modelled as a
+series of well-mixed segments. Each segment's outflow feeds the next
+segment's inflow:
 
 ```{r multi_segment}
-# Eufaula Lake: surface_area_ha = 40100, mean_depth_m = 5.5 (ok_reservoirs dataset)
-# Three segments representing the longitudinal gradient
-# Segment proportions estimated from USACE bathymetric data
-eufaula_area_ha <- 40100
-
-segments <- list(
-  list(
-    label           = "Riverine",
-    surface_area_ha = eufaula_area_ha * 0.25,
-    mean_depth_m    = 3.2
+# A simple 3-segment Tenkiller-like reservoir
+result <- ok_segment_chain(
+  segments = list(
+    riverine   = list(inflow_m3yr   = 1e9,
+                      tp_inflow_ugl = 110,
+                      tn_inflow_ugl = 1700,
+                      surface_area_ha = 1200, mean_depth_m = 4),
+    transition = list(surface_area_ha = 1800, mean_depth_m = 9),
+    lacustrine = list(surface_area_ha = 2060, mean_depth_m = 25)
   ),
-  list(
-    label           = "Transitional",
-    surface_area_ha = eufaula_area_ha * 0.35,
-    mean_depth_m    = 4.8
-  ),
-  list(
-    label           = "Lacustrine",
-    surface_area_ha = eufaula_area_ha * 0.40,
-    mean_depth_m    = 7.1
-  )
+  coefficients = "oklahoma",
+  ecoregion    = "Boston Mountains"
 )
 
-chain <- ok_segment_chain(
-  inflow_m3yr   = 2200e6,   # Eufaula: large watershed, high inflow
-  tp_inflow_ugl = 145,
-  tn_inflow_ugl = 2100,
-  segments      = segments,
-  coefficients  = "oklahoma",
-  ecoregion     = "Arkansas Valley"   # statewide pooled applied (low R2)
-)
-
-ok_segment_summary(chain) |>
-  dplyr::select(segment, tp_inflow_ugl, tp_inlake_ugl, tp_retention,
-                chla_ugl, secchi_m, tsi_mean, trophic_state) |>
-  print()
+ok_segment_summary(result)
 ```
 
-### Longitudinal profile plot
+In-lake TP decreases moving down-reservoir as nutrients settle, which
+is the expected pattern for an unstratified-to-stratified reservoir
+gradient.
 
-```{r segment_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("chain")}
-ok_plot_segments(chain, lake_name = "Eufaula Lake")
-```
+## Load reduction scenarios
 
-The longitudinal profile illustrates the transition from a nutrient-rich, turbid riverine zone to a more dilute lacustrine pool — a pattern typical of Oklahoma's large flood-control reservoirs.
+Use `ok_scenario_sweep()` to evaluate a range of nutrient load
+reductions and identify the reduction needed to meet a TSI target:
 
-## Step 4 — Load Reduction Scenario Analysis
-
-The scenario analysis workflow answers: *how much does inflow TP need to be reduced to achieve a water quality target?*
-
-```{r scenarios}
+```{r scenario, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE)}
 baseline <- ok_load(
-    inflow_m3yr   = inflow_vol_est,
-    tp_inflow_ugl = tp_inflow_est,
-    tn_inflow_ugl = tn_inflow_est,
+    inflow_m3yr   = 45e6,
+    tp_inflow_ugl = 120,
     coefficients  = "oklahoma",
     ecoregion     = "Cross Timbers"
   ) |>
-  ok_hydraulics(
-    surface_area_ha = 890,
-    mean_depth_m    = 4.2
-  )
+  ok_hydraulics(surface_area_ha = 716, mean_depth_m = 4.6)
 
-# Sweep 10% through 70% TP reduction, target: mesotrophic (TSI < 50)
 sweep <- ok_scenario_sweep(
   baseline,
-  max_reduction_pct = 70,
-  step_pct          = 10,
-  target_class      = "mesotrophic"
+  tp_reduction_pct = seq(0, 60, by = 10)
 )
 
-sweep |>
-  dplyr::select(scenario, tp_inflow_ugl, tp_inlake_ugl,
-         chla_ugl, secchi_m, tsi_mean, trophic_state, meets_target) |>
-  print()
-```
-
-### Find the minimum reduction needed
-
-```{r min_reduction}
-min_met <- sweep |>
-  dplyr::filter(meets_target == TRUE) |>
-  dplyr::slice(1)
-
-if (nrow(min_met) > 0) {
-  cat(sprintf(
-    "Minimum TP reduction to achieve mesotrophic (TSI < 50): %s\n",
-    min_met$scenario
-  ))
-  cat(sprintf(
-    "  Inflow TP: %.0f µg/L → In-lake TP: %.1f µg/L → TSI: %.1f\n",
-    min_met$tp_inflow_ugl, min_met$tp_inlake_ugl, min_met$tsi_mean
-  ))
-} else {
-  cat("No scenario in the sweep achieves mesotrophic status.\n")
-  cat("Consider evaluating reductions beyond", max(sweep$tp_reduction_pct, na.rm=TRUE), "%\n")
-}
-```
-
-### Custom scenarios
-
-`ok_scenario()` accepts any combination of TP reduction, TN reduction, or flow change:
-
-```{r custom_scenarios}
-custom <- ok_scenario(
-  baseline  = baseline,
-  scenarios = list(
-    list(label = "Agricultural BMPs (25% TP)",
-         tp_reduction = 0.25),
-    list(label = "Wastewater upgrade (40% TP, 30% TN)",
-         tp_reduction = 0.40, tn_reduction = 0.30),
-    list(label = "Drought year (20% flow reduction)",
-         flow_change  = -0.20),
-    list(label = "Wet year + BMPs",
-         tp_reduction = 0.25, flow_change = 0.15),
-    list(label = "TMDL target TP = 60 µg/L",
-         tp_inflow_ugl = 60)
-  ),
-  target_class = "mesotrophic"
-)
-
-custom |>
-  dplyr::select(scenario, tp_inflow_ugl, tsi_mean, trophic_state, meets_target) |>
-  print()
-```
-
-## Step 5 — Visualisation
-
-### Load-response curve
-
-```{r response_plot, fig.height=5.5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("baseline")}
-ok_plot_response(
-  baseline,
-  response     = "tsi",
-  target_class = "mesotrophic",
-  current_tp   = tp_inflow_est,
-  lake_name    = "Arcadia Lake"
-)
-```
-
-### Scenario comparison
-
-```{r scenario_plot, fig.height=5, eval=requireNamespace("ggplot2", quietly=TRUE) && exists("sweep")}
-ok_plot_scenario(sweep, lake_name = "Arcadia Lake")
-```
-
-### Carlson TSI diagram from observed data
-
-The TSI deviation diagram is a standard diagnostic for separating algal limitation from non-algal turbidity:
-
-```{r tsi_diagram, eval=FALSE}
-# Pull all LMP lakes for statewide TSI diagram
-all_lakes <- ok_from_awqms(
-  year_start            = 2018,
-  year_end              = 2024,
-  ecoregion_lookup_path = ok_path("lake_ecoregion_lookup.csv")
-)
-
-# Compute observed TSI
-all_tsi <- all_lakes |>
-  dplyr::filter(!is.na(tp_ugl), !is.na(chla_ugl)) |>
-  dplyr::mutate(
-    tsi_tp   = 14.42 * log(tp_ugl)   + 4.15,
-    tsi_chla = 9.81  * log(chla_ugl) + 30.6
-  )
-
-ok_plot_tsi(all_tsi, color_by = "eco_l3_name")
-```
-
-Points below the 1:1 diagonal (TSI(Chl-a) < TSI(TP)) indicate phosphorus-rich lakes where algal biomass is suppressed relative to nutrient levels — the signature of light limitation by inorganic turbidity common in Oklahoma's western and Arkansas Valley reservoirs.
-
-## Workflow Summary
-
-The complete Oklahoma reservoir workflow in one code block:
-
-```{r full_workflow}
-# 1. Look up reservoir morphometry
-res <- ok_reservoir("Arcadia Lake")
-
-# 2. Define loading inputs (from USGS/FLUX load estimates)
-loading <- list(
-  inflow_m3yr   = 45e6,
-  tp_inflow_ugl = 120,
-  tn_inflow_ugl = 1800
-)
-
-# 3. Run pipeline with Oklahoma coefficients
-baseline <- ok_load(
-    inflow_m3yr   = loading$inflow_m3yr,
-    tp_inflow_ugl = loading$tp_inflow_ugl,
-    tn_inflow_ugl = loading$tn_inflow_ugl,
-    coefficients  = "oklahoma",
-    ecoregion     = "Cross Timbers"
-  ) |>
-  ok_hydraulics(
-    surface_area_ha = 890,
-    mean_depth_m    = 4.2
-  )
-
-result <- baseline |>
-  ok_retention() |>
-  ok_inlake()    |>
-  ok_tsi()
-
-# 4. Scenario analysis
-sweep <- ok_scenario_sweep(baseline, max_reduction_pct = 60,
-                            step_pct = 10, target_class = "mesotrophic")
-
-# 5. Visualise
-ok_plot_response(baseline, response = "tsi",
-                  target_class = "mesotrophic",
-                  current_tp = loading$tp_inflow_ugl,
-                  lake_name = "Arcadia Lake")
+# Print key columns
+print(sweep[, c("tp_reduction_pct", "tp_inflow_ugl",
+                "tp_inlake_ugl", "chla_ugl", "tsi_mean",
+                "trophic_state")],
+      row.names = FALSE)
 ```
 
 ## References
 
-- Walker, W.W. (1996). *Simplified Procedures for Eutrophication Assessment and Prediction: User Manual*. U.S. Army Corps of Engineers, Instruction Report W-96-2.
-- Oklahoma Water Resources Board (2024). Lake Monitoring Program data. AWQMS database. Oklahoma City, OK.
-- Jones, J.R. and Knowlton, M.F. (2005). Chlorophyll response to nutrients and non-algal seston in Missouri reservoirs. *Lake and Reservoir Management*, 21(3), 361–371.
-- Dzialowski, A.R. et al. (2011). Effects of non-algal turbidity on cyanobacterial biomass in seven turbid Kansas reservoirs. *Lake and Reservoir Management*, 27(1), 6–14.
+- Carlson, R.E. (1977). A trophic state index for lakes.
+  *Limnology and Oceanography*, 22(2), 361-369.
+- Walker, W.W. (1985). Empirical methods for predicting eutrophication
+  in impoundments; Report 3, Phase III: Model refinements. Technical
+  Report E-81-9, U.S. Army Engineer Waterways Experiment Station.
+- Walker, W.W. (1996). *Simplified Procedures for Eutrophication
+  Assessment and Prediction: User Manual*. Instruction Report W-96-2,
+  U.S. Army Engineer Waterways Experiment Station.

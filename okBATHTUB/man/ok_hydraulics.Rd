@@ -7,62 +7,59 @@
 ok_hydraulics(x, surface_area_ha, mean_depth_m, outflow_m3yr = NULL)
 }
 \arguments{
-\item{x}{An \code{okBATHTUB} object produced by \code{ok_load()}.}
+\item{x}{An \code{okBATHTUB} object produced by \code{\link[=ok_load]{ok_load()}}.}
 
-\item{surface_area_ha}{Numeric. Reservoir surface area at normal pool (ha).
-Must be positive.}
+\item{surface_area_ha}{Numeric. Reservoir surface area at normal pool
+(ha). Must be positive.}
 
 \item{mean_depth_m}{Numeric. Mean reservoir depth at normal pool (m).
-Must be positive. Mean depth = volume / surface area; for Oklahoma
-reservoirs this is typically 2--10 m.}
+Must be positive. For Oklahoma reservoirs this is typically 2-10 m.}
 
-\item{outflow_m3yr}{Numeric. Annual outflow volume (m\eqn{^3}/yr). If
+\item{outflow_m3yr}{Numeric. Annual outflow volume (m^3/yr). If
 \code{NULL} (default), outflow is assumed equal to inflow (steady-state
-water balance). Supply an explicit value when significant evaporation or
-diversion alters the water balance.}
+water balance). Supply an explicit value when significant
+evaporation, diversion, or storage change alters the water balance.}
 }
 \value{
-An \code{okBATHTUB} object at pipeline step \code{"hydraulics"},
-  with the following fields added to \code{$data}:
-  \describe{
-    \item{\code{surface_area_ha}}{Reservoir surface area (ha).}
-    \item{\code{surface_area_m2}}{Reservoir surface area (m\eqn{^2}).}
-    \item{\code{mean_depth_m}}{Mean depth (m).}
-    \item{\code{volume_m3}}{Estimated reservoir volume (m\eqn{^3}).}
-    \item{\code{outflow_m3yr}}{Annual outflow volume (m\eqn{^3}/yr).}
-    \item{\code{hydraulic_residence_time_yr}}{Hydraulic residence time (yr).}
-    \item{\code{areal_water_load_myr}}{Areal water load, \eqn{q_s} (m/yr).}
-  }
+An \code{okBATHTUB} object at pipeline step \code{"hydraulics"}.
 }
 \description{
-\code{ok_hydraulics()} takes the inflow volume from \code{ok_load()} and
-the reservoir's morphometric parameters to compute two quantities that
+\code{ok_hydraulics()} takes the inflow volume from \code{\link[=ok_load]{ok_load()}} and the
+reservoir's morphometric parameters to compute two quantities that
 drive nutrient retention in all subsequent steps:
 
 \itemize{
-  \item \strong{Hydraulic residence time} (\eqn{\tau}, yr): the average
-    time water spends in the reservoir before leaving via the outlet.
-    Calculated as reservoir volume divided by annual outflow, where volume
-    is approximated from surface area and mean depth.
-  \item \strong{Areal water load} (\eqn{q_s}, m/yr): inflow volume divided
-    by surface area. This is the primary driver of the settling-velocity
-    based nutrient retention equations. Also called the hydraulic overflow
-    rate.
+\item \strong{Hydraulic residence time} (\code{tau}, yr): reservoir volume
+divided by annual outflow, where volume is approximated as
+\code{mean_depth * surface_area}.
+\item \strong{Areal water load} (\code{q_s}, m/yr): inflow volume divided by
+surface area. The primary driver of settling-velocity based
+retention.
 }
 }
+\section{Volume approximation}{
+
+Reservoir volume is computed as \code{mean_depth * surface_area}, treating
+the reservoir as a right rectangular prism with flat bottom. This is a
+simplification: real reservoirs have varying bathymetry, and the
+relationship \code{V = Z * A} is exact only when \code{Z} is the
+volume-weighted mean depth, which is what bathymetric surveys
+typically report. If you only have maximum depth or a depth-area
+regression estimate, expect roughly a factor-of-1.5 uncertainty in
+\code{tau} and proportional downstream uncertainty in predicted in-lake
+concentrations.
+}
+
 \examples{
 result <- ok_load(
   inflow_m3yr   = 45e6,
   tp_inflow_ugl = 120,
   tn_inflow_ugl = 1800
 ) |>
-ok_hydraulics(
-  surface_area_ha = 890,
-  mean_depth_m    = 4.2
-)
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2)
 print(result)
 
 }
 \seealso{
-\code{\link{ok_load}}, \code{\link{ok_retention}}
+\code{\link[=ok_load]{ok_load()}}, \code{\link[=ok_retention]{ok_retention()}}
 }

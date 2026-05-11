@@ -32,8 +32,9 @@ the y-axis with trophic state background bands. Deviations from the
 1:1 line indicate light limitation (Chl-a below TP line) or non-algal
 turbidity (Secchi below Chl-a line).
 
-Can accept either a single \code{okBATHTUB} result, a data frame from
-\code{ok_from_awqms()}, or a data frame from \code{ok_scenario()}.
+Can accept either a single \code{okBATHTUB} result, or a data frame
+containing the required TSI columns (e.g. from \code{ok_scenario()}
+or a user-supplied observed-data summary).
 }
 \examples{
 \dontrun{

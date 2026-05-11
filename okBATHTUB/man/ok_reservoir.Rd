@@ -2,19 +2,20 @@
 % Please edit documentation in R/reservoirs.R
 \name{ok_reservoir}
 \alias{ok_reservoir}
-\title{Look up Oklahoma reservoir morphometry for okBATHTUB modelling}
+\title{Look up Oklahoma reservoir morphometry}
 \usage{
 ok_reservoir(
   lake_name = NULL,
   exact = FALSE,
   ecoregion = NULL,
-  data_quality = c("A", "B", "C")
+  data_quality = c("A", "B")
 )
 }
 \arguments{
 \item{lake_name}{Character. One or more lake names to look up. Partial
-matching is supported - \code{"Arcadia"} will match
-\code{"Arcadia Lake"}. Case-insensitive.}
+matching is supported - \code{"Arcadia"} will match \code{"Arcadia Lake"}.
+Case-insensitive. If \code{NULL}, returns all reservoirs (subject to
+other filters).}
 
 \item{exact}{Logical. If \code{TRUE}, requires exact name match
 (case-insensitive). Default \code{FALSE} (partial matching).}
@@ -23,42 +24,38 @@ matching is supported - \code{"Arcadia"} will match
 ecoregion name. Default \code{NULL} (no filter).}
 
 \item{data_quality}{Character vector. Filter to specific data quality
-codes. Default \code{c("A", "B", "C")} (all).}
+codes. Default \code{c("A", "B")} (all).}
 }
 \value{
 A data frame with one row per matched reservoir containing all
-  columns from \code{\link{ok_reservoirs}}.
+columns from \code{\link{ok_reservoirs}}.
 }
 \description{
 \code{ok_reservoir()} retrieves morphometric parameters for one or more
-Oklahoma Lake Monitoring Program reservoirs from the bundled
-\code{\link{ok_reservoirs}} dataset. Returns a data frame that can be
-used directly with \code{ok_hydraulics()} in the okBATHTUB pipeline.
+Oklahoma reservoirs from the bundled \code{\link{ok_reservoirs}} dataset.
+Returns a data frame that can be used directly with \code{\link[=ok_hydraulics]{ok_hydraulics()}}.
 }
 \examples{
-\dontrun{
-# Look up a single lake
-ok_reservoir("Arcadia Lake")
-
-# Partial match
+# Look up a single lake (partial match)
 ok_reservoir("Arcadia")
+
+# Exact match
+ok_reservoir("Arcadia Lake", exact = TRUE)
 
 # Use in pipeline
 res <- ok_reservoir("Arcadia Lake")
-ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120) |>
-  ok_hydraulics(
-    surface_area_ha = res$surface_area_ha,
-    mean_depth_m    = res$mean_depth_m
-  )
-
-# Get all Cross Timbers lakes with quality A data
-ok_reservoir(ecoregion = "Cross Timbers", data_quality = "A")
-
-# List all available lakes
-ok_reservoir()$lake_name
+if (nrow(res) > 0) {
+  ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120) |>
+    ok_hydraulics(
+      surface_area_ha = res$surface_area_ha[1],
+      mean_depth_m    = res$mean_depth_m[1]
+    )
 }
+
+# All Cross Timbers lakes with quality A data
+ok_reservoir(ecoregion = "Cross Timbers", data_quality = "A")
 
 }
 \seealso{
-\code{\link{ok_reservoirs}}, \code{\link{ok_hydraulics}}
+\code{\link{ok_reservoirs}}, \code{\link[=ok_hydraulics]{ok_hydraulics()}}
 }

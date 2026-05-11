@@ -2,7 +2,7 @@
 % Please edit documentation in R/reservoirs.R
 \name{ok_reservoir_summary}
 \alias{ok_reservoir_summary}
-\title{Summarise oklahoma reservoir dataset coverage}
+\title{Summarise the bundled reservoir dataset coverage}
 \usage{
 ok_reservoir_summary()
 }
@@ -10,7 +10,7 @@ ok_reservoir_summary()
 A data frame (invisibly) summarising coverage by ecoregion.
 }
 \description{
-Prints a summary of the \code{ok_reservoirs} dataset by ecoregion,
-showing the number of lakes, surface area range, and data quality
-breakdown. Useful for understanding dataset coverage before modelling.
+Prints a summary of the \code{\link{ok_reservoirs}} dataset by ecoregion, showing
+the number of lakes, surface area range, and data quality breakdown.
+Useful for understanding dataset coverage before modelling.
 }

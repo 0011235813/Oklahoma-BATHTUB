@@ -29,7 +29,7 @@ segment. If \code{NULL}, inherits from the upstream segment.}
 }
 \value{
 An \code{okBATHTUB} object at pipeline step \code{"load"},
-  ready to pipe into \code{ok_hydraulics()} for the downstream segment.
+ready to pipe into \code{ok_hydraulics()} for the downstream segment.
 }
 \description{
 \code{ok_segment()} links two reservoir segments in series, passing the

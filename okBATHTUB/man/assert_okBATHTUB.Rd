@@ -10,7 +10,7 @@ assert_okBATHTUB(x, required_step = NULL)
 \item{x}{Object to check.}
 
 \item{required_step}{If supplied, also checks that the pipeline has
-progressed at least to the step preceding \code{required_step}.}
+progressed exactly to the step preceding \code{required_step}.}
 }
 \description{
 Validate that an object is an okBATHTUB result

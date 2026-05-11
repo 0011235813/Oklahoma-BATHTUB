@@ -12,7 +12,7 @@ ok_segment_summary(chain_result)
 }
 \value{
 A data frame with one row per segment containing key water quality
-  predictions and TSI values.
+predictions and TSI values.
 }
 \description{
 Converts the list output of \code{ok_segment_chain()} into a tidy data

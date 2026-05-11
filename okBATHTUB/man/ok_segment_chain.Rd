@@ -22,11 +22,11 @@ ok_segment_chain(
 
 \item{segments}{A list of named lists, one per segment, each containing:
 \describe{
-  \item{\code{label}}{Character. Segment name.}
-  \item{\code{surface_area_ha}}{Numeric. Surface area (ha).}
-  \item{\code{mean_depth_m}}{Numeric. Mean depth (m).}
-  \item{\code{outflow_m3yr}}{Numeric. Outflow volume (m\eqn{^3}/yr).
-    Optional; defaults to inflow.}
+\item{\code{label}}{Character. Segment name.}
+\item{\code{surface_area_ha}}{Numeric. Surface area (ha).}
+\item{\code{mean_depth_m}}{Numeric. Mean depth (m).}
+\item{\code{outflow_m3yr}}{Numeric. Outflow volume (m\eqn{^3}/yr).
+Optional; defaults to inflow.}
 }}
 
 \item{coefficients}{Coefficient set applied to all segments.
@@ -36,8 +36,8 @@ Default \code{"walker"}.}
 }
 \value{
 A named list of \code{okBATHTUB} objects at step \code{"tsi"},
-  one per segment, in downstream order. Names match the \code{label}
-  field of each segment specification.
+one per segment, in downstream order. Names match the \code{label}
+field of each segment specification.
 }
 \description{
 A convenience wrapper around \code{ok_segment()} for reservoirs with more

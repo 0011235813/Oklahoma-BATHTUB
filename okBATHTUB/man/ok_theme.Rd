@@ -16,6 +16,6 @@ A \code{ggplot2::theme} object.
 }
 \description{
 A clean, minimal ggplot2 theme used consistently across all okBATHTUB
-visualization functions. Based on \code{theme_minimal()} with OWRB-style
+visualization functions. Based on \code{theme_minimal()} with clean
 typography and grid settings.
 }

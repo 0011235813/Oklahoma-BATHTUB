@@ -38,7 +38,7 @@ ok_trophic_colors <- function() {
 #'
 #' @description
 #' A clean, minimal ggplot2 theme used consistently across all okBATHTUB
-#' visualization functions. Based on \code{theme_minimal()} with OWRB-style
+#' visualization functions. Based on \code{theme_minimal()} with clean
 #' typography and grid settings.
 #'
 #' @param base_size Numeric. Base font size. Default 11.
@@ -247,7 +247,7 @@ ok_plot_response <- function(baseline,
       subtitle = subtitle_str,
       x        = "Inflow TP (ug/L)",
       y        = y_label,
-      caption  = "okBATHTUB | OWRB Water Quality Division"
+      caption  = "okBATHTUB R package"
     ) +
     ok_theme()
 
@@ -332,6 +332,8 @@ ok_plot_scenario <- function(scenario_result,
     stop("Package 'ggplot2' is required.", call. = FALSE)
   if (!requireNamespace("tidyr", quietly = TRUE))
     stop("Package 'tidyr' is required.", call. = FALSE)
+  if (!requireNamespace("dplyr", quietly = TRUE))
+    stop("Package 'dplyr' is required.", call. = FALSE)
 
   if (!is.data.frame(scenario_result))
     stop("'scenario_result' must be a data frame from ok_scenario().",
@@ -426,7 +428,7 @@ ok_plot_scenario <- function(scenario_result,
       title   = title_str,
       x       = NULL,
       y       = NULL,
-      caption = "okBATHTUB | OWRB Water Quality Division"
+      caption = "okBATHTUB R package"
     ) +
     ok_theme(legend_position = "top")
 
@@ -477,6 +479,8 @@ ok_plot_segments <- function(segment_data,
     stop("Package 'ggplot2' is required.", call. = FALSE)
   if (!requireNamespace("tidyr", quietly = TRUE))
     stop("Package 'tidyr' is required.", call. = FALSE)
+  if (!requireNamespace("dplyr", quietly = TRUE))
+    stop("Package 'dplyr' is required.", call. = FALSE)
 
   # Accept either a chain list or a summary data frame
   if (is.list(segment_data) && !is.data.frame(segment_data)) {
@@ -533,7 +537,7 @@ ok_plot_segments <- function(segment_data,
       subtitle = "Riverine \u2192 Lacustrine gradient (left to right)",
       x        = NULL,
       y        = NULL,
-      caption  = "okBATHTUB | OWRB Water Quality Division"
+      caption  = "okBATHTUB R package"
     ) +
     ok_theme()
 }
@@ -552,8 +556,9 @@ ok_plot_segments <- function(segment_data,
 #' 1:1 line indicate light limitation (Chl-a below TP line) or non-algal
 #' turbidity (Secchi below Chl-a line).
 #'
-#' Can accept either a single \code{okBATHTUB} result, a data frame from
-#' \code{ok_from_awqms()}, or a data frame from \code{ok_scenario()}.
+#' Can accept either a single \code{okBATHTUB} result, or a data frame
+#' containing the required TSI columns (e.g. from \code{ok_scenario()}
+#' or a user-supplied observed-data summary).
 #'
 #' @param x An \code{okBATHTUB} object, or a data frame containing columns
 #'   \code{tsi_tp}, \code{tsi_chla}, and optionally \code{tsi_secchi}.
@@ -609,6 +614,8 @@ ok_plot_tsi <- function(x,
     stop("Package 'ggplot2' is required.", call. = FALSE)
   if (!requireNamespace("tidyr", quietly = TRUE))
     stop("Package 'tidyr' is required.", call. = FALSE)
+  if (!requireNamespace("dplyr", quietly = TRUE))
+    stop("Package 'dplyr' is required.", call. = FALSE)
 
   pal    <- ok_trophic_colors()
 
@@ -689,7 +696,7 @@ ok_plot_tsi <- function(x,
     title_str <- if (!is.null(lake_name)) {
       sprintf("%s \u2014 Carlson TSI Diagram", lake_name)
     } else {
-      "Carlson TSI Diagram - Oklahoma LMP"
+      "Carlson TSI Diagram"
     }
 
     plot_df <- x[!is.na(x$tsi_tp) & !is.na(x$tsi_chla), ]
@@ -737,7 +744,7 @@ ok_plot_tsi <- function(x,
       subtitle = "Points above 1:1 line: algae-limited clarity | Below: non-algal turbidity",
       x        = "TSI(TP)",
       y        = if (inherits(x, "okBATHTUB")) "TSI(Chl-a) / TSI(Secchi)" else "TSI(Chl-a)",
-      caption  = "okBATHTUB | OWRB Water Quality Division"
+      caption  = "okBATHTUB R package"
     ) +
     ok_theme()
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/okBATHTUB-package.R
 \name{.oklahoma_coefficients}
 \alias{.oklahoma_coefficients}
-\title{Oklahoma Lake Monitoring Program calibrated coefficient set}
+\title{Oklahoma-calibrated chlorophyll/Secchi coefficient set}
 \usage{
 .oklahoma_coefficients(ecoregion = NULL)
 }
@@ -12,18 +12,20 @@ returns the statewide pooled coefficients.}
 }
 \value{
 Named list of coefficients compatible with all okBATHTUB model
-  functions.
+functions.
 }
 \description{
-Returns Oklahoma-specific empirical coefficients calibrated from OWRB Lake
-Monitoring Program data (2000-2024, 82 lakes, 250 observations).
-Chlorophyll-a and Secchi depth regressions are ecoregion-specific where
-sufficient data exist (n >= 15 obs, n >= 5 lakes, R2 >= 0.25); statewide
-pooled otherwise. TP retention uses Walker (1996) Larsen-Mercier defaults.
+Returns Oklahoma-specific empirical chlorophyll-a and Secchi depth
+regression coefficients calibrated from publicly available state lake
+monitoring data, layered on top of Walker (1985, 1996) BATHTUB Model 1
+nutrient retention. Ecoregion-specific regressions are applied where
+calibration support is sufficient (n >= 15 observations, n >= 5 lakes,
+R^2 >= 0.25); a statewide pooled regression is used otherwise.
 }
 \details{
-Ecoregion coefficients are selected by matching the \code{ecoregion}
-argument to the calibrated coefficient list. If no match is found, the
-statewide pooled coefficients are returned with a message.
+Calibration metadata note: the per-ecoregion sample sizes reported below
+reflect each ecoregion's specific fit; the statewide pooled fit reflects
+a separate filtering pass on a different aggregate dataset, so per-
+ecoregion sample sizes do not necessarily sum to the pooled total.
 }
 \keyword{internal}

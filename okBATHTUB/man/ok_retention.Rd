@@ -7,75 +7,83 @@
 ok_retention(x, tp_retention_override = NULL, tn_retention_override = NULL)
 }
 \arguments{
-\item{x}{An \code{okBATHTUB} object produced by \code{ok_hydraulics()}.}
+\item{x}{An \code{okBATHTUB} object produced by \code{\link[=ok_hydraulics]{ok_hydraulics()}}.}
 
-\item{tp_retention_override}{Numeric between 0 and 1. If supplied, bypasses the
-equation and uses this value directly as the TP retention coefficient.
-Useful when observed retention is available from paired inflow/outflow
-monitoring. Default \code{NULL}.}
-
-\item{tn_retention_override}{Numeric between 0 and 1. Same as above for TN.
+\item{tp_retention_override}{Numeric between 0 and 1. If supplied,
+bypasses the equation and uses this value directly. Useful when
+observed retention is available from paired inflow/outflow monitoring.
 Default \code{NULL}.}
+
+\item{tn_retention_override}{Numeric between 0 and 1. Same as above for
+TN. Default \code{NULL}.}
 }
 \value{
-An \code{okBATHTUB} object at pipeline step \code{"retention"},
-  with the following fields added to \code{$data}:
-  \describe{
-    \item{\code{tp_retention_coeff}}{TP retention coefficient (dimensionless,
-      0--1). The fraction of incoming TP retained in the reservoir.}
-    \item{\code{tn_retention_coeff}}{TN retention coefficient (0--1), or
-      \code{NULL} if TN was not supplied in \code{ok_load()}.}
-    \item{\code{tp_retention_form}}{Character. Which retention equation was
-      applied.}
-  }
+An \code{okBATHTUB} object at pipeline step \code{"retention"} with the
+following fields added to \verb{$data}:
+\describe{
+\item{\code{tp_retention_coeff}}{TP retention coefficient (0-1).}
+\item{\code{tn_retention_coeff}}{TN retention coefficient (0-1), or
+\code{NULL} if TN was not supplied.}
+\item{\code{tp_retention_form}, \code{tn_retention_form}}{Character. Which
+retention equation was applied.}
+}
 }
 \description{
 \code{ok_retention()} computes the fraction of incoming total phosphorus
-(TP) and total nitrogen (TN) that is retained within the reservoir through
-sedimentation, biological uptake, and denitrification. These retention
-coefficients are then applied in \code{ok_inlake()} to predict in-lake
-nutrient concentrations.
-}
-\section{TP retention}{
+(TP) and total nitrogen (TN) that is retained within the reservoir.
+The retention coefficient is defined as
+\deqn{R = 1 - C_{lake}/C_{in}}
+and is applied in \code{\link[=ok_inlake]{ok_inlake()}} to predict in-lake nutrient
+concentrations.
 
-Two formulations are available via the coefficient set:
+Three retention model families are supported, selected via the
+\code{coefficients} argument to \code{\link[=ok_load]{ok_load()}}:
 
-\strong{Larsen-Mercier (default in Walker):}
+\describe{
+\item{\code{"walker_model1"} (Walker BATHTUB Model 1, default)}{
+Second-order available-phosphorus sedimentation
+(Walker 1985, 1996). The mass balance solution is
+\deqn{C_{lake} = \frac{-1 + \sqrt{1 + 4 K A_1 C_{in} \tau}}{2 K A_1 \tau}}
+where \eqn{A_1 = 0.17 \cdot Q_s/(Q_s + 13.3)} for TP and
+\eqn{B_1 = 0.0045 \cdot Q_s/(Q_s + 7.2)} for TN, with
+\eqn{Q_s = \max(Z/T,\,4)}.}
+\item{\code{"vollenweider"} (Vollenweider 1976 / Larsen-Mercier 1976)}{
+First-order hydraulic-residence model:
 \deqn{R_{TP} = \frac{1}{1 + 1/\sqrt{\tau}}}
-where \eqn{\tau} is hydraulic residence time (yr). This form is appropriate
-for most Oklahoma reservoirs and is the Walker BATHTUB default.
-
-\strong{Vollenweider settling velocity:}
-\deqn{R_{TP} = \frac{v_s}{v_s + q_s}}
-where \eqn{v_s} is an empirical phosphorus settling velocity (m/yr) and
-\eqn{q_s} is the areal water load (m/yr). Used when
-\code{tp_retention_form = "vollenweider"} in a custom coefficient list.
+Mathematically equivalent to Walker BATHTUB Model 5 (Northern
+Lakes). Single parameter (residence time), no ortho-P data
+required. Walker (1996) notes this form is not calibrated to
+Corps of Engineers reservoir data.}
+\item{\code{"settling_velocity"} (used as TN companion to vollenweider)}{
+\deqn{R = v_s / (v_s + q_s)}
+where \eqn{v_s} is an apparent settling velocity (m/yr).}
 }
-
-\section{TN retention}{
-
-TN retention uses the settling velocity form:
-\deqn{R_{TN} = \frac{k_{TN}}{k_{TN} + q_s}}
-where \eqn{k_{TN}} is the TN apparent settling velocity (m/yr, default 10
-from Walker). This captures both sedimentation and denitrification losses.
 }
-
 \examples{
 result <- ok_load(
   inflow_m3yr   = 45e6,
   tp_inflow_ugl = 120,
   tn_inflow_ugl = 1800
 ) |>
-ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
-ok_retention()
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention()
 print(result)
 
-# Supply an observed TP retention coefficient directly
-result2 <- ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120) |>
+# Vollenweider / Larsen-Mercier retention
+result_v <- ok_load(
+  inflow_m3yr   = 45e6,
+  tp_inflow_ugl = 120,
+  coefficients  = "vollenweider"
+) |>
+  ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
+  ok_retention()
+
+# Observed retention coefficient override
+result_obs <- ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 120) |>
   ok_hydraulics(surface_area_ha = 890, mean_depth_m = 4.2) |>
   ok_retention(tp_retention_override = 0.42)
 
 }
 \seealso{
-\code{\link{ok_hydraulics}}, \code{\link{ok_inlake}}
+\code{\link[=ok_hydraulics]{ok_hydraulics()}}, \code{\link[=ok_inlake]{ok_inlake()}}
 }

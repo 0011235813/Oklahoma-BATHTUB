@@ -3,58 +3,63 @@
 \docType{data}
 \name{ok_reservoirs}
 \alias{ok_reservoirs}
-\title{Oklahoma Lake Monitoring Program reservoir morphometry dataset}
+\title{Oklahoma reservoir morphometry dataset}
 \format{
-A data frame with one row per reservoir and the following columns:
+A data frame with one row per reservoir and the following
+columns:
 \describe{
-  \item{lake_name}{Character. Lake name as used in AWQMS and the
-    \code{lake_ecoregion_lookup} table.}
-  \item{alt_name}{Character. Common alternate name, if applicable.}
-  \item{county}{Character. Primary Oklahoma county.}
-  \item{managing_agency}{Character. Primary managing agency.}
-  \item{primary_use}{Character. Primary designated use.}
-  \item{surface_area_ha}{Numeric. Normal pool surface area (hectares).}
-  \item{mean_depth_m}{Numeric. Mean depth at normal pool (metres).}
-  \item{max_depth_m}{Numeric. Maximum depth at normal pool (metres).}
-  \item{volume_m3}{Numeric. Total storage at normal pool (m\eqn{^3}).}
-  \item{watershed_area_km2}{Numeric. Contributing watershed area (km\eqn{^2}).}
-  \item{eco_l3_code}{Character. EPA Level III ecoregion code.}
-  \item{eco_l3_name}{Character. EPA Level III ecoregion name.}
-  \item{latitude}{Numeric. Approximate dam latitude (WGS84 decimal degrees).}
-  \item{longitude}{Numeric. Approximate dam longitude (WGS84 decimal degrees).}
-  \item{year_completed}{Integer. Year dam was completed.}
-  \item{data_quality}{Character. Data quality code:
-    \code{"A"} = from USACE design memoranda, OWRB bathymetric survey,
-    or National Inventory of Dams;
-    \code{"B"} = mean depth estimated from Oklahoma regional regression;
-    \code{"C"} = derived from volume/area.}
-  \item{notes}{Character. Data source or caveat.}
+\item{lake_name}{Character. Canonical lake name.}
+\item{alt_name}{Character. Common alternate name, if any.}
+\item{county}{Character. Primary Oklahoma county.}
+\item{managing_agency}{Character. Primary managing agency.}
+\item{primary_use}{Character. Primary designated use.}
+\item{surface_area_ha}{Numeric. Normal pool surface area (hectares).}
+\item{mean_depth_m}{Numeric. Mean depth at normal pool (metres).}
+\item{max_depth_m}{Numeric. Maximum depth at normal pool (metres).}
+\item{volume_m3}{Numeric. Total storage at normal pool (m^3).}
+\item{watershed_area_km2}{Numeric. Contributing watershed area (km^2).}
+\item{eco_l3_code}{Character. EPA Level III ecoregion code.}
+\item{eco_l3_name}{Character. EPA Level III ecoregion name.}
+\item{latitude}{Numeric. Approximate dam latitude (WGS84 decimal degrees).}
+\item{longitude}{Numeric. Approximate dam longitude (WGS84 decimal degrees).}
+\item{year_completed}{Integer. Year dam was completed.}
+\item{data_quality}{Character. Data quality code:
+\code{"A"} = direct from authoritative source (USACE design memoranda,
+published bathymetric surveys, or National Inventory of Dams);
+\code{"B"} = mean depth estimated from Oklahoma regional regression.}
+\item{notes}{Character. Data source or caveat.}
 }
 }
 \source{
-USACE Tulsa District design memoranda; OWRB bathymetric survey program;
-OWRB Oklahoma Water Atlas; National Inventory of Dams (NID);
-OWRB Beneficial Use Monitoring Program reports.
+Compiled from publicly available sources including U.S. Army Corps of
+Engineers (USACE) Tulsa District design memoranda, the National
+Inventory of Dams (NID), U.S. Bureau of Reclamation (BOR) design data,
+and published Oklahoma Water Resources Board reports. This dataset is
+provided as a convenience starting point and should be verified against
+the most current authoritative source for any decision-relevant
+application.
 }
 \usage{
 ok_reservoirs
 }
 \description{
 A data frame containing morphometric and geographic characteristics for
-reservoirs monitored under the OWRB Lake Monitoring Program. This dataset
-allows users to retrieve surface area, mean depth, and other parameters
-needed for okBATHTUB modelling without manual lookup.
+major reservoirs in Oklahoma, compiled from publicly available sources
+to enable rapid setup of okBATHTUB pipelines without manual morphometric
+lookup.
 }
 \section{Data quality}{
 
-Mean depth is the most critical morphometric parameter for BATHTUB modelling
-(it drives hydraulic residence time). For reservoirs coded \code{"B"},
-mean depth was estimated using an Oklahoma regional log-log regression
-fitted to reservoirs with known bathymetry:
-\deqn{\log(\text{mean depth}) = 0.28 \times \log(\text{area ha}) - 0.34}
-Users with access to USACE or OWRB bathymetric data for specific reservoirs
-are encouraged to supply those values directly to \code{ok_hydraulics()}
-rather than relying on the estimated values here.
+Mean depth is the most critical morphometric parameter for okBATHTUB
+modelling (it drives hydraulic residence time). For reservoirs coded
+\code{"B"}, mean depth was estimated using an Oklahoma regional log-log
+regression fitted to reservoirs with known bathymetry:
+\deqn{\log_{10}(\text{mean depth}) = 0.28 \times \log_{10}(\text{area in ha}) - 0.34}
+This regression has substantial residual scatter; the resulting depth
+carries roughly a factor-of-1.5 prediction interval. Users with access
+to authoritative bathymetric data for specific reservoirs are
+encouraged to supply those values directly to \code{\link[=ok_hydraulics]{ok_hydraulics()}} rather
+than relying on the estimated values here.
 }
 
 \examples{
@@ -66,6 +71,6 @@ ok_reservoirs[ok_reservoirs$eco_l3_name == "Cross Timbers", ]
 
 }
 \seealso{
-\code{\link{ok_reservoir}}
+\code{\link[=ok_reservoir]{ok_reservoir()}}
 }
 \keyword{datasets}

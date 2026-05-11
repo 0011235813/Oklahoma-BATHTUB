@@ -4,17 +4,46 @@
 \name{okBATHTUB-package}
 \alias{okBATHTUB}
 \alias{okBATHTUB-package}
-\title{okBATHTUB: Reservoir Eutrophication Modeling for Oklahoma Lakes}
+\title{okBATHTUB: Empirical Reservoir Eutrophication Modelling}
 \description{
-okBATHTUB implements steady-state empirical reservoir water quality modeling
-based on Walker's BATHTUB framework, extended with Oklahoma-specific
-calibration options for lakes in the OWRB Lake Monitoring Program.
+okBATHTUB implements steady-state empirical reservoir water quality
+modelling. The package provides three families of phosphorus retention
+models, all of which feed into Carlson (1977) Trophic State Index
+predictions:
 
-The package predicts in-lake total phosphorus (TP), total nitrogen (TN),
-chlorophyll-a, and Secchi depth from tributary nutrient and hydraulic
-loading inputs, and computes Carlson Trophic State Indices (TSI) from
-those predictions.
+\describe{
+\item{\code{"walker"} (default)}{Walker (1985, 1996) BATHTUB Model 1
+second-order available-phosphorus sedimentation. This is the
+canonical default in the BATHTUB program and is calibrated to
+U.S. Army Corps of Engineers reservoir data.}
+\item{\code{"vollenweider"}}{Vollenweider (1976) / Larsen-Mercier (1976)
+hydraulic-residence retention,
+\eqn{C_{lake} = C_{in}/(1 + \sqrt{\tau})}. Equivalent to Walker
+BATHTUB Model 5 (Northern Lakes). Simpler and requires only
+hydraulic residence time; recommended when ortho-P / total-P
+partitioning is unknown.}
+\item{\code{"oklahoma"}}{Uses Walker Model 1 for nutrient retention
+combined with Oklahoma-specific chlorophyll-a and Secchi depth
+regression coefficients calibrated from publicly available state
+lake monitoring data.}
 }
+
+Users may also pass a fully custom named list of coefficients.
+}
+\section{Important note on retention model fidelity}{
+
+Earlier versions of okBATHTUB (v0.1.0) used the Vollenweider /
+Larsen-Mercier form as the default and labelled it as the
+"Walker BATHTUB default." This was incorrect: Walker's BATHTUB
+documentation identifies the second-order available-P model (Model 1
+in his Table 2) as the calibrated default, with the Vollenweider /
+Larsen-Mercier form available as an alternative (Model 5, "Northern
+Lakes," explicitly flagged as not calibrated to CE reservoir data).
+Starting in v0.1.1, \code{coefficients = "walker"} correctly invokes
+Model 1, and the previous behaviour is available via
+\code{coefficients = "vollenweider"}.
+}
+
 \section{Core pipeline}{
 
 The standard single-segment workflow is:
@@ -23,43 +52,44 @@ ok_load() |> ok_hydraulics() |> ok_retention() |> ok_inlake() |> ok_tsi()
 }
 
 For multi-segment reservoirs, pass the result of one segment's
-\code{ok_inlake()} into the next segment's \code{ok_load()} via
-\code{ok_segment()}.
-}
-
-\section{Coefficient sets}{
-
-All model functions accept a \code{coefficients} argument. The default is
-\code{"walker"}, which uses Walker's nationally-derived empirical
-coefficients. Passing \code{"oklahoma"} substitutes Oklahoma Lake Monitoring
-Program-derived coefficients where available. Users may also supply a named
-list of custom coefficients.
+\code{ok_inlake()} into the next via \code{ok_segment()}.
 }
 
 \references{
-Walker, W.W. (1996). Simplified Procedures for Eutrophication Assessment
-and Prediction: User Manual. U.S. Army Corps of Engineers, Instruction
-Report W-96-2.
+Carlson, R.E. (1977). A trophic state index for lakes.
+Limnology and Oceanography, 22(2), 361-369.
+
+Larsen, D.P. and Mercier, H.T. (1976). Phosphorus retention capacity
+of lakes. Journal of the Fisheries Research Board of Canada, 33(8),
+1742-1750.
+
+Vollenweider, R.A. (1976). Advances in defining critical loading
+levels for phosphorus in lake eutrophication. Memorie dell'Istituto
+Italiano di Idrobiologia, 33, 53-83.
+
+Walker, W.W. (1985). Empirical methods for predicting eutrophication
+in impoundments; Report 3, Phase III: Model refinements. Technical
+Report E-81-9, U.S. Army Engineer Waterways Experiment Station.
+
+Walker, W.W. (1996). Simplified Procedures for Eutrophication
+Assessment and Prediction: User Manual. Instruction Report W-96-2,
+U.S. Army Engineer Waterways Experiment Station.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/0011235813/Oklahoma-BATHTUB}
-  \item Report bugs at \url{https://github.com/0011235813/Oklahoma-BATHTUB/issues}
+  \item \url{https://github.com/0011235813/okBATHTUB}
+  \item Report bugs at \url{https://github.com/0011235813/okBATHTUB/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Jordon Henderson \email{jordon.henderson@owrb.ok.gov}
+\strong{Maintainer}: Jordon Henderson \email{jordon.henderson.dev@gmail.com} [copyright holder]
 
 Authors:
 \itemize{
-  \item Jordon Henderson \email{jordon.henderson@owrb.ok.gov}
-}
-
-Other contributors:
-\itemize{
-  \item Oklahoma Water Resources Board [copyright holder]
+  \item Jordon Henderson \email{jordon.henderson.dev@gmail.com} [copyright holder]
 }
 
 }
+\keyword{internal}

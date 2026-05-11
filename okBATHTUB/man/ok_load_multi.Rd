@@ -4,31 +4,39 @@
 \alias{ok_load_multi}
 \title{Assemble tributary loads from multiple tributaries}
 \usage{
-ok_load_multi(tributaries, segment_label = "main", coefficients = "walker")
+ok_load_multi(
+  tributaries,
+  segment_label = "main",
+  coefficients = "walker",
+  ecoregion = NULL
+)
 }
 \arguments{
-\item{tributaries}{A data frame with one row per tributary and the following
+\item{tributaries}{A data frame with one row per tributary and these
 columns:
 \describe{
-  \item{\code{inflow_m3yr}}{Annual inflow volume (m\eqn{^3}/yr). Required.}
-  \item{\code{tp_inflow_ugl}}{Flow-weighted mean TP (ug/L). Required.}
-  \item{\code{tn_inflow_ugl}}{Flow-weighted mean TN (ug/L). Optional.}
-  \item{\code{tss_inflow_mgl}}{Flow-weighted mean TSS (mg/L). Optional.}
+\item{\code{inflow_m3yr}}{Annual inflow volume (m^3/yr). Required.}
+\item{\code{tp_inflow_ugl}}{Flow-weighted mean TP (ug/L). Required.}
+\item{\code{tn_inflow_ugl}}{Flow-weighted mean TN (ug/L). Optional.}
+\item{\code{tss_inflow_mgl}}{Flow-weighted mean TSS (mg/L). Optional.}
 }}
 
-\item{segment_label}{Character. Segment label passed to \code{ok_load()}.
+\item{segment_label}{Character. Segment label passed to \code{\link[=ok_load]{ok_load()}}.
 Default \code{"main"}.}
 
 \item{coefficients}{Coefficient set. Default \code{"walker"}.}
+
+\item{ecoregion}{EPA Level III ecoregion name. Default \code{NULL}.
+Passed through to \code{\link[=ok_load]{ok_load()}}.}
 }
 \value{
 An \code{okBATHTUB} object at pipeline step \code{"load"}.
 }
 \description{
-A convenience wrapper around \code{ok_load()} for reservoirs with more than
+A convenience wrapper around \code{\link[=ok_load]{ok_load()}} for reservoirs with more than
 one tributary. Accepts a data frame of tributary data, computes
 flow-weighted mean concentrations, sums inflow volumes, and calls
-\code{ok_load()} with the aggregated values.
+\code{\link[=ok_load]{ok_load()}} with the aggregated values.
 }
 \examples{
 tribs <- data.frame(
@@ -40,5 +48,5 @@ result <- ok_load_multi(tribs)
 
 }
 \seealso{
-\code{\link{ok_load}}
+\code{\link[=ok_load]{ok_load()}}
 }

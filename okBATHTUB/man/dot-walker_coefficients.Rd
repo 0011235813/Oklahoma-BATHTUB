@@ -2,7 +2,7 @@
 % Please edit documentation in R/okBATHTUB-package.R
 \name{.walker_coefficients}
 \alias{.walker_coefficients}
-\title{Walker (1996) default coefficient set}
+\title{Walker (1985, 1996) BATHTUB Model 1 coefficient set}
 \usage{
 .walker_coefficients()
 }
@@ -10,7 +10,21 @@
 Named list of coefficients.
 }
 \description{
-Nationally-derived empirical coefficients from Walker's BATHTUB model.
-These are the default for all okBATHTUB model functions.
+Walker's calibrated second-order phosphorus and nitrogen sedimentation
+models, fit to U.S. Army Corps of Engineers reservoir data. This is the
+default option in the BATHTUB program.
+}
+\details{
+TP sedimentation rate (mg/m3-yr):
+\deqn{W_s = K \cdot A_1 \cdot P^2}
+where \eqn{A_1 = 0.17 \cdot Q_s / (Q_s + 13.3)} and
+\eqn{Q_s = \max(Z/T,\,4)} m/yr. The mass balance solution for the
+mixed-segment in-lake TP concentration is then:
+\deqn{P = \frac{-1 + \sqrt{1 + 4 K A_1 P_i T}}{2 K A_1 T}}
+
+TN follows the same form with \eqn{B_1 = 0.0045 \cdot Q_s/(Q_s + 7.2)}.
+
+Chlorophyll-a and Secchi depth use Walker's nationally-derived log-log
+regressions.
 }
 \keyword{internal}

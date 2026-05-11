@@ -23,7 +23,7 @@ have a \code{label} (character, required). Optional fields:
 \code{tp_inflow_ugl} (numeric, absolute inflow TP in ug/L, overrides
 tp_reduction), \code{tn_inflow_ugl} (numeric, absolute inflow TN in ug/L),
 \code{flow_change} (numeric, fractional change in inflow volume, e.g.
-\code{-0.20} = 20\% flow reduction).}
+\code{-0.20} = 20\\% flow reduction).}
 
 \item{include_baseline}{Logical. Whether to include the baseline run as
 the first row in the output. Default \code{TRUE}.}
@@ -37,13 +37,13 @@ to the upper bound of that class automatically.}
 }
 \value{
 A data frame with one row per scenario (plus baseline if requested).
-  Columns include: \code{scenario} (label), \code{tp_inflow_ugl} (inflow TP
-  in ug/L), \code{tp_reduction_pct} (reduction from baseline in percent),
-  \code{tp_inlake_ugl} (predicted in-lake TP), \code{chla_ugl} (predicted
-  chlorophyll-a), \code{secchi_m} (predicted Secchi depth), \code{tsi_tp},
-  \code{tsi_chla}, \code{tsi_mean} (Carlson TSI values), \code{trophic_state}
-  (classification), and optionally \code{meets_target} (logical, present when
-  \code{target_tsi} is supplied).
+Columns include: \code{scenario} (label), \code{tp_inflow_ugl} (inflow TP
+in ug/L), \code{tp_reduction_pct} (reduction from baseline in percent),
+\code{tp_inlake_ugl} (predicted in-lake TP), \code{chla_ugl} (predicted
+chlorophyll-a), \code{secchi_m} (predicted Secchi depth), \code{tsi_tp},
+\code{tsi_chla}, \code{tsi_mean} (Carlson TSI values), \code{trophic_state}
+(classification), and optionally \code{meets_target} (logical, present when
+\code{target_tsi} is supplied).
 }
 \description{
 \code{ok_scenario()} takes a baseline \code{ok_load()} result and runs
@@ -57,7 +57,7 @@ mesotrophic?"
 
 Each scenario modifies one or more inflow parameters relative to the
 baseline. Reductions are expressed as fractions (0?1), where
-\code{tp_reduction = 0.30} means a 30\% reduction in inflow TP load.
+\code{tp_reduction = 0.30} means a 30\\% reduction in inflow TP load.
 Scenarios can also specify absolute concentrations directly via
 \code{tp_inflow_ugl}, which overrides the reduction fraction.
 
