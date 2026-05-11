@@ -86,10 +86,5 @@ Useful links:
 \author{
 \strong{Maintainer}: Jordon Henderson \email{jordon.henderson.dev@gmail.com} [copyright holder]
 
-Authors:
-\itemize{
-  \item Jordon Henderson \email{jordon.henderson.dev@gmail.com} [copyright holder]
-}
-
 }
 \keyword{internal}

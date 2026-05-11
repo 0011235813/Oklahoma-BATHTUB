@@ -16,7 +16,7 @@ ok_plot_segments(
 
 \item{metrics}{Character vector. Which metrics to plot. Any subset of
 \code{c("tp_inlake_ugl", "chla_ugl", "secchi_m", "tsi_mean",
-"tp_retention_pct")}. Default: first four.}
+  "tp_retention_pct")}. Default: first four.}
 
 \item{lake_name}{Character. Lake name for the plot title.}
 }

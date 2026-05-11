@@ -41,3 +41,4 @@ LazyData: true
 URL: https://github.com/0011235813/okBATHTUB
 BugReports: https://github.com/0011235813/okBATHTUB/issues
 Config/roxygen2/version: 8.0.0
+RoxygenNote: 7.2.3
