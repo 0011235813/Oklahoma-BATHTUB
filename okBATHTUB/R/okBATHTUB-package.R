@@ -405,10 +405,33 @@ summary.okBATHTUB <- function(object, ...) {
 #' calibration support is sufficient (n >= 15 observations, n >= 5 lakes,
 #' R^2 >= 0.25); a statewide pooled regression is used otherwise.
 #'
-#' Calibration metadata note: the per-ecoregion sample sizes reported below
-#' reflect each ecoregion's specific fit; the statewide pooled fit reflects
-#' a separate filtering pass on a different aggregate dataset, so per-
-#' ecoregion sample sizes do not necessarily sum to the pooled total.
+#' @section Calibration data:
+#' Calibration used 2000-2024 growing-season (May-October) surface grab
+#' samples from publicly available state lake monitoring data, aggregated
+#' to lake-station-year means requiring at least 3 samples per parameter,
+#' then filtered to records with valid TP, chlorophyll-a, and Secchi
+#' values (joint filter). The same filtered dataset feeds both the
+#' Chl-a-from-TP and Secchi-from-Chl-a regressions, so per-ecoregion
+#' n values are identical across the two fits. The statewide pooled
+#' total (n=250 observations from 82 lakes) is larger than the sum of
+#' the per-ecoregion fits because the pooled fit includes records from
+#' ecoregions where the per-ecoregion fit did not meet the sample size
+#' threshold (e.g. Ouachita Mountains, Central Great Plains). See
+#' `data-raw/CALIBRATION_README.md` and
+#' `data-raw/ok_calibration_report.xlsx` in the package source for full
+#' provenance.
+#'
+#' @section Ecoregions with ecoregion-specific fits:
+#' \itemize{
+#'   \item Cross Timbers (Chl-a and Secchi)
+#'   \item Central Oklahoma/Texas Plains (Chl-a and Secchi)
+#'   \item Ozark Highlands (Chl-a only; Secchi fit fell below
+#'     R^2 = 0.25 threshold and uses statewide pooled)
+#' }
+#' All other ecoregions use the statewide pooled coefficients.
+#' Arkansas Valley Chl-a was rejected at R^2 = 0.120 due to inorganic
+#' turbidity decoupling the TP-Chl-a relationship; see the calibration
+#' README for context.
 #'
 #' @param ecoregion Character. EPA Level III ecoregion name. If `NULL`,
 #'   returns the statewide pooled coefficients.
@@ -417,17 +440,24 @@ summary.okBATHTUB <- function(object, ...) {
 #' @keywords internal
 .oklahoma_coefficients <- function(ecoregion = NULL) {
 
-  # Ecoregion-specific Chl-a coefficients (log10 chla = a + b * log10 tp_inlake)
+  # ---------------------------------------------------------------------
+  # Ecoregion-specific Chl-a coefficients
+  # log10(chla) = chla_intercept + chla_slope * log10(tp_inlake)
+  #
+  # Source of truth: data-raw/ok_calibration_report.xlsx (Final_Coefficients).
+  # These values are produced by data-raw/ok_calibration.R from publicly
+  # available state lake monitoring data (2000-2024).
+  # ---------------------------------------------------------------------
   chla_eco <- list(
     "Cross Timbers" = list(
       intercept = 0.2823, slope = 0.6171,
       source = "oklahoma_ecoregion_crosstimbers", r_squared = 0.391,
-      n_obs_in_fit = 181, n_lakes_in_fit = 40
+      n_obs_in_fit = 169, n_lakes_in_fit = 36
     ),
     "Central Oklahoma/Texas Plains" = list(
       intercept = 0.0485, slope = 0.7462,
       source = "oklahoma_ecoregion_centralplains", r_squared = 0.614,
-      n_obs_in_fit = 37, n_lakes_in_fit = 10
+      n_obs_in_fit = 24, n_lakes_in_fit = 10
     ),
     "Ozark Highlands" = list(
       intercept = -0.1684, slope = 0.8021,
@@ -436,17 +466,24 @@ summary.okBATHTUB <- function(object, ...) {
     )
   )
 
-  # Ecoregion-specific Secchi coefficients (log10 secchi = a + b * log10 chla)
+  # ---------------------------------------------------------------------
+  # Ecoregion-specific Secchi coefficients
+  # log10(secchi) = secchi_intercept + secchi_slope * log10(chla)
+  #
+  # Note: Ozark Highlands Secchi fit was R^2 = 0.228, below the
+  # 0.25 acceptance threshold, so it is NOT included here and falls
+  # back to the statewide pooled coefficients by code path.
+  # ---------------------------------------------------------------------
   secchi_eco <- list(
     "Cross Timbers" = list(
       intercept = 0.4334, slope = -0.5235,
       source = "oklahoma_ecoregion_crosstimbers", r_squared = 0.359,
-      n_obs_in_fit = 265, n_lakes_in_fit = 36
+      n_obs_in_fit = 169, n_lakes_in_fit = 36
     ),
     "Central Oklahoma/Texas Plains" = list(
       intercept = 0.6489, slope = -0.5743,
       source = "oklahoma_ecoregion_centralplains", r_squared = 0.394,
-      n_obs_in_fit = 26, n_lakes_in_fit = 12
+      n_obs_in_fit = 24, n_lakes_in_fit = 10
     )
   )
 
@@ -501,15 +538,6 @@ summary.okBATHTUB <- function(object, ...) {
 
 
 # =============================================================================
-# Package imports
-# =============================================================================
-
-#' @import stats
-#' @import utils
-NULL
-
-
-# =============================================================================
 # Global variable declarations
 # =============================================================================
 
@@ -522,5 +550,7 @@ utils::globalVariables(c(
   "value", "segment", "tsi_type",
   # dataset columns referenced in ok_reservoir / ok_reservoir_summary
   "ok_reservoirs", "data_quality", "surface_area_ha", "mean_depth_m",
-  "eco_l3_name"
+  "eco_l3_name",
+  # ok_lake_ecoregions dataset
+  "ok_lake_ecoregions"
 ))

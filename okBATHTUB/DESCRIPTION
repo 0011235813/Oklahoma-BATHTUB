@@ -1,6 +1,6 @@
 Package: okBATHTUB
 Title: Empirical Reservoir Eutrophication Modelling with Oklahoma Calibration
-Version: 0.1.1
+Version: 0.1.2
 Authors@R:
     person("Jordon", "Henderson",
            role  = c("aut", "cre", "cph"),
@@ -22,6 +22,7 @@ Description: Empirical reservoir water quality modelling using the
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
 Depends:
     R (>= 4.1.0)
 Imports:
@@ -40,5 +41,3 @@ VignetteBuilder: knitr
 LazyData: true
 URL: https://github.com/0011235813/okBATHTUB
 BugReports: https://github.com/0011235813/okBATHTUB/issues
-Config/roxygen2/version: 8.0.0
-RoxygenNote: 7.2.3

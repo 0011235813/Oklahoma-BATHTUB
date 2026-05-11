@@ -80,6 +80,8 @@ ortho-P / total-P partitioning is unknown.
 | `ok_scenario_sweep()`   |                                                      |
 | `ok_reservoir()` /      | Look up Oklahoma reservoir morphometry                |
 | `ok_reservoirs`         | Bundled dataset (40 reservoirs, 7 ecoregions)         |
+| `ok_lake_ecoregion()` / | Look up an Oklahoma lake's EPA L3 ecoregion           |
+| `ok_lake_ecoregions`    | Bundled dataset (214 lakes, ecoregion + monitoring)   |
 | `ok_plot_response()` /  | Visualizations (require `ggplot2`)                    |
 | `ok_plot_scenario()` /  |                                                      |
 | `ok_plot_segments()` /  |                                                      |

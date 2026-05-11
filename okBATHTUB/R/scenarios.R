@@ -11,7 +11,7 @@
 #' @section How scenarios work:
 #' Each scenario modifies one or more inflow parameters relative to the
 #' baseline. Reductions are expressed as fractions (0?1), where
-#' \code{tp_reduction = 0.30} means a 30% reduction in inflow TP load.
+#' \code{tp_reduction = 0.30} means a 30\% reduction in inflow TP load.
 #' Scenarios can also specify absolute concentrations directly via
 #' \code{tp_inflow_ugl}, which overrides the reduction fraction.
 #'
@@ -21,12 +21,13 @@
 #' @param baseline An \code{okBATHTUB} object that has been run through at
 #'   least \code{ok_hydraulics()}. All morphometry is taken from this object.
 #' @param scenarios A list of named lists, one per scenario. Each list must
-#'   have a \code{label} (character, required). Optional fields include
-#'   \code{tp_reduction} (numeric 0-1), \code{tn_reduction} (numeric 0-1),
+#'   have a \code{label} (character, required). Optional fields:
+#'   \code{tp_reduction} (numeric 0-1, fractional TP reduction),
+#'   \code{tn_reduction} (numeric 0-1, fractional TN reduction),
 #'   \code{tp_inflow_ugl} (numeric, absolute inflow TP in ug/L, overrides
-#'   \code{tp_reduction}), \code{tn_inflow_ugl} (numeric, absolute inflow TN
-#'   in ug/L), and \code{flow_change} (numeric, fractional change in inflow
-#'   volume, e.g. \code{-0.20} for 20% flow reduction).
+#'   tp_reduction), \code{tn_inflow_ugl} (numeric, absolute inflow TN in ug/L),
+#'   \code{flow_change} (numeric, fractional change in inflow volume, e.g.
+#'   \code{-0.20} = 20\% flow reduction).
 #' @param include_baseline Logical. Whether to include the baseline run as
 #'   the first row in the output. Default \code{TRUE}.
 #' @param target_tsi Numeric. Optional TSI target. If supplied, a

@@ -145,19 +145,13 @@ segment's inflow:
 ```{r multi_segment}
 # A simple 3-segment Tenkiller-like reservoir
 result <- ok_segment_chain(
-  inflow_m3yr   = 1e9,
-  tp_inflow_ugl = 110,
-  tn_inflow_ugl = 1700,
   segments = list(
-    list(label = "riverine",
-         surface_area_ha = 1200,
-         mean_depth_m = 4),
-    list(label = "transition",
-         surface_area_ha = 1800,
-         mean_depth_m = 9),
-    list(label = "lacustrine",
-         surface_area_ha = 2060,
-         mean_depth_m = 25)
+    riverine   = list(inflow_m3yr   = 1e9,
+                      tp_inflow_ugl = 110,
+                      tn_inflow_ugl = 1700,
+                      surface_area_ha = 1200, mean_depth_m = 4),
+    transition = list(surface_area_ha = 1800, mean_depth_m = 9),
+    lacustrine = list(surface_area_ha = 2060, mean_depth_m = 25)
   ),
   coefficients = "oklahoma",
   ecoregion    = "Boston Mountains"
@@ -186,8 +180,7 @@ baseline <- ok_load(
 
 sweep <- ok_scenario_sweep(
   baseline,
-  max_reduction_pct = 60,
-  step_pct          = 10
+  tp_reduction_pct = seq(0, 60, by = 10)
 )
 
 # Print key columns
