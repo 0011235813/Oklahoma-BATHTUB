@@ -1,9 +1,10 @@
-## Submission notes (v0.1.6)
+## Submission notes (v0.1.7)
 
 First-time CRAN submission. Pre-submission win-builder R-release run on
-v0.1.4 returned 1 NOTE with four items. Two have been addressed in
-v0.1.5 (broken EPA URL) and v0.1.6 (GitHub URLs now valid); the
-remaining two are expected and not actionable on the package side.
+v0.1.4 returned 1 NOTE with four items. Three have been addressed
+across v0.1.5-v0.1.7; the remaining one is the expected "new submission"
+tag plus the misspelled-words item, which are not actionable on the
+package side.
 
 ## Changes since the v0.1.4 win-builder check
 
@@ -11,8 +12,12 @@ remaining two are expected and not actionable on the package side.
   deprecated `epa.gov/cwsrf/clean-water-state-revolving-fund-cwsrf`
   path to the current canonical
   `epa.gov/nps/water-quality-management-planning-grants`.
-- v0.1.6: re-enabled `URL:` and `BugReports:` fields in `DESCRIPTION`
-  now that the GitHub repository is public.
+- v0.1.6: re-enabled `URL:` and `BugReports:` in `DESCRIPTION` after
+  the GitHub repository was made public.
+- v0.1.7: corrected the GitHub URL. The repository is at
+  `0011235813/Oklahoma-BATHTUB` (capital O, hyphenated; the package
+  source lives in the `okBATHTUB/` subdirectory). Added the pkgdown
+  documentation site as the primary URL.
 
 ## Test environments
 
@@ -76,3 +81,5 @@ None. This is a new package.
   consistency, strengthened cross-dataset consistency test.
 - v0.1.5: updated deprecated EPA URL.
 - v0.1.6: re-enabled `URL:`/`BugReports:` after public GitHub release.
+- v0.1.7: corrected GitHub repo URL (`Oklahoma-BATHTUB`, not
+  `okBATHTUB`); added pkgdown site as primary URL.

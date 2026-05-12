@@ -25,8 +25,10 @@ SWAT and HAWQS in a two-model nutrient management workflow.
 
 ```r
 # install.packages("remotes")
-remotes::install_github("0011235813/okBATHTUB")
+remotes::install_github("0011235813/Oklahoma-BATHTUB", subdir = "okBATHTUB")
 ```
+
+Documentation site: <https://0011235813.github.io/Oklahoma-BATHTUB/>
 
 ## Quick start
 

@@ -1,3 +1,14 @@
+# okBATHTUB 0.1.7
+
+* Corrected GitHub URLs in `DESCRIPTION`. The repository is at
+  `0011235813/Oklahoma-BATHTUB` (the package source is in the
+  `okBATHTUB/` subdirectory of that repo); v0.1.6 had pointed to a
+  non-existent `0011235813/okBATHTUB` URL.
+* Added the pkgdown documentation site as the primary `URL:` entry
+  (https://0011235813.github.io/Oklahoma-BATHTUB/).
+* Updated README install instructions to use the correct
+  `remotes::install_github(..., subdir = "okBATHTUB")` form.
+
 # okBATHTUB 0.1.6
 
 * Restored `URL:` and `BugReports:` fields in `DESCRIPTION`. The GitHub
