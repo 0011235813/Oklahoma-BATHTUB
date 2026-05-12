@@ -1,6 +1,6 @@
 Package: okBATHTUB
 Title: Empirical Reservoir Eutrophication Modelling with Oklahoma Calibration
-Version: 0.1.4
+Version: 0.1.6
 Authors@R:
     person("Jordon", "Henderson",
            role  = c("aut", "cre", "cph"),

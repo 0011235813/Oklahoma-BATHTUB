@@ -1,3 +1,28 @@
+# okBATHTUB 0.1.6
+
+* Restored `URL:` and `BugReports:` fields in `DESCRIPTION`. The GitHub
+  repository (https://github.com/0011235813/okBATHTUB) is now public.
+
+# okBATHTUB 0.1.5
+
+Addresses two of the four NOTE items returned by win-builder R-release
+(R 4.6.0) for the v0.1.4 pre-submission check.
+
+* **Removed broken GitHub URLs from DESCRIPTION.** `URL:` and
+  `BugReports:` previously pointed to a not-yet-public GitHub
+  repository, causing 404 responses in CRAN's URL-validity check.
+  These will be re-added once the repository is made public.
+
+* **Updated broken EPA URL in `hawqs-linkage.Rmd`** from the deprecated
+  `epa.gov/cwsrf/clean-water-state-revolving-fund-cwsrf` subpath to the
+  current canonical landing page for the 604(b) Water Quality
+  Management Planning Grants program:
+  `epa.gov/nps/water-quality-management-planning-grants`.
+
+The remaining two NOTE items ("possibly misspelled words" and "new
+submission") are not actionable on the package side and are explained
+to CRAN reviewers in `cran-comments.md`.
+
 # okBATHTUB 0.1.4
 
 Three small polish fixes prior to CRAN submission.
