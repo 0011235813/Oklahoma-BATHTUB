@@ -88,8 +88,8 @@ test_that("ok_reservoir_summary() runs without error", {
 # against future regressions.
 test_that("ok_reservoirs and ok_lake_ecoregions agree on ecoregion for shared lakes", {
   # Build a join on exact lake_name (case-insensitive)
-  res <- ok_reservoirs[, c("lake_name", "eco_l3_name")]
-  lkp <- ok_lake_ecoregions[, c("lake_name", "eco_l3_name")]
+  res <- ok_reservoirs[, c("lake_name", "eco_l3_name", "eco_l3_code")]
+  lkp <- ok_lake_ecoregions[, c("lake_name", "eco_l3_name", "eco_l3_code")]
   res$key <- tolower(res$lake_name)
   lkp$key <- tolower(lkp$lake_name)
   shared <- merge(res, lkp, by = "key", suffixes = c("_res", "_lkp"))
@@ -97,15 +97,39 @@ test_that("ok_reservoirs and ok_lake_ecoregions agree on ecoregion for shared la
   # Drop rows where lookup ecoregion is NA (border/out-of-state lakes)
   shared <- shared[!is.na(shared$eco_l3_name_lkp), ]
 
-  # If any rows remain, ecoregions must agree
   if (nrow(shared) > 0L) {
-    mismatches <- shared[shared$eco_l3_name_res != shared$eco_l3_name_lkp, ]
+    # Ecoregion NAME must match
+    name_mismatches <- shared[shared$eco_l3_name_res != shared$eco_l3_name_lkp, ]
     expect_equal(
-      nrow(mismatches), 0L,
+      nrow(name_mismatches), 0L,
       info = paste(
-        "Cross-dataset ecoregion mismatch in", nrow(mismatches), "lakes:",
-        paste(mismatches$lake_name_res, collapse = ", ")
+        "Cross-dataset ecoregion NAME mismatch in", nrow(name_mismatches), "lakes:",
+        paste(name_mismatches$lake_name_res, collapse = ", ")
       )
+    )
+    # Ecoregion CODE must also match (a name-only check would miss code drift)
+    code_mismatches <- shared[shared$eco_l3_code_res != shared$eco_l3_code_lkp, ]
+    expect_equal(
+      nrow(code_mismatches), 0L,
+      info = paste(
+        "Cross-dataset ecoregion CODE mismatch in", nrow(code_mismatches), "lakes:",
+        paste(code_mismatches$lake_name_res, collapse = ", ")
+      )
+    )
+  }
+})
+
+test_that("ok_reservoirs eco_l3_code values are internally consistent with eco_l3_name", {
+  # For each ecoregion name, all rows with that name must share the same code.
+  # This catches the v0.1.3-era bug where some rows had eco_l3_name "Cross Timbers"
+  # with eco_l3_code "29" (the code for Ouachita Mountains).
+  by_name <- split(ok_reservoirs$eco_l3_code, ok_reservoirs$eco_l3_name)
+  for (eco_name in names(by_name)) {
+    codes <- unique(by_name[[eco_name]])
+    expect_equal(
+      length(codes), 1L,
+      info = sprintf("Ecoregion '%s' has multiple codes in ok_reservoirs: %s",
+                     eco_name, paste(codes, collapse = ", "))
     )
   }
 })

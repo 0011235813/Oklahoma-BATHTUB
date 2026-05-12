@@ -66,10 +66,10 @@ The `output.rch` file uses fixed-width format with columns including `FLOW_OUTcm
 # Read SWAT output.rch file
 # (Adjust column positions for your SWAT version)
 read_swat_rch <- function(rch_path) {
-  # Read fixed-width format
-  raw <- read_fwf(
+  # Read fixed-width format (requires the 'readr' package)
+  raw <- readr::read_fwf(
     rch_path,
-    fwf_cols(
+    readr::fwf_cols(
       rch_id    = c(1, 4),
       year      = c(5, 9),
       month     = c(10, 12),
@@ -142,7 +142,7 @@ cat(sprintf("  TN inflow:     %.1f µg/L\n", mean_tn_ugl))
 ## Baseline BATHTUB Run
 
 ```{r baseline_run}
-# Reservoir morphometry: Arcadia Lake (Cross Timbers ecoregion)
+# Reservoir morphometry: a representative Cross Timbers reservoir
 # surface_area_ha = 890, mean_depth_m = 4.2 (hardcoded for reproducibility)
 
 baseline <- ok_load(
@@ -245,7 +245,7 @@ Oklahoma's flood-dominated hydrology means that annual TP loading varies substan
 
 ```{r interannual}
 # Run BATHTUB for each year in the HAWQS record
-annual_results <- lapply(seq_len(nrow(hawqs_annual)), function(i) {
+annual_list <- lapply(seq_len(nrow(hawqs_annual)), function(i) {
   yr   <- hawqs_annual[i, ]
   tp_ugl <- yr$tp_conc_ugl
   tn_ugl <- yr$tn_conc_ugl
@@ -275,8 +275,8 @@ annual_results <- lapply(seq_len(nrow(hawqs_annual)), function(i) {
     tsi_mean      = round(r$data$tsi_mean, 1),
     trophic_state = r$data$trophic_state
   )
-}) |>
-  do.call(rbind, args = _)
+})
+annual_results <- do.call(rbind, annual_list)
 
 cat("--- Interannual Range ---\n")
 cat(sprintf("TSI range:    %.1f - %.1f\n",
@@ -297,7 +297,7 @@ ok_plot_response(
   response     = "tsi",
   target_class = "mesotrophic",
   current_tp   = mean_tp_ugl,
-  lake_name    = "Arcadia Lake -- OK-HAWQS/okBATHTUB Linkage"
+  lake_name    = "Cross Timbers Reservoir -- OK-HAWQS/okBATHTUB Linkage"
 )
 ```
 

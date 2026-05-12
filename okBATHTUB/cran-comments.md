@@ -1,30 +1,25 @@
-## Resubmission notes (v0.1.3)
+## Resubmission notes (v0.1.4)
 
-Pre-CRAN forensic review release addressing 14 findings from a v0.1.2
-review. `R CMD check --as-cran` passes cleanly (0 errors, 0 warnings,
-0 notes) on Windows 11 / R 4.5.3.
+Three small polish fixes following a final pre-submission review:
+- Removed R 4.2+ native pipe placeholder syntax from a vignette to
+  stay compatible with the declared R >= 4.1.0 requirement.
+- Namespaced `readr::` calls in an `eval=FALSE` SWAT example chunk.
+- Generalized vignette example labeling to keep canonical Walker Model 1
+  numerical reference inputs (890 ha / 4.2 m) decoupled from named lake
+  examples.
+- Strengthened cross-dataset consistency test (now checks both ecoregion
+  code and name).
 
-Highlights:
-- `ok_reservoirs` and `ok_lake_ecoregions` ecoregion assignments now
-  cross-validate (cross-dataset regression test added).
-- DESCRIPTION reframed: Walker BATHTUB Model 1 (the default) is now
-  identified as such; Vollenweider/Larsen-Mercier is described as the
-  alternative.
-- `ok_lake_ecoregion()` return type is now stable (always data frame);
-  the `simplify` argument is deprecated.
-- Stray institutional attribution strings removed from a source-file
-  header and a vignette reference list to bring the package fully in
-  line with its personal-capacity, MIT-licensed authorship.
-
-See NEWS.md for the complete list.
+`R CMD check --as-cran` passes cleanly (0 errors, 0 warnings, 0 notes)
+on Windows 11 / R 4.5.3.
 
 ## Background
 
 v0.1.0 was withdrawn from CRAN consideration after an internal forensic
-review identified seven scientific and CRAN-policy issues; v0.1.1 fixed
-those; v0.1.2 corrected calibration metadata to match the source-of-
-truth XLSX; v0.1.3 addresses remaining items from a final pre-submission
-review.
+review identified seven scientific and CRAN-policy issues. v0.1.1 fixed
+those. v0.1.2 corrected calibration metadata to match the source-of-
+truth XLSX. v0.1.3 addressed the v0.1.2 review's 14 findings. v0.1.4 is
+final polish before submission.
 
 ## Test environments
 

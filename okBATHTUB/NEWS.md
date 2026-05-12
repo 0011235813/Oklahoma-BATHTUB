@@ -1,3 +1,33 @@
+# okBATHTUB 0.1.4
+
+Three small polish fixes prior to CRAN submission.
+
+* **Removed R 4.2+ native pipe placeholder syntax from a vignette.**
+  `vignettes/hawqs-linkage.Rmd` previously used `do.call(rbind, args = _)`,
+  which requires R >= 4.2.0 but `DESCRIPTION` declares R >= 4.1.0.
+  Replaced with the equivalent `do.call(rbind, annual_list)` two-step
+  pattern that works on any supported R.
+
+* **Namespaced `readr::read_fwf()` and `readr::fwf_cols()` calls** in the
+  `hawqs-linkage.Rmd` SWAT-input example chunk. The chunk is `eval=FALSE`
+  so this is cosmetic, but the namespaced form is clearer to readers and
+  removes a potential `no visible global function` reviewer note.
+
+* **Generalized "Arcadia Lake" examples** in `getting-started.Rmd` and
+  `hawqs-linkage.Rmd` to "a representative Cross Timbers reservoir" where
+  the example uses morphometry (890 ha / 4.2 m) that doesn't match the
+  bundled `ok_reservoirs` entry for Arcadia Lake (716 ha / 4.6 m). The
+  890/4.2 figures remain the canonical Walker Model 1 numerical reference
+  case used throughout tests and docstring examples; only the labeling
+  was changed.
+
+* **Strengthened cross-dataset consistency test** to validate that
+  `ok_reservoirs` and `ok_lake_ecoregions` agree on both the EPA L3
+  *code* and *name* for shared lakes, and that all rows within
+  `ok_reservoirs` sharing the same `eco_l3_name` also share the same
+  `eco_l3_code`. Catches a class of bug that a name-only check would
+  miss.
+
 # okBATHTUB 0.1.3
 
 Pre-CRAN forensic review pass addressing 14 findings from the v0.1.2
