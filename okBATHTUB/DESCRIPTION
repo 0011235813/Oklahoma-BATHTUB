@@ -4,7 +4,7 @@ Version: 0.1.4
 Authors@R:
     person("Jordon", "Henderson",
            role  = c("aut", "cre", "cph"),
-           email = "jordon.henderson.dev@gmail.com")
+           email = "jordon.henderson@owrb.ok.gov")
 Description: Empirical reservoir water quality modelling using Walker's
     BATHTUB Model 1 (second-order available-phosphorus sedimentation;
     Walker 1985, 1996) as the default retention model. The Vollenweider
