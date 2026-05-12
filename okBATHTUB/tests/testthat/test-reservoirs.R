@@ -77,3 +77,52 @@ test_that("ok_reservoir() result is usable in ok_hydraulics pipeline", {
 test_that("ok_reservoir_summary() runs without error", {
   expect_output(ok_reservoir_summary(), "ok_reservoirs Coverage")
 })
+
+# ---------------------------------------------------------------------------
+# Cross-dataset regression test (Finding #8 in the v0.1.2 forensic review)
+# ---------------------------------------------------------------------------
+# In v0.1.2, ok_reservoirs and ok_lake_ecoregions disagreed on ecoregion
+# assignment for 18 of 26 lakes that appeared in both bundled datasets.
+# v0.1.3 regenerated eco_l3_name in ok_reservoirs.csv from the authoritative
+# lake_ecoregion_lookup.csv so the two datasets now agree. This test guards
+# against future regressions.
+test_that("ok_reservoirs and ok_lake_ecoregions agree on ecoregion for shared lakes", {
+  # Build a join on exact lake_name (case-insensitive)
+  res <- ok_reservoirs[, c("lake_name", "eco_l3_name")]
+  lkp <- ok_lake_ecoregions[, c("lake_name", "eco_l3_name")]
+  res$key <- tolower(res$lake_name)
+  lkp$key <- tolower(lkp$lake_name)
+  shared <- merge(res, lkp, by = "key", suffixes = c("_res", "_lkp"))
+
+  # Drop rows where lookup ecoregion is NA (border/out-of-state lakes)
+  shared <- shared[!is.na(shared$eco_l3_name_lkp), ]
+
+  # If any rows remain, ecoregions must agree
+  if (nrow(shared) > 0L) {
+    mismatches <- shared[shared$eco_l3_name_res != shared$eco_l3_name_lkp, ]
+    expect_equal(
+      nrow(mismatches), 0L,
+      info = paste(
+        "Cross-dataset ecoregion mismatch in", nrow(mismatches), "lakes:",
+        paste(mismatches$lake_name_res, collapse = ", ")
+      )
+    )
+  }
+})
+
+test_that("All ok_reservoirs eco_l3_name values are valid EPA L3 names", {
+  # Same valid-name set as test-lake-ecoregions, plus Southwestern Tablelands
+  # which contains Optima Lake (panhandle) but no calibration lakes.
+  valid_ecoregions <- c(
+    "Central Great Plains", "Flint Hills",
+    "Central Oklahoma/Texas Plains", "Cross Timbers",
+    "Ouachita Mountains", "Ozark Highlands",
+    "South Central Plains", "Arkansas Valley",
+    "Southwestern Tablelands"
+  )
+  observed <- na.omit(unique(ok_reservoirs$eco_l3_name))
+  expect_true(all(observed %in% valid_ecoregions),
+              info = paste("Unexpected eco_l3_name values:",
+                           paste(setdiff(observed, valid_ecoregions),
+                                 collapse = ", ")))
+})

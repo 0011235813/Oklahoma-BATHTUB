@@ -91,8 +91,17 @@ test_that("ok_load() rejects non-numeric TP", {
                "'tp_inflow_ugl'")
 })
 
-test_that("ok_load() accepts TP of zero", {
-  expect_no_error(ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 0))
+test_that("ok_load() accepts TP of zero but warns about unphysical value", {
+  expect_warning(
+    ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 0),
+    "unusually low"
+  )
+})
+
+test_that("ok_load() does not warn at realistic low TP", {
+  expect_no_warning(
+    ok_load(inflow_m3yr = 45e6, tp_inflow_ugl = 5)
+  )
 })
 
 test_that("ok_load() rejects invalid coefficient set string", {

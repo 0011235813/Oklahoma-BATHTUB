@@ -1,41 +1,41 @@
 lake_name,alt_name,county,managing_agency,primary_use,surface_area_ha,mean_depth_m,max_depth_m,volume_m3,watershed_area_km2,eco_l3_code,eco_l3_name,latitude,longitude,year_completed,data_quality,notes
-Arcadia Lake,,Oklahoma,City of Edmond,Water Supply,716,4.6,17.4,32900000,275,29,Cross Timbers,35.6470,-97.4178,1986,A,USACE Tulsa District
-Lake Eufaula,,McIntosh,USACE,Multipurpose,41280,7.0,30.5,2891000000,20040,29,Cross Timbers,35.3033,-95.3414,1964,A,USACE NID
-Lake Texoma,,Marshall,USACE,Multipurpose,35840,11.6,30.5,4150000000,103600,27,Central Great Plains,33.8186,-96.5747,1944,A,USACE Tulsa District
-Tenkiller Ferry Lake,Lake Tenkiller,Cherokee,USACE,Multipurpose,5060,15.5,52.4,785000000,4140,38,Boston Mountains,35.6064,-95.0364,1952,A,USACE NID
-Lake Thunderbird,,Cleveland,Bureau of Reclamation,Water Supply,2386,5.5,18.3,156000000,665,29,Cross Timbers,35.2231,-97.2331,1965,A,USBR design
-Lake Oologah,Oologah Lake,Rogers,USACE,Multipurpose,11900,5.4,18.6,656000000,11050,27,Central Great Plains,36.4181,-95.6800,1972,A,USACE NID
-Keystone Lake,,Pawnee,USACE,Multipurpose,10570,7.7,25.6,818000000,194300,27,Central Great Plains,36.1539,-96.2547,1968,A,USACE NID
-Grand Lake o' the Cherokees,Grand Lake,Mayes,Grand River Dam Authority,Hydropower,18700,11.3,42.1,2110000000,25000,38,Boston Mountains,36.5689,-95.0411,1940,A,GRDA published
-Lake Hudson,Markham Ferry,Mayes,Grand River Dam Authority,Hydropower,4690,6.4,32.0,300000000,26000,38,Boston Mountains,36.2294,-95.0383,1964,A,GRDA published
-Fort Gibson Lake,,Cherokee,USACE,Multipurpose,7960,6.0,30.5,478000000,32100,38,Boston Mountains,35.8783,-95.2461,1953,A,USACE NID
-Lake Hefner,,Oklahoma,City of Oklahoma City,Water Supply,1015,8.0,25.9,81200000,194,29,Cross Timbers,35.5483,-97.6328,1947,A,OKC Utilities
-Lake Overholser,,Oklahoma,City of Oklahoma City,Water Supply,615,2.4,5.5,14800000,11400,29,Cross Timbers,35.5167,-97.6453,1919,A,OKC Utilities
-Lake Stanley Draper,Stanley Draper,Cleveland,City of Oklahoma City,Water Supply,1296,7.2,16.8,93300000,228,29,Cross Timbers,35.3094,-97.3683,1963,A,OKC Utilities
-Skiatook Lake,,Osage,USACE,Multipurpose,4350,11.5,32.6,500000000,910,40,Central Irregular Plains,36.3458,-96.0700,1984,A,USACE NID
-Birch Lake,,Osage,USACE,Multipurpose,440,7.7,17.7,33900000,162,40,Central Irregular Plains,36.5083,-96.3289,1977,A,USACE NID
-Hulah Lake,,Osage,USACE,Multipurpose,1500,4.2,12.5,62800000,1900,40,Central Irregular Plains,36.9319,-96.0903,1951,A,USACE NID
-Copan Lake,,Washington,USACE,Multipurpose,1212,3.8,14.3,46000000,1300,40,Central Irregular Plains,36.8853,-95.9131,1983,A,USACE NID
-Kaw Lake,,Kay,USACE,Multipurpose,7080,8.0,32.0,565000000,116000,27,Central Great Plains,36.7639,-96.9483,1976,A,USACE NID
-Sooner Lake,,Pawnee,Oklahoma Gas & Electric,Cooling Pond,2070,9.5,23.5,196000000,520,27,Central Great Plains,36.4631,-96.9342,1976,A,NID
-Lake McMurtry,,Payne,City of Stillwater,Water Supply,476,4.6,12.2,21900000,77,29,Cross Timbers,36.1622,-97.1408,1973,A,OKC Utilities
-Lake Carl Blackwell,,Payne,Oklahoma State University,Recreation,1410,5.5,17.7,77500000,200,29,Cross Timbers,36.1492,-97.2050,1938,A,USBR design
-Lake Murray,,Carter,Oklahoma Tourism,Recreation,2225,7.6,23.5,170000000,206,29,Cross Timbers,34.0578,-97.0653,1937,A,USACE NID
-Foss Lake,Foss Reservoir,Custer,Bureau of Reclamation,Water Supply,3530,5.3,24.7,186000000,3110,27,Central Great Plains,35.5481,-99.1856,1961,A,USBR design
-Lake Altus-Lugert,Altus Reservoir,Kiowa,Bureau of Reclamation,Water Supply,2400,5.3,32.0,127400000,3070,27,Central Great Plains,34.8783,-99.2956,1948,A,USBR design
-Tom Steed Lake,Lake Tom Steed,Kiowa,Bureau of Reclamation,Water Supply,2630,4.3,17.7,113800000,1310,27,Central Great Plains,34.7325,-98.9931,1975,A,USBR design
-Lake Lawtonka,,Comanche,City of Lawton,Water Supply,720,5.5,17.4,39800000,160,27,Central Great Plains,34.7800,-98.5158,1905,A,Lawton Utilities
-Waurika Lake,,Jefferson,USACE,Multipurpose,4070,5.8,26.5,236000000,1140,27,Central Great Plains,34.2461,-97.9856,1980,A,USACE NID
+Arcadia Lake,,Oklahoma,City of Edmond,Water Supply,716,4.6,17.4,32900000,275,28,Cross Timbers,35.6470,-97.4178,1986,A,USACE Tulsa District
+Lake Eufaula,,McIntosh,USACE,Multipurpose,41280,7.0,30.5,2891000000,20040,37,Arkansas Valley,35.3033,-95.3414,1964,A,USACE NID
+Lake Texoma,,Marshall,USACE,Multipurpose,35840,11.6,30.5,4150000000,103600,27,Central Oklahoma/Texas Plains,33.8186,-96.5747,1944,A,USACE Tulsa District
+Tenkiller Ferry Lake,Lake Tenkiller,Cherokee,USACE,Multipurpose,5060,15.5,52.4,785000000,4140,29,Ouachita Mountains,35.6064,-95.0364,1952,A,USACE NID
+Lake Thunderbird,,Cleveland,Bureau of Reclamation,Water Supply,2386,5.5,18.3,156000000,665,28,Cross Timbers,35.2231,-97.2331,1965,A,USBR design
+Lake Oologah,Oologah Lake,Rogers,USACE,Multipurpose,11900,5.4,18.6,656000000,11050,30,Ozark Highlands,36.4181,-95.6800,1972,A,USACE NID
+Keystone Lake,,Pawnee,USACE,Multipurpose,10570,7.7,25.6,818000000,194300,28,Cross Timbers,36.1539,-96.2547,1968,A,USACE NID
+Grand Lake o' the Cherokees,Grand Lake,Mayes,Grand River Dam Authority,Hydropower,18700,11.3,42.1,2110000000,25000,30,Ozark Highlands,36.5689,-95.0411,1940,A,GRDA published
+Lake Hudson,Markham Ferry,Mayes,Grand River Dam Authority,Hydropower,4690,6.4,32.0,300000000,26000,30,Ozark Highlands,36.2294,-95.0383,1964,A,GRDA published
+Fort Gibson Lake,,Cherokee,USACE,Multipurpose,7960,6.0,30.5,478000000,32100,30,Ozark Highlands,35.8783,-95.2461,1953,A,USACE NID
+Lake Hefner,,Oklahoma,City of Oklahoma City,Water Supply,1015,8.0,25.9,81200000,194,28,Cross Timbers,35.5483,-97.6328,1947,A,OKC Utilities
+Lake Overholser,,Oklahoma,City of Oklahoma City,Water Supply,615,2.4,5.5,14800000,11400,28,Cross Timbers,35.5167,-97.6453,1919,A,OKC Utilities
+Lake Stanley Draper,Stanley Draper,Cleveland,City of Oklahoma City,Water Supply,1296,7.2,16.8,93300000,228,28,Cross Timbers,35.3094,-97.3683,1963,A,OKC Utilities
+Skiatook Lake,,Osage,USACE,Multipurpose,4350,11.5,32.6,500000000,910,28,Cross Timbers,36.3458,-96.0700,1984,A,USACE NID
+Birch Lake,,Osage,USACE,Multipurpose,440,7.7,17.7,33900000,162,30,Ozark Highlands,36.5083,-96.3289,1977,A,USACE NID
+Hulah Lake,,Osage,USACE,Multipurpose,1500,4.2,12.5,62800000,1900,30,Ozark Highlands,36.9319,-96.0903,1951,A,USACE NID
+Copan Lake,,Washington,USACE,Multipurpose,1212,3.8,14.3,46000000,1300,30,Ozark Highlands,36.8853,-95.9131,1983,A,USACE NID
+Kaw Lake,,Kay,USACE,Multipurpose,7080,8.0,32.0,565000000,116000,28,Cross Timbers,36.7639,-96.9483,1976,A,USACE NID
+Sooner Lake,,Pawnee,Oklahoma Gas & Electric,Cooling Pond,2070,9.5,23.5,196000000,520,28,Cross Timbers,36.4631,-96.9342,1976,A,NID
+Lake McMurtry,,Payne,City of Stillwater,Water Supply,476,4.6,12.2,21900000,77,28,Cross Timbers,36.1622,-97.1408,1973,A,OKC Utilities
+Lake Carl Blackwell,,Payne,Oklahoma State University,Recreation,1410,5.5,17.7,77500000,200,28,Cross Timbers,36.1492,-97.2050,1938,A,USBR design
+Lake Murray,,Carter,Oklahoma Tourism,Recreation,2225,7.6,23.5,170000000,206,28,Cross Timbers,34.0578,-97.0653,1937,A,USACE NID
+Foss Lake,Foss Reservoir,Custer,Bureau of Reclamation,Water Supply,3530,5.3,24.7,186000000,3110,28,Cross Timbers,35.5481,-99.1856,1961,A,USBR design
+Lake Altus-Lugert,Altus Reservoir,Kiowa,Bureau of Reclamation,Water Supply,2400,5.3,32.0,127400000,3070,27,Central Oklahoma/Texas Plains,34.8783,-99.2956,1948,A,USBR design
+Tom Steed Lake,Lake Tom Steed,Kiowa,Bureau of Reclamation,Water Supply,2630,4.3,17.7,113800000,1310,27,Central Oklahoma/Texas Plains,34.7325,-98.9931,1975,A,USBR design
+Lake Lawtonka,,Comanche,City of Lawton,Water Supply,720,5.5,17.4,39800000,160,27,Central Oklahoma/Texas Plains,34.7800,-98.5158,1905,A,Lawton Utilities
+Waurika Lake,,Jefferson,USACE,Multipurpose,4070,5.8,26.5,236000000,1140,27,Central Oklahoma/Texas Plains,34.2461,-97.9856,1980,A,USACE NID
 Lake Wister,,Le Flore,USACE,Multipurpose,1660,4.0,15.9,66400000,2540,37,Arkansas Valley,34.9311,-94.6953,1949,A,USACE NID
 Robert S Kerr Lake,Kerr Reservoir,Le Flore,USACE,Navigation,17710,4.8,18.3,850000000,395000,37,Arkansas Valley,35.3506,-94.7867,1970,A,USACE NID
-Lake Ellsworth,,Comanche,City of Lawton,Water Supply,2330,5.5,18.0,128000000,277,27,Central Great Plains,34.7567,-98.3486,1961,A,Lawton Utilities
-Lake Wes Watkins,,Pottawatomie,City of Shawnee,Water Supply,440,4.7,11.9,20680000,84,29,Cross Timbers,35.3508,-96.9533,1991,A,OKC Utilities
-Lake Konawa,,Seminole,Public Service of Oklahoma,Cooling Pond,1370,5.8,16.8,79500000,140,29,Cross Timbers,34.9286,-96.7461,1976,A,NID
-Lake McGee Creek,McGee Creek Reservoir,Atoka,Bureau of Reclamation,Water Supply,1700,12.2,32.0,207000000,228,38,Boston Mountains,34.4031,-95.8514,1985,A,USBR design
-Pine Creek Lake,,McCurtain,USACE,Multipurpose,1620,7.6,29.6,123000000,1300,35,South Central Plains,34.1167,-95.0900,1969,A,USACE NID
-Broken Bow Lake,,McCurtain,USACE,Multipurpose,5610,13.1,53.0,734000000,1850,35,South Central Plains,34.1581,-94.6711,1968,A,USACE NID
-Hugo Lake,,Choctaw,USACE,Multipurpose,5060,4.4,15.9,222000000,4640,35,South Central Plains,34.0250,-95.4017,1974,A,USACE NID
-Atoka Reservoir,Lake Atoka,Atoka,Atoka Reservoir Authority,Water Supply,2330,5.5,15.9,128000000,400,38,Boston Mountains,34.4181,-96.0419,1959,A,Atoka Utilities
-Lake Murray Holdenville,Holdenville Lake,Hughes,City of Holdenville,Water Supply,212,3.4,9.4,7200000,40,29,Cross Timbers,35.0833,-96.4014,1962,B,Estimated depth
-Sardis Lake,Sardis Reservoir,Pushmataha,USACE,Multipurpose,5710,5.2,28.0,296000000,712,35,South Central Plains,34.6181,-95.3653,1983,A,USACE NID
+Lake Ellsworth,,Comanche,City of Lawton,Water Supply,2330,5.5,18.0,128000000,277,27,Central Oklahoma/Texas Plains,34.7567,-98.3486,1961,A,Lawton Utilities
+Lake Wes Watkins,,Pottawatomie,City of Shawnee,Water Supply,440,4.7,11.9,20680000,84,28,Cross Timbers,35.3508,-96.9533,1991,A,OKC Utilities
+Lake Konawa,,Seminole,Public Service of Oklahoma,Cooling Pond,1370,5.8,16.8,79500000,140,37,Arkansas Valley,34.9286,-96.7461,1976,A,NID
+Lake McGee Creek,McGee Creek Reservoir,Atoka,Bureau of Reclamation,Water Supply,1700,12.2,32.0,207000000,228,29,Ouachita Mountains,34.4031,-95.8514,1985,A,USBR design
+Pine Creek Lake,,McCurtain,USACE,Multipurpose,1620,7.6,29.6,123000000,1300,29,Ouachita Mountains,34.1167,-95.0900,1969,A,USACE NID
+Broken Bow Lake,,McCurtain,USACE,Multipurpose,5610,13.1,53.0,734000000,1850,29,Ouachita Mountains,34.1581,-94.6711,1968,A,USACE NID
+Hugo Lake,,Choctaw,USACE,Multipurpose,5060,4.4,15.9,222000000,4640,29,Ouachita Mountains,34.0250,-95.4017,1974,A,USACE NID
+Atoka Reservoir,Lake Atoka,Atoka,Atoka Reservoir Authority,Water Supply,2330,5.5,15.9,128000000,400,37,Arkansas Valley,34.4181,-96.0419,1959,A,Atoka Utilities
+Lake Murray Holdenville,Holdenville Lake,Hughes,City of Holdenville,Water Supply,212,3.4,9.4,7200000,40,37,Arkansas Valley,35.0833,-96.4014,1962,B,Estimated depth
+Sardis Lake,Sardis Reservoir,Pushmataha,USACE,Multipurpose,5710,5.2,28.0,296000000,712,29,Ouachita Mountains,34.6181,-95.3653,1983,A,USACE NID
 Optima Lake,,Texas,USACE,Multipurpose,2090,3.5,18.0,73000000,12700,26,Southwestern Tablelands,36.7669,-101.1700,1978,A,USACE NID

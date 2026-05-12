@@ -57,41 +57,54 @@ test_that("ok_lake_ecoregions ecoregion values are valid EPA L3 names", {
   expect_true(all(observed %in% valid_ecoregions))
 })
 
-test_that("ok_lake_ecoregion() exact match returns single ecoregion name", {
-  eco <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)
-  expect_type(eco, "character")
-  expect_length(eco, 1L)
-  expect_equal(eco, "Cross Timbers")
+test_that("ok_lake_ecoregion() exact match returns single-row data frame", {
+  result <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)
+  expect_s3_class(result, "data.frame")
+  expect_equal(nrow(result), 1L)
+  expect_equal(result$eco_l3_name, "Cross Timbers")
 })
 
 test_that("ok_lake_ecoregion() exact match is case-insensitive", {
-  eco <- ok_lake_ecoregion("arcadia lake", exact = TRUE)
-  expect_equal(eco, "Cross Timbers")
+  result <- ok_lake_ecoregion("arcadia lake", exact = TRUE)
+  expect_equal(result$eco_l3_name, "Cross Timbers")
 })
 
 test_that("ok_lake_ecoregion() partial match works", {
-  result <- ok_lake_ecoregion("Tenkiller", exact = FALSE, simplify = FALSE)
+  result <- ok_lake_ecoregion("Tenkiller", exact = FALSE)
   expect_s3_class(result, "data.frame")
   expect_gte(nrow(result), 1L)
   expect_true(any(grepl("Tenkiller", result$lake_name, ignore.case = TRUE)))
 })
 
-test_that("ok_lake_ecoregion() returns NA on no match (simplify = TRUE)", {
+test_that("ok_lake_ecoregion() returns empty data frame on no match", {
   expect_warning(
-    eco <- ok_lake_ecoregion("Lake of Atlantis", exact = TRUE),
-    "No lakes matched"
-  )
-  expect_true(is.na(eco))
-})
-
-test_that("ok_lake_ecoregion() returns empty data frame on no match (simplify = FALSE)", {
-  expect_warning(
-    result <- ok_lake_ecoregion("Lake of Atlantis",
-                                exact = TRUE, simplify = FALSE),
+    result <- ok_lake_ecoregion("Lake of Atlantis", exact = TRUE),
     "No lakes matched"
   )
   expect_s3_class(result, "data.frame")
   expect_equal(nrow(result), 0L)
+})
+
+test_that("ok_lake_ecoregion() return type is stable (always data.frame)", {
+  # Single match
+  r1 <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)
+  # Multi match
+  r2 <- ok_lake_ecoregion("Lake")
+  # No match
+  suppressWarnings(r3 <- ok_lake_ecoregion("XYZNOLAKE", exact = TRUE))
+
+  expect_s3_class(r1, "data.frame")
+  expect_s3_class(r2, "data.frame")
+  expect_s3_class(r3, "data.frame")
+  expect_identical(names(r1), names(r2))
+  expect_identical(names(r1), names(r3))
+})
+
+test_that("ok_lake_ecoregion() warns on deprecated simplify argument", {
+  expect_warning(
+    ok_lake_ecoregion("Arcadia Lake", exact = TRUE, simplify = TRUE),
+    "deprecated"
+  )
 })
 
 test_that("ok_lake_ecoregion() rejects non-character input", {
@@ -100,7 +113,7 @@ test_that("ok_lake_ecoregion() rejects non-character input", {
 })
 
 test_that("ok_lake_ecoregion() result is usable in ok_load() pipeline", {
-  eco <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)
+  eco <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)$eco_l3_name
   result <- ok_load(
     inflow_m3yr   = 45e6,
     tp_inflow_ugl = 120,

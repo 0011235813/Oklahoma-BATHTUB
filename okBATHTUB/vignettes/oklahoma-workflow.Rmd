@@ -154,7 +154,7 @@ result <- ok_segment_chain(
     list(label = "lacustrine",  surface_area_ha = 2060, mean_depth_m = 25)
   ),
   coefficients = "oklahoma",
-  ecoregion    = "Boston Mountains"
+  ecoregion    = "Ouachita Mountains"
 )
 
 ok_segment_summary(result)

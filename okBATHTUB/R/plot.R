@@ -1,6 +1,9 @@
 # =============================================================================
 # okBATHTUB - Visualization Functions
-# Oklahoma Water Resources Board - Water Quality Division
+#
+# ggplot2-based plotting helpers for ok_load(), ok_scenario(), and
+# ok_tsi() outputs. All functions check for ggplot2/dplyr/tidyr at
+# call time (Suggests) rather than importing them.
 #
 # Exported functions:
 #   ok_plot_response()   - load-response curve (TP -> Chl-a or TSI)

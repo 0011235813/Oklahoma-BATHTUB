@@ -10,7 +10,7 @@
 #'
 #' @section How scenarios work:
 #' Each scenario modifies one or more inflow parameters relative to the
-#' baseline. Reductions are expressed as fractions (0?1), where
+#' baseline. Reductions are expressed as fractions (0-1), where
 #' \code{tp_reduction = 0.30} means a 30% reduction in inflow TP load.
 #' Scenarios can also specify absolute concentrations directly via
 #' \code{tp_inflow_ugl}, which overrides the reduction fraction.

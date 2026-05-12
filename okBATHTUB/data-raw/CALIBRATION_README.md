@@ -192,6 +192,24 @@ in the western and Arkansas Valley systems.
    trophic dynamics during those years. A future sensitivity analysis
    stratifying by wet/dry periods is recommended.
 
+6. **Provenance discrepancy between `ok_ecoregion_assignment.R` and
+   `lake_ecoregion_lookup.csv`.** A v0.1.2 audit identified 15 lakes
+   for which the latest version of the ecoregion-assignment script
+   disagrees with the bundled lookup CSV. Specifically, the script
+   uses different EPA L3 codes for some ecoregions than the CSV
+   (e.g. the script labels code "26" as Flint Hills, but the published
+   CSV uses standard EPA codes where 26 = Southwestern Tablelands and
+   28 = Cross Timbers). The published CSV is treated as the source of
+   truth because that is what was fed into the regression `lm()` calls
+   that produced the bundled coefficients. Discrepant lakes with
+   geographically defensible alternative assignments include Hulah,
+   Copan, and Skiatook (Osage County, on the Cross Timbers / Flint
+   Hills / Ozark Highlands transition) and Lake Murray (Carter County,
+   Cross Timbers / Central OK Plains edge). A future recalibration
+   pass should reconcile the script and the CSV — either by re-running
+   the script on the EPA Level III shapefile directly, or by manual
+   review of border-zone lakes against authoritative maps.
+
 ---
 
 ## Recalibration

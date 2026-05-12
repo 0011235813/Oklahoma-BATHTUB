@@ -69,6 +69,16 @@ ok_load <- function(inflow_m3yr,
   .assert_positive(inflow_m3yr,   "inflow_m3yr")
   .assert_nonneg(tp_inflow_ugl,   "tp_inflow_ugl")
 
+  # TP = 0 is mathematically allowed but unphysical (no surface water on
+  # Earth has zero phosphorus); warn the user without failing.
+  if (tp_inflow_ugl < 1) {
+    warning(sprintf(
+      paste0("'tp_inflow_ugl' = %.3g ug/L is unusually low; ",
+             "downstream Chl-a and Secchi predictions may be unreliable."),
+      tp_inflow_ugl
+    ), call. = FALSE)
+  }
+
   if (!is.null(tn_inflow_ugl))
     .assert_nonneg(tn_inflow_ugl, "tn_inflow_ugl")
   if (!is.null(tss_inflow_mgl))

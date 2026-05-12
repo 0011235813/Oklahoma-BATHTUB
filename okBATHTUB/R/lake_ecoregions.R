@@ -77,36 +77,42 @@
 #'
 #' @description
 #' Convenience wrapper around [`ok_lake_ecoregions`] for retrieving the
-#' ecoregion name for one or more lakes. Returns either the ecoregion
-#' name (single match) or a data frame of all matches.
+#' ecoregion assignment for one or more lakes. Always returns a data
+#' frame so that the return type is stable across single-match and
+#' multi-match results.
+#'
+#' To get a bare ecoregion name string for use in [ok_load()], use:
+#'
+#' ```r
+#' eco <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)$eco_l3_name
+#' ```
 #'
 #' @param lake_name Character. One or more lake names to look up.
 #'   Partial matching is supported (case-insensitive) unless `exact`
 #'   is `TRUE`.
 #' @param exact Logical. If `TRUE`, requires an exact name match
 #'   (case-insensitive). Default `FALSE`.
-#' @param simplify Logical. If `TRUE` and exactly one lake matches,
-#'   return the ecoregion name as a length-1 character vector. If
-#'   `FALSE` or multiple matches, return a data frame with all matched
-#'   rows from [`ok_lake_ecoregions`]. Default `TRUE`.
+#' @param simplify Deprecated. Retained for backward compatibility with
+#'   pre-0.1.3 callers; ignored with a deprecation warning. The function
+#'   always returns a data frame.
 #'
-#' @return Character (single match, `simplify = TRUE`) or data frame
-#'   (otherwise). Returns `NA_character_` or an empty data frame if
-#'   no match is found.
+#' @return A data frame of zero or more rows from [`ok_lake_ecoregions`]
+#'   with all columns. An unmatched lookup returns an empty data frame
+#'   (with the correct column structure) plus a warning.
 #'
 #' @examples
-#' # Single lake, get back the ecoregion name
-#' ok_lake_ecoregion("Arcadia Lake", exact = TRUE)
+#' # Standard usage: exact match, extract ecoregion name
+#' eco <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)$eco_l3_name
+#' eco
 #'
-#' # Partial match - returns a data frame of all matches
-#' ok_lake_ecoregion("Lake")
+#' # Partial match: returns a data frame of all matches
+#' ok_lake_ecoregion("Tenkiller")
 #'
-#' # Use the result in a pipeline call
-#' eco <- ok_lake_ecoregion("Tenkiller", exact = FALSE,
-#'                          simplify = TRUE)
-#' if (!is.na(eco)) {
-#'   ok_load(inflow_m3yr   = 1e9,
-#'           tp_inflow_ugl = 60,
+#' # Use in pipeline
+#' eco <- ok_lake_ecoregion("Arcadia Lake", exact = TRUE)$eco_l3_name
+#' if (length(eco) == 1L && !is.na(eco)) {
+#'   ok_load(inflow_m3yr   = 45e6,
+#'           tp_inflow_ugl = 120,
 #'           coefficients  = "oklahoma",
 #'           ecoregion     = eco)
 #' }
@@ -115,7 +121,16 @@
 #' @export
 ok_lake_ecoregion <- function(lake_name,
                               exact    = FALSE,
-                              simplify = TRUE) {
+                              simplify = NULL) {
+
+  if (!is.null(simplify)) {
+    warning(
+      "The 'simplify' argument to ok_lake_ecoregion() is deprecated as of ",
+      "v0.1.3 and is ignored. The function now always returns a data frame ",
+      "for type stability. Use `$eco_l3_name` to extract the ecoregion name.",
+      call. = FALSE
+    )
+  }
 
   if (!is.character(lake_name) || length(lake_name) < 1L)
     stop("'lake_name' must be a non-empty character vector.", call. = FALSE)
@@ -132,6 +147,7 @@ ok_lake_ecoregion <- function(lake_name,
   }
 
   result <- df[matched, , drop = FALSE]
+  rownames(result) <- NULL
 
   if (nrow(result) == 0L) {
     warning(
@@ -139,14 +155,7 @@ ok_lake_ecoregion <- function(lake_name,
               paste0("'", paste(lake_name, collapse = "', '"), "'")),
       call. = FALSE
     )
-    return(if (simplify) NA_character_ else result)
-  }
-
-  if (simplify && nrow(result) == 1L) {
-    return(result$eco_l3_name)
-  }
-
-  if (nrow(result) > 1L && length(lake_name) == 1L && !exact) {
+  } else if (nrow(result) > 1L && length(lake_name) == 1L && !exact) {
     message(sprintf(
       "ok_lake_ecoregion(): %d lakes matched '%s'. Returning all matches.",
       nrow(result), lake_name

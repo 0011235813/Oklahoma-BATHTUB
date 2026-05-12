@@ -318,4 +318,4 @@ ok_plot_response(
 - Soil and Water Assessment Tool (SWAT) documentation: https://swat.tamu.edu
 - OK-HAWQS: Oklahoma application of HAWQS 2.0 (USGS/EPA national platform)
 - Walker, W.W. (1996). *Simplified Procedures for Eutrophication Assessment and Prediction: User Manual*. U.S. Army Corps of Engineers, Instruction Report W-96-2.
-- Oklahoma Water Resources Board (2024). FY-24 604(b) BIL Watershed Modeling Project — Sensitive Water Supply Reservoirs.
+- U.S. EPA Clean Water Act Section 604(b) Water Quality Management Planning Grant program: https://www.epa.gov/cwsrf/clean-water-state-revolving-fund-cwsrf

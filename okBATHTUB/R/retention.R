@@ -112,8 +112,15 @@ ok_retention <- function(x,
         qs_eff       <- max(z / tau, qs_min)
         a1           <- a1_num * qs_eff / (qs_eff + a1_denom_add)
         Pi           <- d$tp_inflow_ugl
-        # Quadratic solution to mixed-segment mass balance
-        # P^2 * (K*A1*T) + P - Pi = 0  ->  P = (-1 + sqrt(1+4KA1Pi*T)) / (2KA1*T)
+        # Quadratic mass balance solution:
+        #   K*A1*T * P^2 + P - Pi = 0  ->  P = (-1 + sqrt(1 + 4*K*A1*Pi*T)) / (2*K*A1*T)
+        # Note on units: A1 carries implicit units of m^3/(mg*yr). The numeric
+        # value 0.17 is correct ONLY when TP is in mg/m^3 (= ug/L) and tau is
+        # in years. Do not substitute other unit systems without rescaling.
+        # Defensive guard: K, a1, tau, and Pi are all guaranteed > 0 by upstream
+        # validation in ok_load() and ok_hydraulics(), so the else branch always
+        # executes in practice. The K*a1*tau<=0 case is here only as a numerical
+        # safety net for pathological custom coefficient lists.
         if (K * a1 * tau <= 0 || Pi <= 0) {
           tp_lake_w1 <- 0
           r_tp       <- if (Pi > 0) 1 else 0

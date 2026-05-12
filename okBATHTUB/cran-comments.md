@@ -1,24 +1,30 @@
-## Resubmission notes (v0.1.2)
+## Resubmission notes (v0.1.3)
 
-This is a metadata-correction release of okBATHTUB. Coefficient values
-are unchanged from v0.1.1; only the calibration metadata (sample sizes
-and ecoregion-fallback flags) has been corrected to match the source-of-
-truth calibration report (`data-raw/ok_calibration_report.xlsx`). See
-NEWS.md for the full diff. The calibration provenance trail
-(`CALIBRATION_README.md`, the calibration script, the report XLSX, and
-diagnostic plots) is now bundled in `data-raw/` (build-ignored, so not
-in the installed tarball).
+Pre-CRAN forensic review release addressing 14 findings from a v0.1.2
+review. `R CMD check --as-cran` passes cleanly (0 errors, 0 warnings,
+0 notes) on Windows 11 / R 4.5.3.
 
-A new test file `test-calibration-metadata.R` pins the metadata to the
-XLSX values to prevent future silent drift.
+Highlights:
+- `ok_reservoirs` and `ok_lake_ecoregions` ecoregion assignments now
+  cross-validate (cross-dataset regression test added).
+- DESCRIPTION reframed: Walker BATHTUB Model 1 (the default) is now
+  identified as such; Vollenweider/Larsen-Mercier is described as the
+  alternative.
+- `ok_lake_ecoregion()` return type is now stable (always data frame);
+  the `simplify` argument is deprecated.
+- Stray institutional attribution strings removed from a source-file
+  header and a vignette reference list to bring the package fully in
+  line with its personal-capacity, MIT-licensed authorship.
 
-## v0.1.1 background
+See NEWS.md for the complete list.
 
-v0.1.0 was withdrawn from CRAN consideration after a forensic review
-identified seven issues (scientific accuracy, empty bundled dataset,
-hardcoded private infrastructure, and authorship inconsistency). All
-seven were addressed in v0.1.1. v0.1.2 is a follow-up correction to
-calibration metadata only.
+## Background
+
+v0.1.0 was withdrawn from CRAN consideration after an internal forensic
+review identified seven scientific and CRAN-policy issues; v0.1.1 fixed
+those; v0.1.2 corrected calibration metadata to match the source-of-
+truth XLSX; v0.1.3 addresses remaining items from a final pre-submission
+review.
 
 ## Test environments
 

@@ -1,24 +1,23 @@
 Package: okBATHTUB
 Title: Empirical Reservoir Eutrophication Modelling with Oklahoma Calibration
-Version: 0.1.2
+Version: 0.1.3
 Authors@R:
     person("Jordon", "Henderson",
            role  = c("aut", "cre", "cph"),
-           email = "jordon.henderson.dev@gmail.com",
-           comment = c(ORCID = ""))
-Description: Empirical reservoir water quality modelling using the
-    Vollenweider (1976) / Larsen-Mercier (1976) hydraulic-residence
-    phosphorus retention framework, with an optional implementation of
-    Walker's BATHTUB Model 1 (second-order available-phosphorus
-    sedimentation; Walker 1985, 1996). Predicts in-lake total phosphorus,
-    total nitrogen, chlorophyll-a, and Secchi depth from tributary nutrient
-    and hydraulic loading inputs, and computes Carlson (1977) Trophic
-    State Indices. Optional Oklahoma-specific chlorophyll and Secchi
-    regression coefficients are provided, calibrated from publicly
-    available state lake monitoring data. Supports single-segment and
-    multi-segment reservoir configurations and load-reduction scenario
-    analysis. Designed to complement watershed loading models such as
-    SWAT and HAWQS in a two-model nutrient management workflow.
+           email = "jordon.henderson.dev@gmail.com")
+Description: Empirical reservoir water quality modelling using Walker's
+    BATHTUB Model 1 (second-order available-phosphorus sedimentation;
+    Walker 1985, 1996) as the default retention model. The Vollenweider
+    (1976) / Larsen-Mercier (1976) hydraulic-residence form is available
+    as an alternative. Predicts in-lake total phosphorus, total nitrogen,
+    chlorophyll-a, and Secchi depth from tributary nutrient and hydraulic
+    loading inputs, and computes Carlson (1977) Trophic State Indices.
+    Optional Oklahoma-specific chlorophyll and Secchi regression
+    coefficients are provided, calibrated from publicly available state
+    lake monitoring data. Supports single-segment and multi-segment
+    reservoir configurations and load-reduction scenario analysis.
+    Designed to complement watershed loading models such as SWAT and
+    HAWQS in a two-model nutrient management workflow.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

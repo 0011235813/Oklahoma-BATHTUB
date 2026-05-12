@@ -1,3 +1,68 @@
+# okBATHTUB 0.1.3
+
+Pre-CRAN forensic review pass addressing 14 findings from the v0.1.2
+review. `R CMD check --as-cran` continues to pass cleanly (0 errors,
+0 warnings, 0 notes).
+
+## Critical fixes
+
+* **`ok_reservoirs` and `ok_lake_ecoregions` ecoregion assignments now
+  agree.** v0.1.2 had 18 of 26 shared lakes disagreeing on EPA Level III
+  ecoregion (e.g. Hugo Lake was "South Central Plains" in `ok_reservoirs`
+  but "Ouachita Mountains" in `ok_lake_ecoregions`). The `eco_l3_name`
+  and `eco_l3_code` columns in `ok_reservoirs.csv` have been regenerated
+  by joining against the authoritative `lake_ecoregion_lookup.csv`,
+  with manual fallback for lakes not in the lookup (Optima Lake -> 
+  Southwestern Tablelands). A new regression test
+  (`test-reservoirs.R: ok_reservoirs and ok_lake_ecoregions agree on
+  ecoregion for shared lakes`) guards against future drift.
+  37 of 40 reservoirs received corrected ecoregion assignments.
+
+* **`R/plot.R` source-file comment header no longer claims "Oklahoma
+  Water Resources Board - Water Quality Division" institutional
+  attribution.** The earlier cleanup pass scrubbed plot captions and
+  visible titles but missed this source-file comment.
+
+* **`vignettes/hawqs-linkage.Rmd` reference list no longer cites a
+  current OWRB grant project as a reference.** Replaced with a generic
+  EPA Clean Water Act Section 604(b) program reference.
+
+## Major fixes
+
+* **DESCRIPTION now leads with Walker BATHTUB Model 1 as the default**
+  retention model, with Vollenweider/Larsen-Mercier as the alternative.
+  The v0.1.2 description had this inverted, which would have given a
+  CRAN reviewer a misleading first impression about model fidelity.
+
+* **`ok_lake_ecoregion()` now has a stable return type.** Always
+  returns a data frame, regardless of how many lakes match. The
+  `simplify` argument is deprecated (retained for backward compatibility
+  with a deprecation warning). Use `$eco_l3_name` to extract the
+  ecoregion name. v0.1.2's behavior of returning character on single
+  match and data.frame otherwise was a recurring source of brittle
+  caller code.
+
+## Minor fixes
+
+* `ok_load()` now emits a warning when `tp_inflow_ugl < 1 ug/L` to
+  flag unphysically low TP values that would produce unreliable Chl-a
+  and Secchi predictions.
+
+* Removed empty `comment = c(ORCID = "")` from Authors@R in DESCRIPTION.
+
+* Fixed encoding mojibake `(0?1)` -> `(0-1)` in `R/scenarios.R`
+  docstring.
+
+* Walker Model 1 retention now documents the implicit units of the
+  A1 coefficient (m^3/(mg*yr)) and explicitly notes the defensive
+  guard branch is unreachable under normal operation.
+
+* `data-raw/CALIBRATION_README.md` documents a newly discovered
+  discrepancy between `ok_ecoregion_assignment.R` and the bundled
+  `lake_ecoregion_lookup.csv`. The CSV is treated as authoritative
+  because it is what was fed into the calibration regressions; the
+  script-CSV reconciliation is queued as a future recalibration task.
+
 # okBATHTUB 0.1.2
 
 This is a metadata-correction release. **Coefficient values are
